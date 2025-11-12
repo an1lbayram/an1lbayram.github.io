@@ -1,0 +1,19 @@
+{
+  "name": "Anıl Bayram - Software Developer",
+  "short_name": "Anıl Bayram",
+  "description": "Front-End geliştirici, yazılım meraklısı ve teknoloji tutkunu. Portfolio ve projelerim.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#00adb5",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/A.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ]
+}

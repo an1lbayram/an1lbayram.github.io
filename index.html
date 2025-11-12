@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Anıl Bayram - Front-End geliştirici, yazılım meraklısı ve teknoloji tutkunu. HTML, CSS, JavaScript, React, C#, PowerShell ve Arduino projeleri.">
+<meta name="keywords" content="Anıl Bayram, yazılım geliştirici, front-end developer, web developer, React, JavaScript, HTML, CSS, portfolio">
+<meta name="author" content="Anıl Bayram">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="language" content="Turkish">
+<link rel="canonical" href="https://an1lbayram.github.io">
+<meta property="og:title" content="Anıl Bayram | Software Developer">
+<meta property="og:description" content="Front-End geliştirici, yazılım meraklısı ve teknoloji tutkunu. Projeler, Medium yazıları, sertifikalar ve teknik beceriler.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://an1lbayram.github.io">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:image" content="https://an1lbayram.github.io/icons/A.ico">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anıl Bayram | Software Developer">
+<meta name="twitter:description" content="Front-End geliştirici, yazılım meraklısı ve teknoloji tutkunu.">
+<meta name="twitter:image" content="https://an1lbayram.github.io/icons/A.ico">
+<link rel="icon" href="icons/A.ico" type="image/x-icon">
+<link rel="shortcut icon" href="icons/A.ico" type="image/x-icon">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00adb5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Anıl Bayram">
+<link rel="apple-touch-icon" href="icons/A.ico">
+<title>Anıl Bayram | Software Developer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Anıl Bayram",
+  "jobTitle": "Software Developer",
+  "description": "Front-End geliştirici, yazılım meraklısı ve teknoloji tutkunu",
+  "url": "https://an1lbayram.github.io",
+  "image": "https://an1lbayram.github.io/icons/A.ico",
+  "sameAs": [
+    "https://github.com/an1lbayram",
+    "https://medium.com/@anl1bayram",
+    "https://www.linkedin.com/in/an1lbayram"
+  ],
+  "email": "anilbayram48@gmail.com",
+  "knowsLanguage": ["tr", "en"],
+  "knowsAbout": ["Front-End Development", "JavaScript", "React", "HTML", "CSS", "C#", "PowerShell", "Arduino"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Anıl Bayram",
+  "url": "https://an1lbayram.github.io",
+  "logo": "https://an1lbayram.github.io/icons/A.ico",
+  "description": "Front-End geliştirici ve yazılım geliştirme portalı",
+  "sameAs": [
+    "https://github.com/an1lbayram",
+    "https://medium.com/@anl1bayram",
+    "https://www.linkedin.com/in/an1lbayram"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "anilbayram48@gmail.com",
+    "contactType": "Customer Service"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana Sayfa",
+      "item": "https://an1lbayram.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projeler",
+      "item": "https://an1lbayram.github.io/#projects"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sertifikalar",
+      "item": "https://an1lbayram.github.io/#certificates"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "İletişim",
+      "item": "https://an1lbayram.github.io/#contact"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="custom-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="brand">&lt;Anıl Bayram/&gt;</a>
+
+      <div class="hamburger" id="hamburger" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="nav-links" role="button" tabindex="0">
+        <div></div><div></div><div></div>
+      </div>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımda</a></li>
+        <li><a href="#projects">Projeler</a></li>
+        <li><a href="#medium">Medium</a></li>
+        <li><a href="#certificates">Sertifikalar</a></li>
+        <li><a href="#skills">Beceriler</a></li>
+        <li><a href="#languages">Diller</a></li>
+        <li><a href="#social">Sosyal</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section id="hero" class="py-5 mt-5">
+  <div class="container text-center py-5">
+    <img src="images/ANIL_BAYRAM.jpg" alt="Anıl Bayram Profil Fotoğrafı" class="profile-photo mb-4" width="280" height="280" loading="lazy">
+    <h1 class="display-5 fw-bold mb-2">Merhaba, ben <span class="text-primary">Anıl Bayram</span></h1>
+    <p class="lead text-secondary">Front-End geliştirici, yazılım meraklısı ve teknoloji tutkunu.</p>
+    <a href="#projects" class="btn btn-primary btn-lg mt-3">Projelerimi Gör</a>
+  </div>
+</section>
+
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="h3 text-primary mb-3 text-center">Hakkımda</h2>
+        <p class="text-secondary text-center">
+          Yazılım dünyasına olan ilgimle başladım ve kendimi sürekli geliştiren bir Front-End geliştirici olarak yol alıyorum.
+          HTML, CSS, Bootstrap, JavaScript ve React konularında çalışmalar yapıyor; hem açık kaynak projeler geliştiriyor hem de Medium üzerinden deneyimlerimi paylaşıyorum.
+          Teknolojiye olan merakım, beni yeni projeler üretmeye ve öğrenmeye motive ediyor.
+          Ayrıca Python, C#, PowerShell, Arduino gibi farklı alanlara da adım atıyor; bu sayede çok yönlü bir yazılım geliştirici olmayı hedefliyorum.
+        </p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="h3 text-primary mb-4">Projelerim</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">DatHex</h3>
+            <p class="card-text text-secondary">Winget tabanlı toplu uygulama güncelleyici | Winget-based mass software updater for Windows systems</p>
+            <a href="https://github.com/an1lbayram/DatHex" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub'da Gör</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">FiWi</h3>
+            <p class="card-text text-secondary">Kayıtlı Wi-Fi şifrelerini görüntüleme aracı | Tool for viewing saved Wi-Fi passwords</p>
+            <a href="https://github.com/an1lbayram/FiWi" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub'da Gör</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<section id="medium" class="py-5">
+  <div class="container">
+    <h2 class="h3 text-primary mb-4">Medium Yazılarım</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">İlk Açık Kaynak GitHub Projem: DatHex</h3>
+            <p class="card-text text-secondary">TR: İlk GitHub açık kaynak projem DatHex yazımda projeyi ve benim için anlamını detaylıca paylaştım.</p>
+            <a href="https://medium.com/@anl1bayram/i%CC%87lk-github-a%C3%A7%C4%B1k-kaynak-projem-DatHex-60473a3e880c" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Yazıya Git (TR)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">My First Open Source GitHub Project: DatHex</h3>
+            <p class="card-text text-secondary">EN: My first open‑source GitHub project DatHex yazımda proje süreci ve deneyimlerimi paylaştım.</p>
+            <a href="https://medium.com/@anl1bayram/my-first-open-source-github-project-DatHex-b24dee934cf0" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Go to Article (EN)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">DatHex v1.3 – Windows Uygulamalarını Güncellemenin Yeni Yolu</h3>
+            <p class="card-text text-secondary">TR: DatHex v1.3: Windows uygulamalarını güncellemenin yeni yolu başlıklı teknik yazımda versiyon detaylarını paylaştım.</p>
+            <a href="https://medium.com/@anl1bayram/dathex-v1-3-windows-uygulamalar%C4%B1n%C4%B1-g%C3%BCncellemenin-yeni-yolu-2fb5d2381523" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Yazıya Git (TR)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">DatHex v1.3 – A New Way to Update Windows Apps</h3>
+            <p class="card-text text-secondary">EN: DatHex v1.3 – A new way to update Windows apps başlıklı yazımda versiyon güncelleme sürecini anlattım.</p>
+            <a href="https://medium.com/@anl1bayram/dathex-v1-3-a-new-way-to-update-windows-apps-a630f7099c47" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Go to Article (EN)</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Yapay Zekâ Tarafından Yazılan Yazıları Nasıl Anlarız?</h3>
+            <p class="card-text text-secondary">TR: Yapay zekâ tarafından yazılan yazıları nasıl anlarız başlıklı düşünsel yazımda içerik üretimindeki etik ve pratikleri tartıştım.</p>
+            <a href="https://medium.com/@anl1bayram/yapay-zek%C3%A2-taraf%C4%B1ndan-yaz%C4%B1lan-yaz%C4%B1lar%C4%B1-nas%C4%B1l-anlar%C4%B1z-9101edf809ad" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Yazıya Git (TR)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<section id="certificates" class="py-5">
+  <div class="container">
+    <h2 class="h3 text-primary mb-4">Sertifikalarım</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Temel Seviye SQL Eğitimi</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> CSDEV - Ankara Üniversitesi Bilgisayar Bilimleri Geliştirme Topluluğu</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ağustos 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> 96874326598077</p>
+            <a class="certificate-link" href="https://verified.sertifier.com/en/verify/96874326598077/" target="_blank" rel="noopener noreferrer" aria-label="Temel Seviye SQL Eğitimi Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Yapay Zeka Yaz Kampı 2025</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Miuul</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ağustos 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> mjvv2gmdr7</p>
+            <a class="certificate-link" href="https://learning.miuul.com/certificates/mjvv2gmdr7" target="_blank" rel="noopener noreferrer" aria-label="Yapay Zeka Yaz Kampı 2025 Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">C# ile Algoritma ve Programlama 101</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Turkcell Geleceği Yazanlar</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Nisan 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> 3b940ddee8b14eafb2d701f60a725a7a</p>
+            <a class="certificate-link" href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/3b940ddee8b14eafb2d701f60a725a7a" target="_blank" rel="noopener noreferrer" aria-label="C# ile Algoritma ve Programlama 101 Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Cursor ile Yapay Zeka Destekli Yazılım Geliştirme Atölyesi</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Pupilica</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Mart 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Yapay Zekanın İş Dünyasına Etkisi</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Toplum Gönüllüleri Vakfı (TOG)</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Mart 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> 36219526099805</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">React 101</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Turkcell Geleceği Yazanlar</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Şubat 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> f681c780d040424992cb88e638564edd</p>
+            <a class="certificate-link" href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/f681c780d040424992cb88e638564edd" target="_blank" rel="noopener noreferrer" aria-label="React 101 Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Bootstrap Eğitimi</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> İstanbul İşletme Enstitüsü</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ocak 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> 135649211522</p>
+            <a class="certificate-link" href="https://www.iienstitu.com/sertifika-sorgulama/sertifika/135649211522" target="_blank" rel="noopener noreferrer" aria-label="Bootstrap Eğitimi Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Siber Güvenliğe Giriş</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Turkcell Geleceği Yazanlar</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ocak 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> b7f651f6201b4bb1988cc25fdd74b968</p>
+            <a class="certificate-link" href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/b7f651f6201b4bb1988cc25fdd74b968" target="_blank" rel="noopener noreferrer" aria-label="Siber Güvenliğe Giriş Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Veritabanı Saldırıları ve Veritabanı Güvenliği</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> BTK Akademi</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ocak 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> 7rptmPzAq</p>
+            <a class="certificate-link" href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=7rptmPzAq" target="_blank" rel="noopener noreferrer" aria-label="Veritabanı Saldırıları ve Veritabanı Güvenliği Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">İngilizce B2 Eğitimi</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Sorbil</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ocak 2025</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">DDOS / DDOS Saldırıları ve Koruma</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> BTK Akademi</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Aralık 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> Yx1hPYqV8z</p>
+            <a class="certificate-link" href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Yx1hPYqV8z" target="_blank" rel="noopener noreferrer" aria-label="DDOS / DDOS Saldırıları ve Koruma Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Data Science and AI Engineering Mini Bootcamp</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Miuul</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Aralık 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+            <a class="certificate-link" href="https://certificate.miuul.com/anil_bayram" target="_blank" rel="noopener noreferrer" aria-label="Data Science and AI Engineering Mini Bootcamp Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Robotik Kodlama Eğitimi</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Sorbil</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Aralık 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Web Programlama 301: JavaScript</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Turkcell Geleceği Yazanlar</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Aralık 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+            <a class="certificate-link" href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/da10e5dc48644ac68e679d557ac75ac0" target="_blank" rel="noopener noreferrer" aria-label="Web Programlama 301: JavaScript Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Web Tasarım Geliştirme Kursu HTML5 - CSS3 - JavaScript - Bootstrap</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Udemy</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Aralık 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> UC-a4c43573-8be0-4a05-b5c2-3b0aed18508f</p>
+            <a class="certificate-link" href="https://www.udemy.com/certificate/UC-a4c43573-8be0-4a05-b5c2-3b0aed18508f/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" target="_blank" rel="noopener noreferrer" aria-label="Web Tasarım Geliştirme Kursu Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Sıfırdan Web Sitesi Oluşturma 2. Eğitim</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Sorbil</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Eylül 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Web Programlama 101: HTML</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Turkcell Geleceği Yazanlar</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Eylül 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+            <a class="certificate-link" href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/17b70800681141f3b1b2037708d2bf63" target="_blank" rel="noopener noreferrer" aria-label="Web Programlama 101: HTML Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Web Programlama 201: HTML5 & CSS</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Turkcell Geleceği Yazanlar</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Eylül 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+            <a class="certificate-link" href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/59d76a51254b4e0e942d341b417f597f" target="_blank" rel="noopener noreferrer" aria-label="Web Programlama 201: HTML5 & CSS Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Sıfırdan Web Sitesi Oluşturma 1. Eğitim</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Sorbil</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ağustos 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">Finansal Okuryazarlık</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu A.Ş.</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Mayıs 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> d4e5f563-0fe5-4a11-965b-88bf7e284e5c</p>
+            <a class="certificate-link" href="https://finansalokuryazarlik.spl.com.tr/c/d4e5f563-0fe5-4a11-965b-88bf7e284e5c" target="_blank" rel="noopener noreferrer" aria-label="Finansal Okuryazarlık Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">İlkyardım</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> T.C. Sağlık Bakanlığı</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Nisan 2024</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> SB.21160734.00</p>
+            <a class="certificate-link" href="https://ckys.saglik.gov.tr/reports/rwservlet?&cmdkey=YRDMR01&PRM_K_ID=QUCWKWGWHL" target="_blank" rel="noopener noreferrer" aria-label="İlkyardım (Sağlık Bakanlığı) Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">E-Ticarete Giriş</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> BTK Akademi</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Ekim 2023</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> AJaSdMXY0g</p>
+            <a class="certificate-link" href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=AJaSdMXY0g" target="_blank" rel="noopener noreferrer" aria-label="E-Ticarete Giriş Yeterlilik Belgesi">Yeterlilik Belgesi</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm card-reveal">
+          <div class="card-body">
+            <h3 class="h5 card-title">İlkyardım</h3>
+            <p class="card-text text-secondary mb-1"><strong>Kurum:</strong> T.C. Millî Eğitim Bakanlığı</p>
+            <p class="card-text text-secondary mb-1"><strong>Tarih:</strong> Kasım 2018 - Kasım 2023</p>
+            <p class="card-text text-secondary mb-1"><strong>Yeterlilik Kimliği:</strong> 27049320180058314916</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="h3 text-primary mb-4">Yetkinliklerim / Teknik Becerilerim</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="mb-2 fw-semibold">HTML / CSS / Bootstrap</div>
+          <div class="progress" role="progressbar" aria-label="HTML CSS" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-primary skill-fill" data-progress="95%">95%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-2 fw-semibold">JavaScript / React</div>
+          <div class="progress" role="progressbar" aria-label="JS React" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-info skill-fill" data-progress="90%">90%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mt-4 mb-2 fw-semibold">Python / C# / PowerShell</div>
+          <div class="progress" role="progressbar" aria-label="CSharp PowerShell" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-success skill-fill" data-progress="75%">75%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mt-4 mb-2 fw-semibold">Arduino / Embedded</div>
+          <div class="progress" role="progressbar" aria-label="Arduino Embedded" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-warning skill-fill" data-progress="70%">70%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section id="languages" class="py-5">
+  <div class="container">
+    <h2 class="h3 text-primary mb-4 text-center">Diller</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h3 class="h5 card-title mb-2">Türkçe</h3>
+            <p class="text-secondary mb-0">Anadil</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h3 class="h5 card-title mb-2">İngilizce</h3>
+            <p class="text-secondary mb-0">B2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="social" class="py-5 text-center">
+  <div class="container">
+    <h2 class="h3 text-primary mb-4">Sosyal Bağlantılarım</h2>
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+      <a class="btn btn-primary" href="https://github.com/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label="GitHub profilimi ziyaret et">GitHub</a>
+      <a class="btn btn-primary" href="https://medium.com/@anl1bayram" target="_blank" rel="noopener noreferrer" aria-label="Medium yazılarımı oku">Medium</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profilimi görüntüle">LinkedIn</a>
+      <a class="btn btn-primary" href="https://dijital.link/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label="Tüm sosyal bağlantılarım">Tüm Bağlantılar</a>
+    </div>
+    <div class="mt-4">
+      <h3 class="h5 text-secondary mb-3">Sayfayı Paylaş</h3>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <a href="https://twitter.com/intent/tweet?url=https://an1lbayram.github.io&text=Anıl%20Bayram%20-%20Front-End%20Geliştirici%20Portalı" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" aria-label="Twitter'da paylaş">Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://an1lbayram.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" aria-label="Facebook'ta paylaş">Facebook</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://an1lbayram.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" aria-label="LinkedIn'de paylaş">LinkedIn</a>
+        <button id="copy-link" class="btn btn-sm btn-outline-primary" aria-label="Bağlantıyı kopyala">Bağlantıyı Kopyala</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-5 text-center">
+  <div class="container">
+    <h2 class="h3 text-primary mb-3">İletişim</h2>
+    <p class="text-secondary">Email ile iletişime geçebilirsiniz:</p>
+    <p><a class="link-primary" href="mailto:anilbayram48@gmail.com?subject=%C4%B0%C5%9F%20birli%C4%9Fi%20hakk%C4%B1nda&body=Merhaba%2C%0A%0AProjelerinizi%20%C3%A7ok%20be%C4%9Fendim%2C%20birlikte%20%C3%A7al%C4%B1%C5%9Fmak%20i%C3%A7in%20sab%C4%B1rs%C4%B1zlan%C4%B1yorum!%0A%0ASevgilerimle.">anilbayram48@gmail.com</a></p>
+  </div>
+</section>
+
+<footer class="py-3 border-top text-center text-secondary">
+  © <span id="year"></span> Anıl Bayram - Tüm hakları saklıdır.
+  </footer>
+
+<button class="toggle-theme" id="theme-toggle" aria-label="Açık Temaya Geç">●</button>
+<button class="scroll-to-top" id="scroll-to-top" aria-label="Sayfanın Başına Git">▲</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+<script src="script.js" defer></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

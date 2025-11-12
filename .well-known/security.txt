@@ -1,0 +1,3 @@
+Contact: mailto:anilbayram48@gmail.com
+Preferred-Languages: tr, en
+Acknowledgments: https://anilbayram.dev/
