@@ -21,6 +21,11 @@ html {
 #hero p { animation-delay: 0.25s; }
 #hero a.btn { animation-delay: 0.4s; }
 
+#hero .lead {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
 .profile-photo {
   width: 280px;
   height: 280px;
@@ -35,7 +40,7 @@ html {
 }
 
 .profile-photo:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   box-shadow: 0 15px 40px rgba(0, 173, 181, 0.4);
 }
 
@@ -208,6 +213,7 @@ html[data-bs-theme="light"] .nav-links li::before {
   position: relative;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.05rem;
   padding: .35rem 0;
   transition: color .3s ease;
 }
