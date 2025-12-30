@@ -151,3 +151,136 @@ if (copyLinkBtn) {
     });
   });
 }
+
+// Contact Form Handler
+const contactForm = document.getElementById('contact-form');
+const charCount = document.getElementById('char-count');
+const messageInput = document.getElementById('contact-message');
+
+// Character counter
+if (messageInput && charCount) {
+  messageInput.addEventListener('input', () => {
+    const length = messageInput.value.length;
+    charCount.textContent = length;
+    
+    if (length > 1900) {
+      charCount.classList.add('text-warning');
+    } else {
+      charCount.classList.remove('text-warning');
+    }
+  });
+}
+
+// Input sanitization helper
+const sanitizeInput = (input) => {
+  const div = document.createElement('div');
+  div.textContent = input;
+  return div.innerHTML;
+};
+
+// Form validation and submission
+if (contactForm) {
+  const formInputs = contactForm.querySelectorAll('input, textarea');
+  
+  // Real-time validation
+  formInputs.forEach(input => {
+    input.addEventListener('blur', () => {
+      if (input.value.trim() !== '') {
+        if (input.checkValidity()) {
+          input.classList.remove('is-invalid');
+          input.classList.add('is-valid');
+        } else {
+          input.classList.remove('is-valid');
+          input.classList.add('is-invalid');
+        }
+      }
+    });
+    
+    input.addEventListener('input', () => {
+      if (input.classList.contains('is-invalid') || input.classList.contains('is-valid')) {
+        if (input.checkValidity()) {
+          input.classList.remove('is-invalid');
+          input.classList.add('is-valid');
+        } else {
+          input.classList.remove('is-valid');
+          input.classList.add('is-invalid');
+        }
+      }
+    });
+  });
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Validate form
+    let isValid = true;
+    formInputs.forEach(input => {
+      if (!input.checkValidity()) {
+        input.classList.add('is-invalid');
+        input.classList.remove('is-valid');
+        isValid = false;
+      } else {
+        input.classList.add('is-valid');
+        input.classList.remove('is-invalid');
+      }
+    });
+    
+    if (!isValid) {
+      const firstInvalid = contactForm.querySelector('.is-invalid');
+      if (firstInvalid) {
+        firstInvalid.focus();
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+    
+    // Get and sanitize form data
+    const name = sanitizeInput(document.getElementById('contact-name').value.trim());
+    const email = sanitizeInput(document.getElementById('contact-email').value.trim());
+    const subject = sanitizeInput(document.getElementById('contact-subject').value.trim());
+    const message = sanitizeInput(document.getElementById('contact-message').value.trim());
+    
+    // Show loading state
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const buttonText = submitBtn.querySelector('.button-text');
+    const buttonLoader = submitBtn.querySelector('.button-loader');
+    
+    buttonText.classList.add('d-none');
+    buttonLoader.classList.remove('d-none');
+    submitBtn.disabled = true;
+    
+    // Create mailto link
+    const mailtoBody = `Merhaba,\n\nİsim: ${name}\nE-posta: ${email}\n\n${message}\n\n---\nBu mesaj ${window.location.href} adresinden gönderilmiştir.`;
+    const mailtoLink = `mailto:anilbayram48@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
+    
+    // Small delay for UX
+    setTimeout(() => {
+      // Open mailto link
+      window.location.href = mailtoLink;
+      
+      // Reset form after a delay
+      setTimeout(() => {
+        buttonText.classList.remove('d-none');
+        buttonLoader.classList.add('d-none');
+        submitBtn.disabled = false;
+        
+        // Reset form and validation states
+        contactForm.reset();
+        formInputs.forEach(input => {
+          input.classList.remove('is-valid', 'is-invalid');
+        });
+        if (charCount) charCount.textContent = '0';
+        
+        // Show success message
+        const successMsg = document.createElement('div');
+        successMsg.className = 'alert alert-success mt-3';
+        successMsg.innerHTML = '<strong>Başarılı!</strong> E-posta uygulamanız açılacak. Lütfen mesajınızı gönderin.';
+        contactForm.parentElement.insertBefore(successMsg, contactForm.nextSibling);
+        
+        setTimeout(() => {
+          successMsg.remove();
+        }, 5000);
+      }, 1000);
+    }, 500);
+  });
+}
