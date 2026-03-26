@@ -1,4 +1,4 @@
-const CACHE_NAME = 'anilbayram-v1';
+const CACHE_NAME = 'anilbayram-v2';
 const ASSETS = [
   '/',
   '/index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   '/icons/A.ico'
 ];
 
+// Install: Yeni cache oluştur ve dosyaları önbelleğe al
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -19,6 +20,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
+// Activate: Eski cache'leri temizle
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -34,31 +36,32 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+// Fetch: Network First stratejisi — önce sunucudan çek, başarısız olursa önbellekten sun
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') {
     return;
   }
 
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        return response;
-      }
-
-      return fetch(event.request).then((response) => {
-        if (!response || response.status !== 200 || response.type === 'error') {
+    fetch(event.request)
+      .then((response) => {
+        if (!response || response.status !== 200) {
           return response;
         }
 
+        // Başarılı yanıtı önbelleğe kaydet
         const responseToCache = response.clone();
         caches.open(CACHE_NAME).then((cache) => {
           cache.put(event.request, responseToCache);
         });
 
         return response;
-      }).catch(() => {
-        return caches.match('/index.html');
-      });
-    })
+      })
+      .catch(() => {
+        // Ağ başarısız olursa önbellekten sun (offline desteği)
+        return caches.match(event.request).then((cachedResponse) => {
+          return cachedResponse || caches.match('/index.html');
+        });
+      })
   );
 });
