@@ -209,7 +209,7 @@ if (contactForm) {
     });
   });
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     // Validate form
@@ -234,11 +234,11 @@ if (contactForm) {
       return;
     }
     
-    // Get and sanitize form data
-    const name = sanitizeInput(document.getElementById('contact-name').value.trim());
-    const email = sanitizeInput(document.getElementById('contact-email').value.trim());
-    const subject = sanitizeInput(document.getElementById('contact-subject').value.trim());
-    const message = sanitizeInput(document.getElementById('contact-message').value.trim());
+    // Botcheck (Honeypot) validation
+    const botcheck = document.getElementById('botcheck');
+    if (botcheck && botcheck.checked) {
+      return; // Eğer bot doldurduysa formu gizlice reddet
+    }
     
     // Show loading state
     const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -249,38 +249,46 @@ if (contactForm) {
     buttonLoader.classList.remove('d-none');
     submitBtn.disabled = true;
     
-    // Create mailto link
-    const mailtoBody = `Merhaba,\n\nİsim: ${name}\nE-posta: ${email}\n\n${message}\n\n---\nBu mesaj ${window.location.href} adresinden gönderilmiştir.`;
-    const mailtoLink = `mailto:anilbayram48@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
-    
-    // Small delay for UX
-    setTimeout(() => {
-      // Open mailto link
-      window.location.href = mailtoLink;
+    try {
+      const formData = new FormData(contactForm);
       
-      // Reset form after a delay
-      setTimeout(() => {
-        buttonText.classList.remove('d-none');
-        buttonLoader.classList.add('d-none');
-        submitBtn.disabled = false;
-        
-        // Reset form and validation states
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
         contactForm.reset();
         formInputs.forEach(input => {
           input.classList.remove('is-valid', 'is-invalid');
         });
         if (charCount) charCount.textContent = '0';
         
-        // Show success message
         const successMsg = document.createElement('div');
         successMsg.className = 'alert alert-success mt-3';
-        successMsg.innerHTML = '<strong>Başarılı!</strong> E-posta uygulamanız açılacak. Lütfen mesajınızı gönderin.';
+        successMsg.innerHTML = '<strong>Başarılı!</strong> Mesajınız başarıyla gönderildi.';
         contactForm.parentElement.insertBefore(successMsg, contactForm.nextSibling);
         
-        setTimeout(() => {
-          successMsg.remove();
-        }, 5000);
-      }, 1000);
-    }, 500);
+        setTimeout(() => successMsg.remove(), 5000);
+      } else {
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'alert alert-danger mt-3';
+        errorMsg.innerHTML = '<strong>Hata!</strong> ' + (data.message || 'Mesaj gönderilemedi.');
+        contactForm.parentElement.insertBefore(errorMsg, contactForm.nextSibling);
+        setTimeout(() => errorMsg.remove(), 5000);
+      }
+    } catch (error) {
+      const errorMsg = document.createElement('div');
+      errorMsg.className = 'alert alert-danger mt-3';
+      errorMsg.innerHTML = '<strong>Hata!</strong> Ağ hatası oluştu, lütfen daha sonra tekrar deneyin.';
+      contactForm.parentElement.insertBefore(errorMsg, contactForm.nextSibling);
+      setTimeout(() => errorMsg.remove(), 5000);
+    } finally {
+      buttonText.classList.remove('d-none');
+      buttonLoader.classList.add('d-none');
+      submitBtn.disabled = false;
+    }
   });
 }
