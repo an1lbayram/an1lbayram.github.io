@@ -248,7 +248,7 @@ html[data-bs-theme="dark"] .certificate-link:hover { border-color: rgba(255,255,
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #212529;
   color: #f8f9fa;
   border: none;
