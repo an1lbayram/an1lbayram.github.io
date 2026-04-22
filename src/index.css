@@ -239,41 +239,6 @@ html[data-bs-theme="dark"] .certificate-link:hover { border-color: rgba(255,255,
 }
 .toggle-theme:hover { transform: scale(1.06); background: var(--accent-hover); }
 
-/* Scroll to Top Button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  z-index: 1040;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease-in-out;
-  background-color: #212529;
-  color: #f8f9fa;
-  border: none;
-  border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.scroll-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-to-top:hover {
-  transform: scale(1.06);
-  background-color: var(--accent);
-  color: #fff;
-}
-
 html[data-bs-theme="dark"] .scroll-to-top {
   background-color: #f8f9fa;
   color: #212529;
