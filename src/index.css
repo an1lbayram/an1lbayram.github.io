@@ -320,3 +320,18 @@ html[data-bs-theme="dark"] .contact-form textarea:focus {
 @keyframes fadeInUp {
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+  .toggle-theme {
+    width: 46px;
+    height: 46px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .scroll-to-top {
+    width: 46px;
+    height: 46px;
+    bottom: 74px;
+    right: 16px;
+  }
+}
