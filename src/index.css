@@ -13,6 +13,11 @@ html {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 .profile-photo-wrapper {
@@ -333,5 +338,11 @@ html[data-bs-theme="dark"] .contact-form textarea:focus {
     height: 46px;
     bottom: 74px;
     right: 16px;
+  }
+  
+  /* Mobilde IntersectionObserver çalışmazsa sitenin görünmez (.opacity-0) kalmasını engeller */
+  .opacity-0 {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

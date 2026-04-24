@@ -21,6 +21,17 @@ export default defineConfig({
             src: 'icons/A.ico',
             sizes: 'any',
             type: 'image/x-icon',
+          },
+          {
+            src: 'images/an1lbayram_light.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any maskable'
+          },
+          {
+            src: 'images/an1lbayram_night.png',
+            sizes: '512x512',
+            type: 'image/png',
             purpose: 'any maskable'
           }
         ]
