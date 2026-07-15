@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [charCount, setCharCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -64,9 +66,9 @@ const Contact = () => {
       <div className={`container ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
         <div className="row justify-content-center">
           <div className="col-lg-8">
-            <h2 className="h3 text-primary mb-3 text-center">İletişim</h2>
+            <h2 className="h3 text-primary mb-3 text-center">{t('contact-title')}</h2>
             <p className="text-secondary text-center mb-4">
-              Benimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.
+              {t('contact-desc')}
             </p>
 
             <form id="contact-form" className="contact-form needs-validation" noValidate onSubmit={handleSubmit}>
@@ -74,27 +76,27 @@ const Contact = () => {
               <input type="checkbox" name="botcheck" id="botcheck" className="hidden" style={{ display: 'none' }} />
 
               <div className="mb-3">
-                <label htmlFor="contact-name" className="form-label">İsim <span className="text-danger">*</span></label>
-                <input type="text" className="form-control" id="contact-name" name="name" placeholder="Adınız Soyadınız" required minLength="2" maxLength="100" />
-                <div className="invalid-feedback">Lütfen isminizi girin (en az 2 karakter).</div>
+                <label htmlFor="contact-name" className="form-label">{t('contact-name')} <span className="text-danger">*</span></label>
+                <input type="text" className="form-control" id="contact-name" name="name" placeholder={t('contact-name-ph')} required minLength="2" maxLength="100" />
+                <div className="invalid-feedback">{t('contact-name-err')}</div>
               </div>
 
               <div className="mb-3">
-                <label htmlFor="contact-email" className="form-label">E-posta <span className="text-danger">*</span></label>
-                <input type="email" className="form-control" id="contact-email" name="email" placeholder="ornek@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                <div className="invalid-feedback">Lütfen geçerli bir e-posta adresi girin.</div>
+                <label htmlFor="contact-email" className="form-label">{t('contact-email')} <span className="text-danger">*</span></label>
+                <input type="email" className="form-control" id="contact-email" name="email" placeholder={t('contact-email-ph')} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                <div className="invalid-feedback">{t('contact-email-err')}</div>
               </div>
 
               <div className="mb-3">
-                <label htmlFor="contact-subject" className="form-label">Konu <span className="text-danger">*</span></label>
-                <input type="text" className="form-control" id="contact-subject" name="subject" placeholder="Mesajınızın konusu" required minLength="3" maxLength="200" />
-                <div className="invalid-feedback">Lütfen bir konu başlığı girin (en az 3 karakter).</div>
+                <label htmlFor="contact-subject" className="form-label">{t('contact-subject')} <span className="text-danger">*</span></label>
+                <input type="text" className="form-control" id="contact-subject" name="subject" placeholder={t('contact-subject-ph')} required minLength="3" maxLength="200" />
+                <div className="invalid-feedback">{t('contact-subject-err')}</div>
               </div>
 
               <div className="mb-4">
-                <label htmlFor="contact-message" className="form-label">Mesaj <span className="text-danger">*</span></label>
-                <textarea className="form-control" id="contact-message" name="message" rows="6" placeholder="Mesajınızı buraya yazın..." required minLength="10" maxLength="2000" onChange={handleMessageChange}></textarea>
-                <div className="invalid-feedback">Lütfen mesajınızı girin (en az 10 karakter).</div>
+                <label htmlFor="contact-message" className="form-label">{t('contact-msg')} <span className="text-danger">*</span></label>
+                <textarea className="form-control" id="contact-message" name="message" rows="6" placeholder={t('contact-msg-ph')} required minLength="10" maxLength="2000" onChange={handleMessageChange}></textarea>
+                <div className="invalid-feedback">{t('contact-msg-err')}</div>
                 <div className="form-text text-end">
                   <span className={charCount > 1900 ? 'text-warning' : ''}>{charCount}</span> / 2000 karakter
                 </div>
@@ -103,11 +105,11 @@ const Contact = () => {
               <div className="text-center">
                 <button type="submit" className="btn btn-primary btn-lg px-5" disabled={isLoading}>
                   {!isLoading ? (
-                    <span>Gönder</span>
+                    <span>{t('contact-send')}</span>
                   ) : (
                     <>
                       <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                      Gönderiliyor...
+                      {t('contact-sending')}
                     </>
                   )}
                 </button>
@@ -126,8 +128,8 @@ const Contact = () => {
             )}
 
             <div className="mt-4 text-center">
-              <p className="text-secondary mb-2">veya doğrudan e-posta gönderin:</p>
-              <p><a className="link-primary text-decoration-none" href="mailto:anilbayram48@gmail.com">anilbayram48@gmail.com</a></p>
+              <p className="text-secondary mb-2">{t('contact-or')}</p>
+              <p><a className="link-primary text-decoration-none" href="mailto:anilbayram48@gmail.com?subject=Proje%20Ortakl%C4%B1%C4%9F%C4%B1%20Hakk%C4%B1nda&body=Merhaba%20An%C4%B1l%20Bey!%0A%0ASizinle%20bir%20proje%20ortakl%C4%B1%C4%9F%C4%B1%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%0A%0ASayg%C4%B1lar%C4%B1mla.%0A%0A%0Ahttps%3A%2F%2Fan1lbayram-github-io.vercel.app%2F">anilbayram48@gmail.com</a></p>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { certificates } from '../data/certificates';
+import { useLanguage } from '../context/LanguageContext';
 
 const CertificateCard = ({ cert }) => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
@@ -38,6 +39,7 @@ const CertificateCard = ({ cert }) => {
 };
 
 const Certificates = () => {
+  const { t } = useLanguage();
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
   return (

@@ -1,8 +1,8 @@
 :root {
-  --accent: #00adb5;
-  --accent-hover: #028f98;
-  --bs-primary: #00adb5;
-  --bs-primary-rgb: 0, 173, 181;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --bs-primary: #4f46e5;
+  --bs-primary-rgb: 79, 70, 229;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -21,6 +21,7 @@ body {
 }
 
 .profile-photo-wrapper {
+  transition: transform 0.3s ease;
   position: relative;
   display: inline-block;
   width: 280px;
@@ -40,7 +41,10 @@ body {
   left: 0;
 }
 
-.profile-photo:hover {
+.profile-photo-wrapper:hover {
+  transform: scale(1.05);
+}
+.profile-photo-wrapper:hover .profile-photo {
   transform: scale(1.15);
   box-shadow: 0 15px 40px rgba(var(--bs-primary-rgb), 0.4);
 }

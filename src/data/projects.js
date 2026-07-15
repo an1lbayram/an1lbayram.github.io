@@ -1,44 +1,99 @@
 export const projects = [
   {
     id: 1,
-    title: "WinKam",
-    description: "An all-in-one Windows optimization tool for safe cleanup, system repair, and one-click backup creation.",
-    url: "https://github.com/an1lbayram/WinKam",
-    repo: "WinKam"
+    title: "DatHex V2",
+    descKey: "proj-dathex2",
+    url: "https://github.com/an1lbayram/DatHex-V2",
+    category: "web security",
+    tags: [
+      { name: "React (v19)", class: "bg-primary" },
+      { name: "Vite", class: "bg-info text-dark" },
+      { name: "Node.js / Express", class: "bg-success" },
+      { name: "WebSockets", class: "bg-secondary" }
+    ]
   },
   {
     id: 2,
-    title: "Kapatika",
-    description: "Set a time. Walk away. Let Kapatika handle the shutdown.",
-    url: "https://github.com/an1lbayram/Kapatika",
-    repo: "Kapatika"
+    title: "LS Security Portal",
+    descKey: "proj-ls",
+    url: null,
+    isPrivate: true,
+    category: "security web",
+    tags: [
+      { name: "JS", class: "bg-warning text-dark" },
+      { name: "CyberSecurity", class: "bg-dark text-white" }
+    ]
   },
   {
     id: 3,
     title: "DevPulse",
-    description: "A modern Windows desktop app that automatically detects, checks, and safely updates your dev tools with a single click.",
+    descKey: "proj-devpulse",
     url: "https://github.com/an1lbayram/DevPulse",
-    repo: "DevPulse"
+    category: "desktop",
+    tags: [
+      { name: "Electron", class: "bg-info text-dark" },
+      { name: "React (v19)", class: "bg-primary" },
+      { name: "Node.js", class: "bg-success" },
+      { name: "JS", class: "bg-warning text-dark" }
+    ]
   },
   {
     id: 4,
-    title: "Anıl Bayram - Portfolio Website",
-    description: "Anıl Bayram - Portfolio Website",
-    url: "https://github.com/an1lbayram/an1lbayram.github.io",
-    repo: "an1lbayram.github.io"
+    title: "WinKam",
+    descKey: "proj-winkam",
+    url: "https://github.com/an1lbayram/WinKam",
+    category: "desktop",
+    tags: [
+      { name: "Python", class: "bg-warning text-dark" },
+      { name: "Setuptools", class: "bg-secondary" }
+    ]
   },
   {
     id: 5,
-    title: "FiWi",
-    description: "Tool for viewing saved Wi-Fi passwords",
-    url: "https://github.com/an1lbayram/FiWi",
-    repo: "FiWi"
+    title: "Kapatika",
+    descKey: "proj-kapatika",
+    url: "https://github.com/an1lbayram/Kapatika",
+    category: "desktop",
+    tags: [
+      { name: "TypeScript", class: "bg-secondary" },
+      { name: "React (v19)", class: "bg-primary" },
+      { name: "Electron", class: "bg-info text-dark" },
+      { name: "Node.js", class: "bg-success" }
+    ]
   },
   {
     id: 6,
+    title: "an1lbayram.github.io",
+    descKey: "proj-portfolio",
+    url: "https://github.com/an1lbayram/an1lbayram.github.io",
+    category: "web",
+    tags: [
+      { name: "React (v18)", class: "bg-primary" },
+      { name: "Vite", class: "bg-info text-dark" },
+      { name: "JS/HTML/CSS", class: "bg-warning text-dark" },
+      { name: "PWA", class: "bg-success" }
+    ]
+  },
+  {
+    id: 7,
+    title: "FiWi",
+    descKey: "proj-fiwi",
+    url: "https://github.com/an1lbayram/FiWi",
+    category: "security desktop",
+    tags: [
+      { name: "Python", class: "bg-warning text-dark" },
+      { name: "Security", class: "bg-dark text-white" }
+    ]
+  },
+  {
+    id: 8,
     title: "DatHex",
-    description: "Winget-based mass software updater for Windows systems",
+    descKey: "proj-dathex",
     url: "https://github.com/an1lbayram/DatHex",
-    repo: "DatHex"
+    category: "desktop",
+    tags: [
+      { name: "Batch", class: "bg-secondary" },
+      { name: "Winget", class: "bg-primary" }
+    ]
   }
 ];

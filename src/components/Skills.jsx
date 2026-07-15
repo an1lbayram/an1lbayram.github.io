@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { skills, languages } from '../data/skills';
+import { useLanguage } from '../context/LanguageContext';
 
 const Skills = () => {
+  const { t } = useLanguage();
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.2 });
   const [animated, setAnimated] = useState(false);
 
@@ -16,7 +18,7 @@ const Skills = () => {
     <>
       <section id="skills" className="py-5" ref={ref}>
         <div className={`container ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <h2 className="h3 text-primary mb-4">Yetkinliklerim / Teknik Becerilerim</h2>
+          <h2 className="h3 text-primary mb-4">{t('skills-title')}</h2>
           <div className="row g-4">
             {skills.map((skill) => (
               <div className="col-md-6" key={skill.id}>
@@ -44,14 +46,14 @@ const Skills = () => {
 
       <section id="languages" className="py-5">
         <div className="container">
-          <h2 className="h3 text-primary mb-4 text-center">Diller</h2>
+          <h2 className="h3 text-primary mb-4 text-center">{t('langs-title')}</h2>
           <div className="row justify-content-center">
             {languages.map((lang) => (
               <div className="col-md-6 col-lg-4" key={lang.id}>
                 <div className="card shadow-sm">
                   <div className="card-body text-center">
-                    <h3 className="h5 card-title mb-2">{lang.name}</h3>
-                    <p className="text-secondary mb-0">{lang.level}</p>
+                    <h3 className="h5 card-title mb-2">{lang.nameKey ? t(lang.nameKey) : lang.name}</h3>
+                    <p className="text-secondary mb-0">{lang.levelKey ? (lang.levelKey === 'B2' ? 'B2' : t(lang.levelKey)) : lang.level}</p>
                   </div>
                 </div>
               </div>

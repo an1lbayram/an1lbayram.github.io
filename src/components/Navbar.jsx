@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -42,13 +44,22 @@ const Navbar = () => {
           </div>
 
           <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-            <li><a href="#hero" onClick={closeMenu}>Ana Sayfa</a></li>
-            <li><a href="#about" onClick={closeMenu}>Hakkımda</a></li>
-            <li><a href="#projects" onClick={closeMenu}>Projeler</a></li>
-            <li><a href="#medium" onClick={closeMenu}>Medium</a></li>
-            <li><a href="#certificates" onClick={closeMenu}>Sertifikalar</a></li>
-            <li><a href="#skills" onClick={closeMenu}>Beceriler</a></li>
-            <li><a href="#contact" onClick={closeMenu}>İletişim</a></li>
+            <li><a href="#hero" onClick={closeMenu}>{t('nav-home')}</a></li>
+            <li><a href="#about" onClick={closeMenu}>{t('nav-about')}</a></li>
+            <li><a href="#projects" onClick={closeMenu}>{t('nav-projects')}</a></li>
+            <li><a href="#medium" onClick={closeMenu}>{t('nav-medium')}</a></li>
+            <li><a href="#certificates" onClick={closeMenu}>{t('nav-certs')}</a></li>
+            <li><a href="#skills" onClick={closeMenu}>{t('nav-skills')}</a></li>
+            <li><a href="#contact" onClick={closeMenu}>{t('nav-contact')}</a></li>
+            <li>
+              <button 
+                onClick={toggleLanguage} 
+                className="btn btn-sm btn-outline-primary ms-lg-3 mt-2 mt-lg-0" 
+                style={{ fontWeight: 600, padding: '4px 12px', borderRadius: '6px' }}
+              >
+                {language === 'tr' ? 'EN | TR' : 'TR | EN'}
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
