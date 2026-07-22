@@ -48,14 +48,13 @@ const Footer = () => {
             <a className="btn btn-primary" href="https://www.linkedin.com/in/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-linkedin-aria')}>LinkedIn</a>
             <a className="btn btn-primary" href="https://www.instagram.com/_an1lbayram_" target="_blank" rel="noopener noreferrer" aria-label={t('social-instagram-aria')}>Instagram</a>
             <a className="btn btn-primary" href="https://ig.me/m/_an1lbayram_?text=Merhaba%2C%20%20Projelerinizi%20%C3%A7ok%20be%C4%9Fendim%2C%20birlikte%20%C3%A7al%C4%B1%C5%9Fmak%20i%C3%A7in%20sab%C4%B1rs%C4%B1zlan%C4%B1yorum!%20%20Sevgilerimle.%20" target="_blank" rel="noopener noreferrer" aria-label={t('social-dm-aria')}>{t('social-dm')}</a>
-            <a className="btn btn-primary" href="https://dijital.link/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-all-aria')}>{t("social-all")}</a>
           </div>
           <div className="mt-4">
             <h3 className="h5 text-secondary mb-3">{t("social-share")}</h3>
             <div className="d-flex flex-wrap gap-2 justify-content-center">
-              <a href="https://twitter.com/intent/tweet?url=https://an1lbayram.github.io&text=Anıl%20Bayram%20-%20Front-End%20Geliştirici%20Portalı" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary" aria-label={t('social-twitter-aria')}>Twitter</a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://an1lbayram.github.io" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary" aria-label={t('social-facebook-aria')}>Facebook</a>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://an1lbayram.github.io" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary" aria-label={t('social-linkedin-share-aria')}>LinkedIn</a>
+              <a href="https://x.com/intent/post?url=https://an1lbayram-github-io.vercel.app&text=Anıl%20Bayram%20-%20Front-End%20Geliştirici%20Portalı" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary" aria-label={t('social-twitter-aria')}>X (Twitter)</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://an1lbayram-github-io.vercel.app" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary" aria-label={t('social-facebook-aria')}>Facebook</a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://an1lbayram-github-io.vercel.app" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary" aria-label={t('social-linkedin-share-aria')}>LinkedIn</a>
               <button className="btn btn-sm btn-outline-primary" onClick={handleCopy} aria-label={t('social-copy-aria')}>{copyText}</button>
             </div>
           </div>
