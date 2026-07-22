@@ -5,6 +5,7 @@ export const projects = [
     descKey: "proj-dathex2",
     url: "https://github.com/an1lbayram/DatHex-V2",
     category: "web security",
+    customDate: "2026-07-01",
     tags: [
       { name: "React (v19)", class: "bg-primary" },
       { name: "Vite", class: "bg-info text-dark" },
@@ -19,6 +20,7 @@ export const projects = [
     url: null,
     isPrivate: true,
     category: "security web",
+    customDate: "2026-05-01",
     tags: [
       { name: "JS", class: "bg-warning text-dark" },
       { name: "CyberSecurity", class: "bg-dark text-white" }
@@ -30,6 +32,7 @@ export const projects = [
     descKey: "proj-devpulse",
     url: "https://github.com/an1lbayram/DevPulse",
     category: "desktop",
+    customDate: "2026-04-10",
     tags: [
       { name: "Electron", class: "bg-info text-dark" },
       { name: "React (v19)", class: "bg-primary" },
@@ -43,6 +46,7 @@ export const projects = [
     descKey: "proj-winkam",
     url: "https://github.com/an1lbayram/WinKam",
     category: "desktop",
+    customDate: "2026-04-05",
     tags: [
       { name: "Python", class: "bg-warning text-dark" },
       { name: "Setuptools", class: "bg-secondary" }
@@ -54,6 +58,7 @@ export const projects = [
     descKey: "proj-kapatika",
     url: "https://github.com/an1lbayram/Kapatika",
     category: "desktop",
+    customDate: "2026-04-01",
     tags: [
       { name: "TypeScript", class: "bg-secondary" },
       { name: "React (v19)", class: "bg-primary" },
@@ -67,6 +72,7 @@ export const projects = [
     descKey: "proj-portfolio",
     url: "https://github.com/an1lbayram/an1lbayram.github.io",
     category: "web",
+    customDate: "2026-03-01",
     tags: [
       { name: "React (v18)", class: "bg-primary" },
       { name: "Vite", class: "bg-info text-dark" },
@@ -80,6 +86,7 @@ export const projects = [
     descKey: "proj-fiwi",
     url: "https://github.com/an1lbayram/FiWi",
     category: "security desktop",
+    customDate: "2025-10-01",
     tags: [
       { name: "Python", class: "bg-warning text-dark" },
       { name: "Security", class: "bg-dark text-white" }
@@ -91,6 +98,7 @@ export const projects = [
     descKey: "proj-dathex",
     url: "https://github.com/an1lbayram/DatHex",
     category: "desktop",
+    customDate: "2025-08-01",
     tags: [
       { name: "Batch", class: "bg-secondary" },
       { name: "Winget", class: "bg-primary" }

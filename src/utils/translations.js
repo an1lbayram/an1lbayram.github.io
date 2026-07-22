@@ -19,6 +19,13 @@ export const translations = {
     
     'about-title': 'Hakkımda',
     'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. HTML, CSS, JavaScript, TypeScript ve React gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; projelerime Node.js, Express, Vite, Electron, WebSockets, Bootstrap ve PWA gibi güncel teknolojileri de entegre ediyorum. Açık kaynak dünyasına katkı sağlamaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum. Sadece web arayüzleri geliştirmekle kalmıyor; Python, C#, PowerShell, Batch (CMD) ve Arduino gibi farklı disiplinlere dokunarak çok yönlü bir mühendislik bakış açısı kazanmayı hedefliyorum.',
+    'about-personal': 'Kişisel Bilgiler',
+    'about-edu': 'Eğitim',
+    'about-license': 'Ehliyet',
+    'about-dob': 'Doğum Tarihi',
+    'edu-1': 'İstanbul Üniversitesi | Bilgisayar Programcılığı - Mezuniyet: Devam Ediyor',
+    'edu-2': 'Muğla Sıtkı Koçman Üni. | Acil Durum ve Afet Yönetimi - Mezuniyet: 24.06.2020',
+    'edu-3': 'Melsa Sağlık Meslek Lisesi | Acil Tıp Teknisyenliği - Mezuniyet: 09.06.2017',
     
     'projects-title': 'Projelerim',
     'filter-all': 'Tümü',
@@ -179,6 +186,13 @@ export const translations = {
     
     'about-title': 'About Me',
     'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End Developer. While designing user-centric interfaces with modern web technologies such as HTML, CSS, JavaScript, TypeScript, and React; I also integrate up-to-date technologies like Node.js, Express, Vite, Electron, WebSockets, Bootstrap, and PWA into my projects. I enjoy contributing to the open-source world and sharing my technical experiences on Medium. Not only developing web interfaces, but I also aim to gain a versatile engineering perspective by touching upon different disciplines like Python, C#, PowerShell, Batch (CMD), and Arduino.',
+    'about-personal': 'Personal Information',
+    'about-edu': 'Education',
+    'about-license': 'Driving License',
+    'about-dob': 'Date of Birth',
+    'edu-1': 'Istanbul University | Computer Programming - Graduation: Ongoing',
+    'edu-2': 'Mugla Sitki Kocman Univ. | Emergency & Disaster Mng. - Graduation: 24.06.2020',
+    'edu-3': 'Melsa Vocational Health High School | Emergency Med. Tech - Graduation: 09.06.2017',
     
     'projects-title': 'My Projects',
     'filter-all': 'All',

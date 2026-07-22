@@ -14,6 +14,7 @@ const Certificates = React.lazy(() => import('./components/Certificates'));
 const Skills = React.lazy(() => import('./components/Skills'));
 const Contact = React.lazy(() => import('./components/Contact'));
 const Footer = React.lazy(() => import('./components/Footer'));
+const CV = React.lazy(() => import('./components/CV'));
 
 // Full page loader fallback for suspense
 const PageLoader = () => (
@@ -26,9 +27,26 @@ const PageLoader = () => (
 
 function App() {
   const [theme, setTheme] = useState('dark');
+  const [showCV, setShowCV] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
+    // Check initial hash for CV
+    if (window.location.hash === '#cv') {
+      setShowCV(true);
+    }
+
+    // Listen for hash changes
+    const handleHashChange = () => {
+      if (window.location.hash === '#cv') {
+        setShowCV(true);
+      } else {
+        setShowCV(false);
+      }
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+
     const savedTheme = localStorage.getItem('color-mode');
     if (savedTheme) {
       setTheme(savedTheme);
@@ -36,6 +54,8 @@ function App() {
     } else {
       document.documentElement.setAttribute('data-bs-theme', 'dark');
     }
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   const toggleTheme = () => {
@@ -47,26 +67,37 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <Navbar />
-      <Hero />
-      <Suspense fallback={<PageLoader />}>
-        <About />
-        <Projects />
-        <Timeline />
-        <Medium />
-        <Certificates />
-        <Skills />
-        <Contact />
-        <Footer />
-      </Suspense>
-      
-      <button 
-        className="toggle-theme" 
-        onClick={toggleTheme}
-        aria-label={theme === 'dark' ? t('theme-light') : t('theme-dark')}
-      >
-        {theme === 'dark' ? '🌞' : '🌙'}
-      </button>
+      {showCV ? (
+        <Suspense fallback={<PageLoader />}>
+          <CV onClose={() => {
+            setShowCV(false);
+            window.location.hash = ''; // Clear hash
+          }} />
+        </Suspense>
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <Suspense fallback={<PageLoader />}>
+            <About />
+            <Projects />
+            <Timeline />
+            <Medium />
+            <Certificates />
+            <Skills />
+            <Contact />
+            <Footer />
+          </Suspense>
+          
+          <button 
+            className="toggle-theme" 
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? t('theme-light') : t('theme-dark')}
+          >
+            {theme === 'dark' ? '🌞' : '🌙'}
+          </button>
+        </>
+      )}
       <Analytics />
     </ErrorBoundary>
   );

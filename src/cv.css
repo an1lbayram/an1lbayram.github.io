@@ -1,0 +1,175 @@
+/* CV Specific Styles */
+
+/* Print settings */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cv-container, #cv-container * {
+    visibility: visible;
+  }
+  #cv-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Reset some bootstrap properties that might break print */
+  html, body {
+    height: 100%;
+    overflow: visible;
+    background-color: white !important;
+  }
+  
+  /* Make all text black for print */
+  #cv-container {
+    color: black !important;
+  }
+  
+  /* Force background colors */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Avoid page breaks inside sections */
+  .cv-section {
+    page-break-inside: avoid;
+  }
+  .cv-item {
+    page-break-inside: avoid;
+  }
+}
+
+/* Web View Styles */
+.cv-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: var(--bs-body-bg);
+  overflow-y: auto;
+}
+
+.cv-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  display: flex;
+  gap: 10px;
+}
+
+#cv-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  color: #333;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+html[data-bs-theme="dark"] #cv-container {
+  /* In dark mode, CV still looks white like paper, but shadow is darker */
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #00adb5;
+  padding-bottom: 20px;
+}
+
+.cv-name {
+  color: #00adb5;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.cv-role {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.cv-contact {
+  font-size: 0.9rem;
+  color: #666;
+}
+.cv-contact span {
+  margin: 0 8px;
+}
+
+.cv-section-title {
+  color: #00adb5;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.cv-text {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: justify;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 600px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+  #cv-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+.cv-item-title {
+  font-weight: 700;
+  color: #222;
+}
+
+.cv-item-subtitle {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.cv-item-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.cv-bullet-list {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.cv-bullet-list li {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 4px;
+}

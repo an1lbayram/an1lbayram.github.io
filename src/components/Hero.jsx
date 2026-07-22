@@ -35,7 +35,7 @@ const Hero = () => {
           <a href="#about" className="btn btn-primary btn-lg px-4" aria-label={t('hero-btn')}>
             {t('hero-btn')}
           </a>
-          <a href="/Anil_Bayram_CV.pdf" download="Anil_Bayram_CV.pdf" className="btn btn-outline-primary btn-lg px-4" aria-label={t('hero-cv-btn')}>
+          <a href="#cv" className="btn btn-outline-primary btn-lg px-4" aria-label={t('hero-cv-btn')}>
             {t('hero-cv-btn') || 'CV İndir'}
           </a>
         </div>

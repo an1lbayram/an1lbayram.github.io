@@ -9,19 +9,13 @@ const Timeline = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
   const { stats } = useGitHubStats();
 
-  // Combine local project data with GitHub stats to order by creation date
+  // Use customDate for timeline sorting
   const timelineItems = projects
-    .filter(p => !p.isPrivate && p.url && p.url.includes('github.com'))
     .map(p => {
-      const repoName = p.url.split('/').pop();
-      const repoStats = stats ? stats[repoName] : null;
-      
-      // Default to 2024 if can't find in stats
-      const date = repoStats ? new Date(repoStats.created_at) : new Date('2024-01-01');
+      const date = new Date(p.customDate);
       
       return {
         ...p,
-        repoStats,
         date,
         year: date.getFullYear(),
         month: date.toLocaleString('default', { month: 'short' })
@@ -56,9 +50,13 @@ const Timeline = () => {
                       </span>
                     ))}
                   </div>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary">
-                    {t('btn-github')} {item.repoStats && `(⭐ ${item.repoStats.stars})`}
-                  </a>
+                  {item.isPrivate ? (
+                     <span className="badge bg-secondary text-white py-2 px-3">{t('btn-private')}</span>
+                  ) : (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-primary">
+                      {t('btn-github')}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

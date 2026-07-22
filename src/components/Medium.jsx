@@ -56,8 +56,21 @@ const Medium = () => {
   let displayArticles = [];
   
   if (!loading && feedArticles && feedArticles.length > 0) {
-    displayArticles = feedArticles.slice(0, 6); // Show latest 6
+    // Filter RSS feed by language
+    const langFiltered = feedArticles.filter(article => {
+      const isEnglishTitle = article.title.includes('(EN)');
+      if (language === 'en') {
+        return isEnglishTitle;
+      } else {
+        return !isEnglishTitle;
+      }
+    });
+    
+    // Fallback to un-filtered if no articles match (shouldn't happen)
+    const finalFeed = langFiltered.length > 0 ? langFiltered : feedArticles;
+    displayArticles = finalFeed.slice(0, 6); // Show latest 6
   } else if (!loading) {
+    // Local fallback
     displayArticles = mediumArticles.filter(article => article.lang === (language === 'tr' ? 'TR' : 'EN'));
   }
 
