@@ -61,6 +61,7 @@ const CV = ({ onClose }) => {
               <span>E-Mail: anilbayram48@gmail.com</span>
               <span>GitHub: github.com/an1lbayram</span>
               <span>LinkedIn: linkedin.com/in/an1lbayram</span>
+              <span>Website: https://an1lbayram-github-io.vercel.app/</span>
             </div>
           </div>
         </div>
