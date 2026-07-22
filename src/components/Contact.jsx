@@ -81,7 +81,7 @@ const Contact = () => {
             <div className="card shadow-sm border-0">
               <div className="card-body p-4 p-md-5">
                 <form className="contact-form needs-validation" noValidate onSubmit={handleSubmit}>
-                  <input type="hidden" name="access_key" value="09bfafcc-831d-4074-a0ba-06d9a1841399" />
+                  <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "cf4f69bd-a28d-448c-aef3-edd7c46da5ad"} />
                   <input type="hidden" name="subject" value="Portfolyo İletişim Formu" />
                   <input type="hidden" name="from_name" value="Anıl Bayram Portfolio" />
                   
@@ -141,7 +141,7 @@ const Contact = () => {
 
                 <div className="text-center mt-5 pt-4 border-top">
                   <p className="text-secondary mb-2">{t('contact-or')}</p>
-                  <a href="mailto:anilbayram48@gmail.com" className="h5 text-primary text-decoration-none">anilbayram48@gmail.com</a>
+                  <a href="mailto:anilbayram48@gmail.com?subject=Proje%20Ortakl%C4%B1%C4%9F%C4%B1%20Hakk%C4%B1nda&body=Merhaba%20An%C4%B1l%20Bey!%0A%0ASizinle%20bir%20proje%20ortakl%C4%B1%C4%9F%C4%B1%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.%0A%0ASayg%C4%B1lar%C4%B1mla.%0A%0A%0A(Bu%20mail%20https%3A%2F%2Fan1lbayram-github-io.vercel.app%20sitesi%20%C3%BCzerinden%20g%C3%B6nderilmi%C5%9Ftir.)" className="h5 text-primary text-decoration-none">anilbayram48@gmail.com</a>
                 </div>
               </div>
             </div>
