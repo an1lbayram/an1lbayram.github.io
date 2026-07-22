@@ -175,7 +175,7 @@ export const translations = {
     'cv-projects-title': 'Öne Çıkan Projeler',
     'cv-certs-title': 'Kurslar & Sertifikalar',
     'cv-tech-label': 'Teknolojiler',
-    'cv-footer-text': 'Bu özgeçmiş otomatik olarak portföy canlı verilerinden oluşturulmuştur.',
+    'cv-footer-text': 'Bu özgeçmiş https://an1lbayram-github-io.vercel.app websitesinden indirilmiştir.',
     'cv-known-langs': 'Bilinen Diller',
     'cv-dob': 'Doğum Tarihi',
     'cv-license': 'Ehliyet'
@@ -356,7 +356,7 @@ export const translations = {
     'cv-projects-title': 'Featured Projects',
     'cv-certs-title': 'Courses & Certifications',
     'cv-tech-label': 'Technologies',
-    'cv-footer-text': 'This resume is automatically generated from portfolio live data.',
+    'cv-footer-text': 'This resume was downloaded from https://an1lbayram-github-io.vercel.app',
     'cv-known-langs': 'Languages',
     'cv-dob': 'Date of Birth',
     'cv-license': 'Driving License'

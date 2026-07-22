@@ -1,58 +1,150 @@
 /* CV Specific Styles */
 
+@page {
+  size: A4;
+  margin: 10mm 12mm;
+}
+
 /* Print settings for ATS Compliant Output */
 @media print {
   body * {
     visibility: hidden;
   }
-  #cv-container, #cv-container * {
+
+  html, body, .cv-wrapper, #cv-container, #cv-container * {
     visibility: visible;
   }
+
+  html, body {
+    overflow: visible !important;
+    height: auto !important;
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cv-wrapper {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
   #cv-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
     background: #ffffff !important;
     color: #000000 !important;
+    border: none !important;
   }
+
   .no-print, .cv-top-bar {
     display: none !important;
   }
-  
-  html, body {
-    overflow: visible !important;
-    height: auto !important;
-    background: #ffffff !important;
-  }
-  
-  .cv-wrapper {
-    position: static !important;
-    overflow: visible !important;
-    height: auto !important;
-    background: #ffffff !important;
-    padding: 0 !important;
-  }
-  
+
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    color: #000000 !important;
+    box-shadow: none !important;
   }
-  
+
+  /* Typography for Print ATS */
   .cv-name {
     color: #008080 !important;
+    font-size: 22pt !important;
+    margin-bottom: 2pt !important;
   }
+
+  .cv-role {
+    color: #333333 !important;
+    font-size: 11pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .cv-contact {
+    color: #333333 !important;
+    font-size: 9pt !important;
+    gap: 10pt !important;
+  }
+
+  .cv-header-content {
+    border-bottom: 1.5pt solid #008080 !important;
+    padding-bottom: 6pt !important;
+    margin-bottom: 10pt !important;
+  }
+
   .cv-section-title {
     color: #008080 !important;
-    border-bottom: 2px solid #008080 !important;
+    font-size: 11pt !important;
+    border-bottom: 1pt solid #008080 !important;
+    margin-top: 10pt !important;
+    margin-bottom: 5pt !important;
+    padding-bottom: 2pt !important;
+    text-transform: uppercase;
   }
-  
-  /* Avoid page breaks inside sections and items */
-  .cv-section, .cv-item {
+
+  .cv-text {
+    font-size: 8.8pt !important;
+    line-height: 1.4 !important;
+    color: #111111 !important;
+  }
+
+  .cv-bullet-list {
+    padding-left: 14pt !important;
+    margin-top: 3pt !important;
+  }
+
+  .cv-bullet-list li {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    color: #111111 !important;
+    margin-bottom: 2.5pt !important;
+  }
+
+  .cv-item {
+    margin-bottom: 5pt !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .cv-item-title {
+    font-size: 9pt !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+  }
+
+  .cv-item-subtitle {
+    font-size: 8.2pt !important;
+    color: #444444 !important;
+  }
+
+  .cv-item-desc {
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    color: #222222 !important;
+    margin-top: 1pt !important;
+  }
+
+  .cv-footer-text {
+    color: #222222 !important;
+    font-size: 8.5pt !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    margin-top: 12pt !important;
+    padding-top: 6pt !important;
+    border-top: 0.5pt solid #bbb !important;
+    opacity: 1 !important;
+  }
+
+  .cv-section {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -216,6 +308,12 @@ html[data-bs-theme="dark"] #cv-container {
   color: #333333;
   margin-bottom: 6px;
   line-height: 1.6;
+}
+
+.cv-footer-text {
+  color: #333333;
+  font-size: 0.88rem;
+  font-weight: 500;
 }
 
 @media (max-width: 650px) {

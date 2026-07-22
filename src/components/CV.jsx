@@ -142,11 +142,11 @@ const CV = ({ onClose }) => {
         </section>
 
         {/* Footer Note */}
-        <section className="cv-section mt-4">
-          <p className="text-center text-muted small mt-4 pt-3 border-top">
-            {t('cv-footer-text')} | https://an1lbayram.github.io/
+        <footer className="cv-footer mt-3">
+          <p className="cv-footer-text text-center mt-3 pt-3 border-top">
+            {t('cv-footer-text')}
           </p>
-        </section>
+        </footer>
       </div>
     </div>
   );
