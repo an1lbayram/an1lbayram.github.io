@@ -8,11 +8,8 @@ const CV = ({ onClose }) => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    // Add no-scroll to body when CV is open
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
+    // We don't hide body overflow because it breaks PDF printing across multiple pages.
+    // The cv-wrapper will cover the screen anyway.
   }, []);
 
   const handlePrint = () => {
@@ -49,7 +46,7 @@ const CV = ({ onClose }) => {
 
         <section className="cv-section">
           <h3 className="cv-section-title">👨‍💻 Hakkımda</h3>
-          <p className="cv-text">
+          <p className="cv-text" style={{ textAlign: 'center' }}>
             Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. 
             HTML, CSS, JavaScript, TypeScript ve React gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; 
             projelerime Node.js, Express, Vite, Electron, WebSockets, Bootstrap ve PWA gibi güncel teknolojileri de entegre ediyorum. 

@@ -20,6 +20,12 @@
     display: none !important;
   }
   
+  /* Ensure body doesn't clip content */
+  html, body {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
   /* Make all text black for print */
   #cv-container {
     color: black !important;
