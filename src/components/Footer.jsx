@@ -46,8 +46,8 @@ const Footer = () => {
             <a className="btn btn-primary" href="https://github.com/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-github-aria')}>GitHub</a>
             <a className="btn btn-primary" href="https://medium.com/@anl1bayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-medium-aria')}>Medium</a>
             <a className="btn btn-primary" href="https://www.linkedin.com/in/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-linkedin-aria')}>LinkedIn</a>
-            <a className="btn btn-primary" href="https://www.instagram.com/anl_bayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-instagram-aria')}>Instagram</a>
-            <a className="btn btn-primary" href="https://ig.me/m/anl_bayram?text=Merhaba%2C%20%20Projelerinizi%20%C3%A7ok%20be%C4%9Fendim%2C%20birlikte%20%C3%A7al%C4%B1%C5%9Fmak%20i%C3%A7in%20sab%C4%B1rs%C4%B1zlan%C4%B1yorum!%20%20Sevgilerimle.%20" target="_blank" rel="noopener noreferrer" aria-label={t('social-dm-aria')}>{t('social-dm')}</a>
+            <a className="btn btn-primary" href="https://www.instagram.com/_an1lbayram_" target="_blank" rel="noopener noreferrer" aria-label={t('social-instagram-aria')}>Instagram</a>
+            <a className="btn btn-primary" href="https://ig.me/m/_an1lbayram_?text=Merhaba%2C%20%20Projelerinizi%20%C3%A7ok%20be%C4%9Fendim%2C%20birlikte%20%C3%A7al%C4%B1%C5%9Fmak%20i%C3%A7in%20sab%C4%B1rs%C4%B1zlan%C4%B1yorum!%20%20Sevgilerimle.%20" target="_blank" rel="noopener noreferrer" aria-label={t('social-dm-aria')}>{t('social-dm')}</a>
             <a className="btn btn-primary" href="https://dijital.link/an1lbayram" target="_blank" rel="noopener noreferrer" aria-label={t('social-all-aria')}>{t("social-all")}</a>
           </div>
           <div className="mt-4">
