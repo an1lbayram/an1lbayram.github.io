@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <header>
+    <header className="site-header">
       <nav className="custom-nav">
         <div className="nav-inner">
           <a href="#hero" className="brand">&lt;Anıl Bayram/&gt;</a>

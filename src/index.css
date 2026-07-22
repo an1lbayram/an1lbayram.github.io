@@ -63,7 +63,7 @@ html[data-bs-theme="dark"] .profile-photo:hover {
 }
 
 /* Custom Nav */
-header {
+header.site-header {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1030;
@@ -72,8 +72,8 @@ header {
   transition: background-color 0.3s ease;
 }
 
-html[data-bs-theme="dark"] header { background-color: rgba(10,10,10,0.95); }
-html[data-bs-theme="light"] header { background-color: rgba(245,245,245,0.95); }
+html[data-bs-theme="dark"] header.site-header { background-color: rgba(10,10,10,0.95); }
+html[data-bs-theme="light"] header.site-header { background-color: rgba(245,245,245,0.95); }
 
 .custom-nav { max-width: 1200px; margin: 0 auto; padding: 1rem 1.25rem; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }

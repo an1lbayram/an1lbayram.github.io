@@ -52,7 +52,7 @@ const CV = ({ onClose }) => {
 
       <div id="cv-container">
         {/* CV Header */}
-        <header className="cv-header-content">
+        <div className="cv-header-content">
           <img src="/images/an1lbayram_light.png" alt="Anıl Bayram" className="cv-photo no-print" />
           <div className="cv-header-text">
             <h1 className="cv-name">ANIL BAYRAM</h1>
@@ -63,7 +63,7 @@ const CV = ({ onClose }) => {
               <span>LinkedIn: linkedin.com/in/an1lbayram</span>
             </div>
           </div>
-        </header>
+        </div>
 
         {/* About Section */}
         <section className="cv-section">
