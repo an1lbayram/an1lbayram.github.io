@@ -15,7 +15,7 @@ const Hero = () => {
             className="profile-photo profile-photo--night"
             width="280"
             height="280"
-            loading="lazy"
+            loading="eager"
           />
           <img
             src="/images/an1lbayram_light.png"
@@ -23,7 +23,7 @@ const Hero = () => {
             className="profile-photo profile-photo--light"
             width="280"
             height="280"
-            loading="lazy"
+            loading="eager"
           />
         </div>
         <h1 className="display-5 fw-bold mb-2" dangerouslySetInnerHTML={{ __html: t('hero-hello') }}></h1>

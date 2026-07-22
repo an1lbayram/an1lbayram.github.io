@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { useLanguage } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,6 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [theme, setTheme] = useState('dark');
+  const { t } = useLanguage();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('color-mode');
@@ -45,7 +47,7 @@ function App() {
       <button 
         className="toggle-theme" 
         onClick={toggleTheme}
-        aria-label={theme === 'dark' ? 'Açık Temaya Geç' : 'Koyu Temaya Geç'}
+        aria-label={theme === 'dark' ? t('theme-light') : t('theme-dark')}
       >
         {theme === 'dark' ? '🌞' : '🌙'}
       </button>

@@ -44,17 +44,17 @@ const Contact = () => {
 
       if (data.success) {
         setStatus('success');
-        setMessage('Mesajınız başarıyla gönderildi.');
+        setMessage(t('contact-success'));
         form.reset();
         setCharCount(0);
         form.classList.remove('was-validated');
       } else {
         setStatus('error');
-        setMessage(data.message || 'Mesaj gönderilemedi.');
+        setMessage(data.message || t('contact-error'));
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Ağ hatası oluştu, lütfen daha sonra tekrar deneyin.');
+      setMessage(t('contact-network-error'));
     } finally {
       setIsLoading(false);
       setTimeout(() => setStatus(null), 5000);
@@ -98,7 +98,7 @@ const Contact = () => {
                 <textarea className="form-control" id="contact-message" name="message" rows="6" placeholder={t('contact-msg-ph')} required minLength="10" maxLength="2000" onChange={handleMessageChange}></textarea>
                 <div className="invalid-feedback">{t('contact-msg-err')}</div>
                 <div className="form-text text-end">
-                  <span className={charCount > 1900 ? 'text-warning' : ''}>{charCount}</span> / 2000 karakter
+                  <span className={charCount > 1900 ? 'text-warning' : ''}>{charCount}</span> / 2000 {t('contact-char')}
                 </div>
               </div>
 
@@ -118,12 +118,12 @@ const Contact = () => {
 
             {status === 'success' && (
               <div className="alert alert-success mt-3 text-center">
-                <strong>Başarılı!</strong> {message}
+                <strong>{t('contact-success-label')}</strong> {message}
               </div>
             )}
             {status === 'error' && (
               <div className="alert alert-danger mt-3 text-center">
-                <strong>Hata!</strong> {message}
+                <strong>{t('contact-error-label')}</strong> {message}
               </div>
             )}
 

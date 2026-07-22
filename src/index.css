@@ -330,6 +330,28 @@ html[data-bs-theme="dark"] .contact-form textarea:focus {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .card-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .progress-bar.skill-fill {
+    transition: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .toggle-theme {
     width: 46px;

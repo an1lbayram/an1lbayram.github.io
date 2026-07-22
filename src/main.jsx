@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { registerSW } from 'virtual:pwa-register'
+import { LanguageProvider } from './context/LanguageContext'
 import App from './App.jsx'
 import './index.css'
-import { registerSW } from 'virtual:pwa-register'
 
 const updateSW = registerSW({
   onNeedRefresh() {
@@ -12,8 +13,6 @@ const updateSW = registerSW({
     // Optionally show a "ready for offline" message
   },
 })
-
-import { LanguageProvider } from './context/LanguageContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

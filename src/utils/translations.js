@@ -130,18 +130,30 @@ export const translations = {
     'contact-send': 'Gönder',
     'contact-sending': 'Gönderiliyor...',
     'contact-or': 'veya doğrudan e-posta gönderin:',
+    'contact-success': 'Mesajınız başarıyla gönderildi.',
+    'contact-error': 'Mesaj gönderilemedi.',
+    'contact-network-error': 'Ağ hatası oluştu, lütfen daha sonra tekrar deneyin.',
+    'contact-success-label': 'Başarılı!',
+    'contact-error-label': 'Hata!',
+    
+    'theme-light': 'Açık Temaya Geç',
+    'theme-dark': 'Koyu Temaya Geç',
+    'copy-fail': 'Bağlantı kopyalanamadı',
+    'scroll-top': 'Sayfanın Başına Git',
+    
+    'social-github-aria': 'GitHub profilimi ziyaret et',
+    'social-medium-aria': 'Medium yazılarımı oku',
+    'social-linkedin-aria': 'LinkedIn profilimi görüntüle',
+    'social-instagram-aria': 'Instagram profilimi ziyaret et',
+    'social-dm-aria': 'Instagram\'dan direkt mesaj gönder',
+    'social-all-aria': 'Tüm sosyal bağlantılarım',
+    'social-twitter-aria': 'Twitter\'da paylaş',
+    'social-facebook-aria': 'Facebook\'ta paylaş',
+    'social-linkedin-share-aria': 'LinkedIn\'de paylaş',
+    'social-copy-aria': 'Bağlantıyı kopyala',
     
     'footer-copy': ' Anıl Bayram - Tüm hakları saklıdır.'
   },
-  
-    'filter-all': 'Tümü',
-    'filter-web': 'Web',
-    'filter-desktop': 'Masaüstü',
-    'filter-security': 'Güvenlik',
-    'proj-dathex2': 'Winget tabanlı toplu Windows yazılım güncelleme aracının yeni nesil versiyonu.',
-    'proj-ls': 'Kapsamlı güvenlik portalı projesi. (Özel/Gizli Depo)',
-    'btn-private': 'Özel Proje (Private)',
-
   en: {
     'nav-home': 'Home',
     'nav-about': 'About',
@@ -273,15 +285,28 @@ export const translations = {
     'contact-send': 'Send',
     'contact-sending': 'Sending...',
     'contact-or': 'or send an email directly:',
+    'contact-success': 'Your message has been sent successfully.',
+    'contact-error': 'Message could not be sent.',
+    'contact-network-error': 'A network error occurred, please try again later.',
+    'contact-success-label': 'Success!',
+    'contact-error-label': 'Error!',
     
-    'footer-copy': ' Anıl Bayram - All rights reserved.',
-    'filter-all': 'All',
-    'filter-web': 'Web',
-    'filter-desktop': 'Desktop',
-    'filter-security': 'Security',
-    'proj-dathex2': 'Next-generation Winget-based mass Windows software updater.',
-    'proj-ls': 'Comprehensive security portal project. (Private Repository)',
-    'btn-private': 'Private Repository',
-
+    'theme-light': 'Switch to Light Mode',
+    'theme-dark': 'Switch to Dark Mode',
+    'copy-fail': 'Could not copy link',
+    'scroll-top': 'Scroll to Top',
+    
+    'social-github-aria': 'Visit my GitHub profile',
+    'social-medium-aria': 'Read my Medium articles',
+    'social-linkedin-aria': 'View my LinkedIn profile',
+    'social-instagram-aria': 'Visit my Instagram profile',
+    'social-dm-aria': 'Send a direct message on Instagram',
+    'social-all-aria': 'All my social links',
+    'social-twitter-aria': 'Share on Twitter',
+    'social-facebook-aria': 'Share on Facebook',
+    'social-linkedin-share-aria': 'Share on LinkedIn',
+    'social-copy-aria': 'Copy link',
+    
+    'footer-copy': ' Anıl Bayram - All rights reserved.'
   }
 };
