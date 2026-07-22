@@ -56,8 +56,8 @@ export const translations = {
     'med-dyn-4': `TR: İlk GitHub açık kaynak projem DatHex yazımda projeyi ve benim için anlamını detaylıca paylaştım.`,
     'med-dyn-5': `DatHex v1.3 - Windows Uygulamalarını Güncellemenin Yeni Yolu`,
     'med-dyn-6': `TR: DatHex v1.3: Windows uygulamalarını güncellemenin yeni yolu başlıklı teknik yazımda versiyon detaylarını paylaştım.`,
-    'med-dyn-7': `Yapay Zekâ Tarafından Yazılan Yazıları Nasıl Anlarız?`,
-    'med-dyn-8': `TR: Yapay zekâ tarafından yazılan yazıları nasıl anlarız başlıklı düşünsel yazımda içerik üretimindeki etik ve pratikleri tartıştım.`,
+    'med-dyn-7': `Yapay Zekâ Tarafından Yazılan Yazıları Nasıl Anlarız?`,
+    'med-dyn-8': `Yapay zekâ tarafından yazılan yazıları nasıl anlarız başlıklı düşünsel yazımda içerik üretimindeki etik ve pratikleri tartıştım.`,
     'med-dyn-9': `FiWi 1.1 - Kayıtlı Wi-Fi Şifrelerini Görüntüleme Aracı`,
     'med-dyn-10': `TR: FiWi v1.1 aracımın kullanım detayları ve teknik özelliklerini anlattım.`,
     'med-dyn-11': `Anıl Bayram - Portfolio Website (TR)`,
@@ -164,7 +164,21 @@ export const translations = {
     'social-linkedin-share-aria': 'LinkedIn\'de paylaş',
     'social-copy-aria': 'Bağlantıyı kopyala',
     
-    'footer-copy': ' Anıl Bayram - Tüm hakları saklıdır.'
+    'footer-copy': ' Anıl Bayram - Tüm hakları saklıdır.',
+    
+    'cv-title': 'Anıl Bayram - Özgeçmiş / CV',
+    'cv-download-btn': '📄 PDF Olarak İndir / Yazdır',
+    'cv-close-btn': '✕ Kapat',
+    'cv-about-title': 'Hakkımda',
+    'cv-edu-title': 'Eğitim & Kişisel Bilgiler',
+    'cv-skills-title': 'Teknik Beceriler & Yetkinlikler',
+    'cv-projects-title': 'Öne Çıkan Projeler',
+    'cv-certs-title': 'Kurslar & Sertifikalar',
+    'cv-tech-label': 'Teknolojiler',
+    'cv-footer-text': 'Bu özgeçmiş otomatik olarak portföy canlı verilerinden oluşturulmuştur.',
+    'cv-known-langs': 'Bilinen Diller',
+    'cv-dob': 'Doğum Tarihi',
+    'cv-license': 'Ehliyet'
   },
   en: {
     'nav-home': 'Home',
@@ -223,8 +237,8 @@ export const translations = {
     'med-dyn-4': `TR: I shared my first open-source GitHub project DatHex and its meaning to me in detail.`,
     'med-dyn-5': `DatHex v1.3 - A New Way to Update Windows Apps (TR)`,
     'med-dyn-6': `TR: I shared version details in my technical article about DatHex v1.3.`,
-    'med-dyn-7': `How to Recognize AI-Written Articles? (TR)`,
-    'med-dyn-8': `TR: I discussed ethics and practices in content creation regarding AI-written texts.`,
+    'med-dyn-7': `How to Recognize AI-Written Articles?`,
+    'med-dyn-8': `In my essay titled "How to Recognize AI-Written Articles?", I discussed ethics and practices in content creation.`,
     'med-dyn-9': `FiWi 1.1 - A Tool to View Saved Wi-Fi Passwords (TR)`,
     'med-dyn-10': `TR: I explained the usage details and technical features of my FiWi v1.1 tool.`,
     'med-dyn-11': `Anıl Bayram - Portfolio Website (TR)`,
@@ -331,6 +345,20 @@ export const translations = {
     'social-linkedin-share-aria': 'Share on LinkedIn',
     'social-copy-aria': 'Copy link',
     
-    'footer-copy': ' Anıl Bayram - All rights reserved.'
+    'footer-copy': ' Anıl Bayram - All rights reserved.',
+    
+    'cv-title': 'Anıl Bayram - Resume / CV',
+    'cv-download-btn': '📄 Download PDF / Print',
+    'cv-close-btn': '✕ Close',
+    'cv-about-title': 'About Me',
+    'cv-edu-title': 'Education & Personal Details',
+    'cv-skills-title': 'Technical Skills & Competencies',
+    'cv-projects-title': 'Featured Projects',
+    'cv-certs-title': 'Courses & Certifications',
+    'cv-tech-label': 'Technologies',
+    'cv-footer-text': 'This resume is automatically generated from portfolio live data.',
+    'cv-known-langs': 'Languages',
+    'cv-dob': 'Date of Birth',
+    'cv-license': 'Driving License'
   }
 };

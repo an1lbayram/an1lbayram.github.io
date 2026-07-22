@@ -35,6 +35,13 @@ export const mediumArticles = [
     lang: "TR"
   },
   {
+    id: 10,
+    titleKey: 'med-dyn-7', title: "How to Recognize AI-Written Articles?",
+    descKey: 'med-dyn-8', description: "EN: I discussed ethics and practices in content creation regarding AI-written texts.",
+    url: "https://medium.com/@anl1bayram/yapay-zek%C3%A2-taraf%C4%B1ndan-yaz%C4%B1lan-yaz%C4%B1lar%C4%B1-nas%C4%B1l-anlar%C4%B1z-9101edf809ad",
+    lang: "EN"
+  },
+  {
     id: 6,
     titleKey: 'med-dyn-9', title: "FiWi 1.1 - Kayıtlı Wi-Fi Şifrelerini Görüntüleme Aracı",
     descKey: 'med-dyn-10', description: "TR: FiWi v1.1 aracımın kullanım detayları ve teknik özelliklerini anlattım.",
