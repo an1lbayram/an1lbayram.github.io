@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/projects';
+import { certificates } from '../data/certificates';
 import '../cv.css';
 
 const CV = ({ onClose }) => {
@@ -23,23 +24,26 @@ const CV = ({ onClose }) => {
 
   return (
     <div className="cv-wrapper animate-fade-in">
-      <div className="cv-controls no-print">
-        <button className="btn btn-primary shadow-sm" onClick={handlePrint}>
-          📄 PDF Olarak İndir / Yazdır
-        </button>
-        <button className="btn btn-danger shadow-sm" onClick={onClose}>
-          ✕ Kapat
-        </button>
-      </div>
-
       <div id="cv-container">
-        <header className="cv-header">
-          <h1 className="cv-name">ANIL BAYRAM</h1>
-          <h2 className="cv-role">JR. Front-End Developer</h2>
-          <div className="cv-contact">
-            <span>✉️ anilbayram48@gmail.com</span> |
-            <span>🔗 github.com/an1lbayram</span> |
-            <span>🔗 linkedin.com/in/an1lbayram</span>
+        <div className="cv-controls no-print">
+          <button className="btn btn-primary shadow-sm" onClick={handlePrint}>
+            📄 PDF Olarak İndir / Yazdır
+          </button>
+          <button className="btn btn-danger shadow-sm" onClick={onClose}>
+            ✕ Kapat
+          </button>
+        </div>
+
+        <header className="cv-header-content">
+          <img src="/images/an1lbayram_light.png" alt="Anıl Bayram" className="cv-photo no-print" />
+          <div className="cv-header-text">
+            <h1 className="cv-name">ANIL BAYRAM</h1>
+            <h2 className="cv-role">JR. Front-End Developer</h2>
+            <div className="cv-contact">
+              <span>✉️ anilbayram48@gmail.com</span>
+              <span>🔗 github.com/an1lbayram</span>
+              <span>🔗 linkedin.com/in/an1lbayram</span>
+            </div>
           </div>
         </header>
 
@@ -61,6 +65,7 @@ const CV = ({ onClose }) => {
             <li><span className="cv-item-title">İstanbul Üniversitesi</span> | Bilgisayar Programcılığı (Devam Ediyor)</li>
             <li><span className="cv-item-title">Muğla Sıtkı Koçman Üniversitesi</span> | Acil Durum ve Afet Yönetimi (2020)</li>
             <li><span className="cv-item-title">Melsa Sağlık Meslek Lisesi</span> | Acil Tıp Teknisyenliği (2017)</li>
+            <li><span className="cv-item-title">Bilinen Diller:</span> İngilizce B2</li>
             <li><span className="cv-item-title">Doğum Tarihi:</span> 13.01.1999</li>
             <li><span className="cv-item-title">Ehliyet:</span> M, A1, B1, B, F</li>
           </ul>
@@ -103,18 +108,14 @@ const CV = ({ onClose }) => {
           <h3 className="cv-section-title">📜 Kurslar & Sertifikalar</h3>
           <div className="cv-grid">
             <ul className="cv-bullet-list m-0">
-              <li>Data Science and AI Engineering Mini Bootcamp</li>
-              <li>Web Tasarım Geliştirme Kursu (HTML5, CSS3, JS)</li>
-              <li>C# ile Algoritma ve Programlama 101</li>
-              <li>Web Tabanlı İçerik Yönetim Sistemleri</li>
-              <li>Cursor ile Yapay Zeka Destekli Yazılım Geliştirme</li>
+              {certificates.slice(0, Math.ceil(certificates.length / 2)).map(cert => (
+                <li key={cert.id}>{cert.title}</li>
+              ))}
             </ul>
             <ul className="cv-bullet-list m-0">
-              <li>Bilgi Güvenliği Farkındalık Eğitimi</li>
-              <li>Siber Güvenliğe Giriş</li>
-              <li>Veri Bilimi için Python ve Tensorflow</li>
-              <li>İngilizce B2 Eğitimi</li>
-              <li>Algoritma, Programlama ve Veri Yapılarına Giriş</li>
+              {certificates.slice(Math.ceil(certificates.length / 2)).map(cert => (
+                <li key={cert.id}>{cert.title}</li>
+              ))}
             </ul>
           </div>
         </section>

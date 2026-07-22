@@ -20,16 +20,19 @@
     display: none !important;
   }
   
-  /* Reset some bootstrap properties that might break print */
-  html, body {
-    height: 100%;
-    overflow: visible;
-    background-color: white !important;
-  }
-  
   /* Make all text black for print */
   #cv-container {
     color: black !important;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .cv-wrapper {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    background: transparent !important;
   }
   
   /* Force background colors */
@@ -60,12 +63,10 @@
 }
 
 .cv-controls {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10000;
   display: flex;
+  justify-content: flex-end;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 #cv-container {
@@ -77,18 +78,36 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  position: relative;
 }
 
 html[data-bs-theme="dark"] #cv-container {
-  /* In dark mode, CV still looks white like paper, but shadow is darker */
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-.cv-header {
-  text-align: center;
-  margin-bottom: 30px;
+.cv-header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
   border-bottom: 2px solid #00adb5;
   padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.cv-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00adb5;
+}
+
+.cv-header-text {
+  flex: 1;
+}
+
+.cv-header-text h1 {
+  text-align: left;
 }
 
 .cv-name {
@@ -102,15 +121,15 @@ html[data-bs-theme="dark"] #cv-container {
   color: #555;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .cv-contact {
   font-size: 0.9rem;
   color: #666;
-}
-.cv-contact span {
-  margin: 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .cv-section-title {
@@ -143,6 +162,16 @@ html[data-bs-theme="dark"] #cv-container {
   #cv-container {
     margin: 20px;
     padding: 20px;
+  }
+  .cv-header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cv-header-text h1 {
+    text-align: center;
+  }
+  .cv-contact {
+    justify-content: center;
   }
 }
 
