@@ -11,6 +11,16 @@ const Footer = () => {
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
+      
+      // Calculate scroll progress
+      const scrollPx = document.documentElement.scrollTop;
+      const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
+      
+      const scrollBtn = document.getElementById('scrollProgressBtn');
+      if (scrollBtn) {
+        scrollBtn.style.setProperty('--scroll-progress', scrolled);
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -57,11 +67,12 @@ const Footer = () => {
       </footer>
 
       <button
+        id="scrollProgressBtn"
         className={`scroll-to-top ${showScrollTop ? 'show' : ''}`}
         onClick={scrollToTop}
         aria-label={t('scroll-top')}
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{position: 'relative', zIndex: 2}}>
           <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
       </button>

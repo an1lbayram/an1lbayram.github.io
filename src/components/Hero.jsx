@@ -1,5 +1,6 @@
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useLanguage } from '../context/LanguageContext';
+import TypeWriter from './TypeWriter';
 
 const Hero = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
@@ -27,7 +28,17 @@ const Hero = () => {
           />
         </div>
         <h1 className="display-5 fw-bold mb-2" dangerouslySetInnerHTML={{ __html: t('hero-hello') }}></h1>
-        <p className="lead text-secondary">{t('hero-role')}</p>
+        <h2 className="h4 text-secondary mb-4">
+          <TypeWriter text={t('hero-role')} delay={100} />
+        </h2>
+        <div className="d-flex justify-content-center gap-3">
+          <a href="#about" className="btn btn-primary btn-lg px-4" aria-label={t('hero-btn')}>
+            {t('hero-btn')}
+          </a>
+          <a href="/Anil_Bayram_CV.pdf" download="Anil_Bayram_CV.pdf" className="btn btn-outline-primary btn-lg px-4" aria-label={t('hero-cv-btn')}>
+            {t('hero-cv-btn') || 'CV İndir'}
+          </a>
+        </div>
       </div>
     </section>
   );
