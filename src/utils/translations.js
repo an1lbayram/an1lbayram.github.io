@@ -15,7 +15,7 @@ export const translations = {
     'hero-btn': 'Projelerimi Gör',
     
     'about-title': 'Hakkımda',
-    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. HTML, CSS, JavaScript, Typescript ve React gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; açık kaynak dünyasına katkı sağlamaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum. Sadece arayüz geliştirmekle kalmıyor; Python, C#, PowerShell ve Arduino gibi farklı disiplinlere de dokunarak çok yönlü bir mühendislik bakış açısı kazanmayı hedefliyorum.',
+    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. HTML, CSS, JavaScript, TypeScript ve React gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; projelerime Node.js, Express, Vite, Electron, WebSockets, Bootstrap ve PWA gibi güncel teknolojileri de entegre ediyorum. Açık kaynak dünyasına katkı sağlamaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum. Sadece web arayüzleri geliştirmekle kalmıyor; Python, C#, PowerShell, Batch (CMD) ve Arduino gibi farklı disiplinlere dokunarak çok yönlü bir mühendislik bakış açısı kazanmayı hedefliyorum.',
     
     'projects-title': 'Projelerim',
     'filter-all': 'Tümü',
@@ -158,7 +158,7 @@ export const translations = {
     'hero-btn': 'View My Projects',
     
     'about-title': 'About Me',
-    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End Developer. While designing user-centric interfaces with modern web technologies such as HTML, CSS, JavaScript, TypeScript, and React; I enjoy contributing to the open-source world and sharing my technical experiences on Medium. Not only developing interfaces, but I also aim to gain a versatile engineering perspective by touching upon different disciplines like Python, C#, PowerShell, and Arduino.',
+    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End Developer. While designing user-centric interfaces with modern web technologies such as HTML, CSS, JavaScript, TypeScript, and React; I also integrate up-to-date technologies like Node.js, Express, Vite, Electron, WebSockets, Bootstrap, and PWA into my projects. I enjoy contributing to the open-source world and sharing my technical experiences on Medium. Not only developing web interfaces, but I also aim to gain a versatile engineering perspective by touching upon different disciplines like Python, C#, PowerShell, Batch (CMD), and Arduino.',
     
     'projects-title': 'My Projects',
     'filter-all': 'All',
