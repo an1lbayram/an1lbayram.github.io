@@ -48,7 +48,8 @@ const Contact = () => {
     setMessage('');
 
     const formData = new FormData(form);
-    // Explicitly add captcha token
+    // Explicitly add captcha token and remove g-recaptcha-response for Web3Forms free tier
+    formData.delete('g-recaptcha-response');
     formData.set('h-captcha-response', captchaToken);
     
     try {
