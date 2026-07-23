@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useLanguage } from '../context/LanguageContext';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import useRateLimit from '../hooks/useRateLimit';
 import Toast from './Toast';
 
@@ -11,6 +12,8 @@ const Contact = () => {
   const [status, setStatus] = useState(null); // 'success' or 'error'
   const [message, setMessage] = useState('');
   const [charCount, setCharCount] = useState(0);
+  const [captchaToken, setCaptchaToken] = useState('');
+  const captchaRef = useRef(null);
   
   const { checkRateLimit } = useRateLimit(3, 5); // Max 3 submissions in 5 minutes
 
@@ -34,11 +37,19 @@ const Contact = () => {
       return;
     }
 
+    if (!captchaToken) {
+      setStatus('error');
+      setMessage('Lütfen robot olmadığınızı doğrulayın.');
+      return;
+    }
+
     setIsLoading(true);
     setStatus(null);
     setMessage('');
 
     const formData = new FormData(form);
+    // Explicitly add captcha token
+    formData.set('h-captcha-response', captchaToken);
     
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -54,6 +65,8 @@ const Contact = () => {
         form.reset();
         setCharCount(0);
         form.classList.remove('was-validated');
+        setCaptchaToken('');
+        captchaRef.current?.resetCaptcha();
       } else {
         setStatus('error');
         setMessage(data.message || t('contact-error'));
@@ -125,8 +138,13 @@ const Contact = () => {
                     </div>
 
                     {/* hCaptcha Widget - Web3Forms spam koruması */}
-                    <div className="col-12 mt-3">
-                      <div className="h-captcha" data-captcha="true"></div>
+                    <div className="col-12 mt-3 d-flex justify-content-center">
+                      <HCaptcha
+                        sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                        onVerify={(token) => setCaptchaToken(token)}
+                        onExpire={() => setCaptchaToken('')}
+                        ref={captchaRef}
+                      />
                     </div>
 
                     <div className="col-12 text-center mt-4">
