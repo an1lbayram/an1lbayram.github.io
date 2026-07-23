@@ -2,6 +2,7 @@ export const certificates = [
   {
     id: 1,
     title: "Web Tabanlı İçerik Yönetim Sistemleri",
+    titleKey: "cert-dyn-17",
     institution: "T.C. Millî Eğitim Bakanlığı",
     date: "Şubat 2026",
     credentialId: "11868320260096835309"
@@ -9,6 +10,7 @@ export const certificates = [
   {
     id: 2,
     title: "Yapay Zeka Mini Bootcamp",
+    titleKey: "cert-dyn-0",
     institution: "Miuul",
     date: "Aralık 2025",
     credentialId: "lnqw0txrji",
@@ -17,6 +19,7 @@ export const certificates = [
   {
     id: 3,
     title: "Temel Excel Eğitimi",
+    titleKey: "cert-dyn-1",
     institution: "Pupilica",
     date: "Kasım 2025",
     credentialId: ""
@@ -24,6 +27,7 @@ export const certificates = [
   {
     id: 4,
     title: "Temel Seviye SQL Eğitimi",
+    titleKey: "cert-dyn-2",
     institution: "CSDEV - Ankara Üniversitesi Bilgisayar Bilimleri Geliştirme Topluluğu",
     date: "Ağustos 2025",
     credentialId: "96874326598077",
@@ -32,6 +36,7 @@ export const certificates = [
   {
     id: 5,
     title: "Yapay Zeka Yaz Kampı 2025",
+    titleKey: "cert-dyn-3",
     institution: "Miuul",
     date: "Ağustos 2025",
     credentialId: "mjvv2gmdr7",
@@ -40,6 +45,7 @@ export const certificates = [
   {
     id: 6,
     title: "Kodsuz Bir IT Kariyeri: QA Test Uzmanı Olmak",
+    titleKey: "cert-dyn-18",
     institution: "GoIT Türkiye",
     date: "Mayıs 2025",
     credentialId: ""
@@ -47,6 +53,7 @@ export const certificates = [
   {
     id: 7,
     title: "C# ile Algoritma ve Programlama 101",
+    titleKey: "cert-dyn-19",
     institution: "Turkcell Geleceği Yazanlar",
     date: "Nisan 2025",
     credentialId: "3b940ddee8b14eafb2d701f60a725a7a",
@@ -55,6 +62,7 @@ export const certificates = [
   {
     id: 8,
     title: "Cursor ile Yapay Zeka Destekli Yazılım Geliştirme Atölyesi",
+    titleKey: "cert-dyn-20",
     institution: "Pupilica",
     date: "Mart 2025",
     credentialId: ""
@@ -62,6 +70,7 @@ export const certificates = [
   {
     id: 9,
     title: "Yapay Zekanın İş Dünyasına Etkisi",
+    titleKey: "cert-dyn-4",
     institution: "Toplum Gönüllüleri Vakfı (TOG)",
     date: "Mart 2025",
     credentialId: "36219526099805"
@@ -69,6 +78,7 @@ export const certificates = [
   {
     id: 10,
     title: "React 101",
+    titleKey: "cert-dyn-5",
     institution: "Turkcell Geleceği Yazanlar",
     date: "Şubat 2025",
     credentialId: "f681c780d040424992cb88e638564edd",
@@ -77,6 +87,7 @@ export const certificates = [
   {
     id: 11,
     title: "Bootstrap Eğitimi",
+    titleKey: "cert-dyn-6",
     institution: "İstanbul İşletme Enstitüsü",
     date: "Ocak 2025",
     credentialId: "135649211522",
@@ -85,6 +96,7 @@ export const certificates = [
   {
     id: 12,
     title: "Siber Güvenliğe Giriş",
+    titleKey: "cert-dyn-7",
     institution: "Turkcell Geleceği Yazanlar",
     date: "Ocak 2025",
     credentialId: "b7f651f6201b4bb1988cc25fdd74b968",
@@ -93,6 +105,7 @@ export const certificates = [
   {
     id: 13,
     title: "Veritabanı Saldırıları ve Veritabanı Güvenliği",
+    titleKey: "cert-dyn-21",
     institution: "BTK Akademi",
     date: "Ocak 2025",
     credentialId: "7rptmPzAq",
@@ -101,6 +114,7 @@ export const certificates = [
   {
     id: 14,
     title: "İngilizce B2 Eğitimi",
+    titleKey: "cert-dyn-8",
     institution: "Sorbil",
     date: "Ocak 2025",
     credentialId: ""
@@ -108,6 +122,7 @@ export const certificates = [
   {
     id: 15,
     title: "DDOS / DDOS Saldırıları ve Koruma",
+    titleKey: "cert-dyn-9",
     institution: "BTK Akademi",
     date: "Aralık 2024",
     credentialId: "Yx1hPYqV8z",
@@ -116,6 +131,7 @@ export const certificates = [
   {
     id: 16,
     title: "Data Science and AI Engineering Mini Bootcamp",
+    titleKey: "cert-dyn-22",
     institution: "Miuul",
     date: "Aralık 2024",
     credentialId: "",
@@ -124,6 +140,7 @@ export const certificates = [
   {
     id: 17,
     title: "Robotik Kodlama Eğitimi",
+    titleKey: "cert-dyn-10",
     institution: "Sorbil",
     date: "Aralık 2024",
     credentialId: ""
@@ -131,6 +148,7 @@ export const certificates = [
   {
     id: 18,
     title: "Web Programlama 301: JavaScript",
+    titleKey: "cert-dyn-11",
     institution: "Turkcell Geleceği Yazanlar",
     date: "Aralık 2024",
     credentialId: "",
@@ -139,6 +157,7 @@ export const certificates = [
   {
     id: 19,
     title: "Web Tasarım Geliştirme Kursu HTML5 - CSS3 - JavaScript - Bootstrap",
+    titleKey: "cert-dyn-23",
     institution: "Udemy",
     date: "Aralık 2024",
     credentialId: "UC-a4c43573-8be0-4a05-b5c2-3b0aed18508f",
@@ -147,6 +166,7 @@ export const certificates = [
   {
     id: 20,
     title: "Sıfırdan Web Sitesi Oluşturma 2. Eğitim",
+    titleKey: "cert-dyn-24",
     institution: "Sorbil",
     date: "Eylül 2024",
     credentialId: ""
@@ -154,6 +174,7 @@ export const certificates = [
   {
     id: 21,
     title: "Web Programlama 101: HTML",
+    titleKey: "cert-dyn-12",
     institution: "Turkcell Geleceği Yazanlar",
     date: "Eylül 2024",
     credentialId: "",
@@ -162,6 +183,7 @@ export const certificates = [
   {
     id: 22,
     title: "Web Programlama 201: HTML5 & CSS",
+    titleKey: "cert-dyn-13",
     institution: "Turkcell Geleceği Yazanlar",
     date: "Eylül 2024",
     credentialId: "",
@@ -170,6 +192,7 @@ export const certificates = [
   {
     id: 23,
     title: "Sıfırdan Web Sitesi Oluşturma 1. Eğitim",
+    titleKey: "cert-dyn-25",
     institution: "Sorbil",
     date: "Ağustos 2024",
     credentialId: ""
@@ -177,6 +200,7 @@ export const certificates = [
   {
     id: 24,
     title: "Finansal Okuryazarlık",
+    titleKey: "cert-dyn-14",
     institution: "Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu A.Ş.",
     date: "Mayıs 2024",
     credentialId: "d4e5f563-0fe5-4a11-965b-88bf7e284e5c",
@@ -185,6 +209,7 @@ export const certificates = [
   {
     id: 25,
     title: "İlkyardım",
+    titleKey: "cert-dyn-15",
     institution: "T.C. Sağlık Bakanlığı",
     date: "Nisan 2024",
     credentialId: "SB.21160734.00",
@@ -193,6 +218,7 @@ export const certificates = [
   {
     id: 26,
     title: "E-Ticarete Giriş",
+    titleKey: "cert-dyn-16",
     institution: "BTK Akademi",
     date: "Ekim 2023",
     credentialId: "AJaSdMXY0g",
@@ -201,6 +227,7 @@ export const certificates = [
   {
     id: 27,
     title: "İlkyardım",
+    titleKey: "cert-dyn-15",
     institution: "T.C. Millî Eğitim Bakanlığı",
     date: "Kasım 2018 - Kasım 2023",
     credentialId: "27049320180058314916"

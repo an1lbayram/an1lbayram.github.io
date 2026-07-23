@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Toast = ({ message, type = 'success', onClose }) => {
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      onClose();
+      onCloseRef.current();
     }, 5000); // 5 saniye sonra kapan
     return () => clearTimeout(timer);
-  }, [onClose]);
+  }, []); // onClose dependency'den çıkarıldı — ref ile izleniyor
 
   return (
     <div className={`custom-toast custom-toast-${type}`}>

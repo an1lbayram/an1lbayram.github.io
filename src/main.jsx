@@ -5,7 +5,7 @@ import { LanguageProvider } from './context/LanguageContext'
 import App from './App.jsx'
 import './index.css'
 
-const updateSW = registerSW({
+registerSW({
   onNeedRefresh() {
     // Optionally prompt user to refresh
   },

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -7,6 +7,7 @@ const Footer = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [copyText, setCopyText] = useState(t('social-copy'));
+  const scrollBtnRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,21 +18,20 @@ const Footer = () => {
       const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
       
-      const scrollBtn = document.getElementById('scrollProgressBtn');
-      if (scrollBtn) {
-        scrollBtn.style.setProperty('--scroll-progress', scrolled);
+      if (scrollBtnRef.current) {
+        scrollBtnRef.current.style.setProperty('--scroll-progress', scrolled);
       }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleCopy = () => {
+  const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(window.location.href).then(() => {
       setCopyText("✓ " + t("social-copy"));
       setTimeout(() => setCopyText(t("social-copy")), 2000);
     }).catch(() => alert(t('copy-fail')));
-  };
+  }, [t]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -66,7 +66,7 @@ const Footer = () => {
       </footer>
 
       <button
-        id="scrollProgressBtn"
+        ref={scrollBtnRef}
         className={`scroll-to-top ${showScrollTop ? 'show' : ''}`}
         onClick={scrollToTop}
         aria-label={t('scroll-top')}

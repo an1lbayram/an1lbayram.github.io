@@ -4,6 +4,21 @@ const CACHE_KEY = 'medium_feed_cache';
 const CACHE_TTL = 12 * 60 * 60 * 1000; // 12 hours in ms
 const RSS2JSON_API = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@anl1bayram';
 
+/**
+ * HTML string'den güvenli şekilde düz metin çıkarır.
+ * innerHTML yerine DOMParser kullanarak XSS riskini azaltır.
+ */
+const extractTextFromHTML = (html) => {
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const textContent = doc.body.textContent || '';
+    return textContent.substring(0, 150) + '...';
+  } catch {
+    return '';
+  }
+};
+
 export const useMediumFeed = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,12 +52,7 @@ export const useMediumFeed = () => {
         if (data.status === 'ok') {
           // Format articles
           const formattedArticles = data.items.map(item => {
-            // Extract text content from description HTML
-            const tmp = document.createElement("DIV");
-            tmp.innerHTML = item.description;
-            let textContent = tmp.textContent || tmp.innerText || "";
-            // Keep first 150 chars
-            textContent = textContent.substring(0, 150) + "...";
+            const textContent = extractTextFromHTML(item.description);
             
             return {
               id: item.guid,

@@ -489,6 +489,11 @@ html[data-bs-theme="dark"] .custom-toast {
   }
 }
 
+@keyframes slideInUp {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
 /* Timeline Styles */
 .timeline-container {
   position: relative;

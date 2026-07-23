@@ -53,7 +53,7 @@ const Skills = () => {
                 <div className="card shadow-sm">
                   <div className="card-body text-center">
                     <h3 className="h5 card-title mb-2">{lang.nameKey ? t(lang.nameKey) : lang.name}</h3>
-                    <p className="text-secondary mb-0">{lang.levelKey ? (lang.levelKey === 'B2' ? 'B2' : t(lang.levelKey)) : lang.level}</p>
+                    <p className="text-secondary mb-0">{lang.levelKey ? t(lang.levelKey) : lang.level}</p>
                   </div>
                 </div>
               </div>

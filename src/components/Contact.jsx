@@ -81,7 +81,7 @@ const Contact = () => {
             <div className="card shadow-sm border-0">
               <div className="card-body p-4 p-md-5">
                 <form className="contact-form needs-validation" noValidate onSubmit={handleSubmit}>
-                  <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "cf4f69bd-a28d-448c-aef3-edd7c46da5ad"} />
+                  <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
                   <input type="hidden" name="subject" value="Portfolyo İletişim Formu" />
                   <input type="hidden" name="from_name" value="Anıl Bayram Portfolio" />
                   
@@ -122,6 +122,11 @@ const Contact = () => {
                           <span className={charCount > 1900 ? 'text-warning' : ''}>{charCount}</span> / 2000 {t('contact-char')}
                         </div>
                       </div>
+                    </div>
+
+                    {/* hCaptcha Widget - Web3Forms spam koruması */}
+                    <div className="col-12 mt-3">
+                      <div className="h-captcha" data-captcha="true"></div>
                     </div>
 
                     <div className="col-12 text-center mt-4">

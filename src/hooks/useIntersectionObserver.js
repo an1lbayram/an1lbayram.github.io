@@ -5,22 +5,24 @@ export const useIntersectionObserver = (options = { threshold: 0.1, rootMargin: 
   const elementRef = useRef(null);
 
   useEffect(() => {
+    const currentElement = elementRef.current; // Yerel değişkene ata — StrictMode cleanup güvenliği
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsIntersecting(true);
-        if (elementRef.current) {
-          observer.unobserve(elementRef.current);
+        if (currentElement) {
+          observer.unobserve(currentElement);
         }
       }
     }, options);
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, [options.threshold, options.rootMargin]);

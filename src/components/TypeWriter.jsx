@@ -4,6 +4,12 @@ const TypeWriter = ({ text, delay = 100, className = '' }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // text değiştiğinde (dil geçişi) state'i sıfırla
+  useEffect(() => {
+    setCurrentText('');
+    setCurrentIndex(0);
+  }, [text]);
+
   useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {

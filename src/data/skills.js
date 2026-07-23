@@ -11,11 +11,15 @@ export const languages = [
   {
     id: 1,
     name: "Türkçe",
-    level: "Anadil"
+    nameKey: "lang-tr",
+    level: "Anadil",
+    levelKey: "lang-tr-lvl"
   },
   {
     id: 2,
     name: "İngilizce",
-    level: "B2"
+    nameKey: "lang-en",
+    level: "B2",
+    levelKey: "lang-en-lvl"
   }
 ];
