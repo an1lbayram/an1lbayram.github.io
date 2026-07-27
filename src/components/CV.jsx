@@ -92,13 +92,13 @@ const CV = ({ onClose }) => {
           <h3 className="cv-section-title">{t('cv-skills-title')}</h3>
           <ul className="cv-bullet-list">
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Diller:' : 'Languages:'}</span> JavaScript, TypeScript, Python, C#, PowerShell, HTML, CSS, Batch (CMD)
+              <span className="cv-item-title">{language === 'tr' ? 'Diller:' : 'Languages:'}</span> JavaScript, TypeScript, Python, C#, PowerShell, HTML5, CSS3, Batch (CMD)
             </li>
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Kütüphaneler & Framework\'ler:' : 'Libraries & Frameworks:'}</span> React (v18, v19), Vite, Electron, Express, Bootstrap, Node.js
+              <span className="cv-item-title">{language === 'tr' ? 'Kütüphaneler & Framework\'ler:' : 'Libraries & Frameworks:'}</span> React (v18, v19), Vite, Electron, Node.js, Express, Socket.io, Tailwind CSS, Bootstrap, Material UI (MUI), Chart.js
             </li>
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Araçlar & Teknolojiler:' : 'Tools & Technologies:'}</span> WebSockets, PWA, Git, GitHub, REST API, Web Vitals, Responsive Design
+              <span className="cv-item-title">{language === 'tr' ? 'Araçlar & Teknolojiler:' : 'Tools & Technologies:'}</span> WebSockets, PWA, Winget, Git, GitHub, REST API, Web Vitals, Responsive Design, Wi-Fi Security
             </li>
             <li>
               <span className="cv-item-title">{language === 'tr' ? 'Öne Çıkan Yetkinlikler:' : 'Skill Highlights:'}</span> {skills.map(s => `${s.name} (%${s.progress})`).join(', ')}
@@ -116,7 +116,14 @@ const CV = ({ onClose }) => {
             return (
               <div key={project.id} className="cv-item mb-3">
                 <div className="d-flex justify-content-between align-items-baseline">
-                  <div className="cv-item-title">{project.title}</div>
+                  <div className="cv-item-title">
+                    {project.title}
+                    {project.demoUrl && (
+                      <span className="ms-2 fw-normal fs-6 text-muted">
+                        (<a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-decoration-none">{project.demoUrl}</a>)
+                      </span>
+                    )}
+                  </div>
                   <div className="cv-item-subtitle">{monthYear}</div>
                 </div>
                 <div className="cv-item-subtitle mb-1">
