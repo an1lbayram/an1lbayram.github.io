@@ -18,7 +18,7 @@ export const translations = {
     'timeline-title': 'Geliştirme Süreci',
     
     'about-title': 'Hakkımda',
-    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. HTML, CSS, JavaScript, TypeScript ve React gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; projelerime Node.js, Express, Vite, Electron, WebSockets, Bootstrap ve PWA gibi güncel teknolojileri de entegre ediyorum. Açık kaynak dünyasına katkı sağlamaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum. Sadece web arayüzleri geliştirmekle kalmıyor; Python, C#, PowerShell, Batch (CMD) ve Arduino gibi farklı disiplinlere dokunarak çok yönlü bir mühendislik bakış açısı kazanmayı hedefliyorum.',
+    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. HTML, CSS, JavaScript, TypeScript ve React (v18/v19) gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; projelerime Node.js, Express, Vite, Electron, Socket.io, WebSockets, Tailwind CSS, Bootstrap, Material UI (MUI) ve PWA gibi güncel teknolojileri de entegre ediyorum. Açık kaynak dünyasına katkı sağlamaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum. Sadece web arayüzleri geliştirmekle kalmıyor; Python, C#, PowerShell, Batch (CMD) ve Arduino gibi farklı disiplinlere dokunarak çok yönlü bir mühendislik bakış açısı kazanmayı hedefliyorum.',
     'about-personal': 'Kişisel Bilgiler',
     'about-edu': 'Eğitim',
     'about-license': 'Ehliyet',
@@ -35,14 +35,17 @@ export const translations = {
     'btn-github': 'GitHub\'da Gör',
     'btn-private': 'Özel Proje (Private)',
     'btn-read': 'Yazıyı Oku',
+    'btn-preview': 'Canlı Önizleme',
     
     'proj-winkam': 'Güvenli temizlik, sistem onarımı ve tek tıkla yedekleme için hepsi bir arada Windows optimizasyon aracı.',
     'proj-kapatika': 'Bir zaman ayarlayın. Arkanıza yaslanın. Bilgisayarı kapatma işini Kapatika\'ya bırakın.',
     'proj-devpulse': 'Geliştirici araçlarınızı otomatik olarak algılayan, kontrol eden ve tek tıkla güvenle güncelleyen modern bir Windows masaüstü uygulaması.',
     'proj-portfolio': 'Anıl Bayram - Kişisel Portföy Web Sitesi',
     'proj-fiwi': 'Kayıtlı Wi-Fi şifrelerini görüntüleme aracı',
+    'proj-fiwi2': 'Kayıtlı Wi-Fi şifrelerini görüntüleme, canlı ağ takibi ve spektrum analizi sunan yeni nesil web tabanlı platform.',
     'proj-dathex': 'Windows sistemleri için Winget tabanlı toplu yazılım güncelleme aracı',
     'proj-dathex2': 'Winget tabanlı toplu Windows yazılım güncelleme aracının yeni nesil versiyonu.',
+    'proj-gaia': 'Yapay zekâ ve OCR destekli interaktif soru çözme, sınav hazırlık ve istatistik takip platformu.',
     'proj-ls': 'Kapsamlı güvenlik portalı projesi. (Özel/Gizli Depo)',
     
     'medium-title': 'Medium Yazılarım',
@@ -195,7 +198,7 @@ export const translations = {
     'timeline-title': 'Development Timeline',
     
     'about-title': 'About Me',
-    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End Developer. While designing user-centric interfaces with modern web technologies such as HTML, CSS, JavaScript, TypeScript, and React; I also integrate up-to-date technologies like Node.js, Express, Vite, Electron, WebSockets, Bootstrap, and PWA into my projects. I enjoy contributing to the open-source world and sharing my technical experiences on Medium. Not only developing web interfaces, but I also aim to gain a versatile engineering perspective by touching upon different disciplines like Python, C#, PowerShell, Batch (CMD), and Arduino.',
+    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End Developer. While designing user-centric interfaces with modern web technologies such as HTML, CSS, JavaScript, TypeScript, and React (v18/v19); I also integrate up-to-date technologies like Node.js, Express, Vite, Electron, Socket.io, WebSockets, Tailwind CSS, Bootstrap, Material UI (MUI), and PWA into my projects. I enjoy contributing to the open-source world and sharing my technical experiences on Medium. Not only developing web interfaces, but I also aim to gain a versatile engineering perspective by touching upon different disciplines like Python, C#, PowerShell, Batch (CMD), and Arduino.',
     'about-personal': 'Personal Information',
     'about-edu': 'Education',
     'about-license': 'Driving License',
@@ -212,14 +215,17 @@ export const translations = {
     'btn-github': 'View on GitHub',
     'btn-private': 'Private Repository',
     'btn-read': 'Read Article',
+    'btn-preview': 'Live Preview',
     
     'proj-winkam': 'An all-in-one Windows optimization tool for safe cleanup, system repair, and one-click backup creation.',
     'proj-kapatika': 'Set a time. Walk away. Let Kapatika handle the shutdown.',
     'proj-devpulse': 'A modern Windows desktop app that automatically detects, checks, and safely updates your dev tools with a single click.',
     'proj-portfolio': 'Anıl Bayram - Portfolio Website',
     'proj-fiwi': 'Tool for viewing saved Wi-Fi passwords',
+    'proj-fiwi2': 'Next-generation web-based platform for viewing saved Wi-Fi passwords, live network monitoring, and spectrum analysis.',
     'proj-dathex': 'Winget-based mass software updater for Windows systems',
     'proj-dathex2': 'Next-generation Winget-based mass Windows software updater.',
+    'proj-gaia': 'AI and OCR-supported interactive quiz solving, exam preparation, and statistics tracking platform.',
     'proj-ls': 'Comprehensive security portal project. (Private Repository)',
     
     'medium-title': 'My Medium Articles',

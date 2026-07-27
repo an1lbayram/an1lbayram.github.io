@@ -29,23 +29,36 @@ const ProjectCard = ({ project, stats }) => {
               <span key={idx} className={`badge ${tag.class}`}>{tag.name}</span>
             ))}
           </div>
-          {project.isPrivate ? (
-            <button className="btn btn-secondary mt-auto" disabled>
-              {t('btn-private')}
-            </button>
-          ) : (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary mt-auto d-flex justify-content-between align-items-center"
-            >
-              <span>{t('btn-github')}</span>
-              {stats && stats.forks > 0 && (
-                <span className="small opacity-75">🍴 {stats.forks}</span>
-              )}
-            </a>
-          )}
+          <div className="mt-auto d-flex flex-column gap-2">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-primary d-flex justify-content-between align-items-center"
+              >
+                <span>🌐 {t('btn-preview')}</span>
+                <span className="small opacity-75">↗</span>
+              </a>
+            )}
+            {project.isPrivate ? (
+              <button className="btn btn-secondary" disabled>
+                {t('btn-private')}
+              </button>
+            ) : (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary d-flex justify-content-between align-items-center"
+              >
+                <span>{t('btn-github')}</span>
+                {stats && stats.forks > 0 && (
+                  <span className="small opacity-75">🍴 {stats.forks}</span>
+                )}
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
