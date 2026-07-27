@@ -92,13 +92,13 @@ const CV = ({ onClose }) => {
           <h3 className="cv-section-title">{t('cv-skills-title')}</h3>
           <ul className="cv-bullet-list">
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Diller:' : 'Languages:'}</span> JavaScript, TypeScript, Python, C#, PowerShell, HTML5, CSS3, Batch (CMD)
+              <span className="cv-item-title">{language === 'tr' ? 'Diller:' : 'Languages:'}</span> JavaScript (ES6+), TypeScript, Python, C#, PowerShell, HTML5, CSS3, Batch (CMD)
             </li>
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Kütüphaneler & Framework\'ler:' : 'Libraries & Frameworks:'}</span> React (v18, v19), Vite, Electron, Node.js, Express, Socket.io, Tailwind CSS, Bootstrap, Material UI (MUI), Chart.js
+              <span className="cv-item-title">{language === 'tr' ? 'Kütüphaneler & Framework\'ler:' : 'Libraries & Frameworks:'}</span> React (v18, v19), Vite, Electron (v41), Node.js, Express, Socket.io, Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js, React Router DOM
             </li>
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Araçlar & Teknolojiler:' : 'Tools & Technologies:'}</span> WebSockets, PWA, Winget, Git, GitHub, REST API, Web Vitals, Responsive Design, Wi-Fi Security
+              <span className="cv-item-title">{language === 'tr' ? 'Araçlar & Teknolojiler:' : 'Tools & Technologies:'}</span> WebSockets, PWA, Winget CLI, Netsh WLAN Security, Python OCR / PyMuPDF, System Cleanup & Automation, Electron Builder, Tsup, Oxlint, Vitest, Vercel Analytics, Git, GitHub
             </li>
             <li>
               <span className="cv-item-title">{language === 'tr' ? 'Öne Çıkan Yetkinlikler:' : 'Skill Highlights:'}</span> {skills.map(s => `${s.name} (%${s.progress})`).join(', ')}

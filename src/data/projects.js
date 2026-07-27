@@ -13,7 +13,9 @@ export const projects = [
       { name: "Node.js / Express", class: "bg-success" },
       { name: "Socket.io", class: "bg-secondary" },
       { name: "PWA", class: "bg-warning text-dark" },
-      { name: "Tailwind CSS", class: "bg-danger" }
+      { name: "Tailwind CSS", class: "bg-danger" },
+      { name: "Framer Motion", class: "bg-primary" },
+      { name: "Netsh WLAN", class: "bg-dark text-white" }
     ]
   },
   {
@@ -31,7 +33,8 @@ export const projects = [
       { name: "Socket.io", class: "bg-secondary" },
       { name: "PWA", class: "bg-warning text-dark" },
       { name: "Tailwind CSS", class: "bg-danger" },
-      { name: "Batch (CMD)", class: "bg-secondary" }
+      { name: "Batch (CMD)", class: "bg-secondary" },
+      { name: "Framer Motion", class: "bg-primary" }
     ]
   },
   {
@@ -44,8 +47,9 @@ export const projects = [
     tags: [
       { name: "React (v19)", class: "bg-primary" },
       { name: "Vite", class: "bg-info text-dark" },
-      { name: "Python", class: "bg-warning text-dark" },
+      { name: "Python (OCR)", class: "bg-warning text-dark" },
       { name: "Chart.js", class: "bg-secondary" },
+      { name: "React Router", class: "bg-danger" },
       { name: "PWA", class: "bg-success" }
     ]
   },
@@ -70,11 +74,12 @@ export const projects = [
     category: "desktop",
     customDate: "2026-04-10",
     tags: [
-      { name: "Electron", class: "bg-info text-dark" },
+      { name: "Electron (v41)", class: "bg-info text-dark" },
       { name: "React (v19)", class: "bg-primary" },
       { name: "Vite", class: "bg-info text-dark" },
       { name: "Node.js", class: "bg-success" },
-      { name: "Tailwind CSS", class: "bg-danger" }
+      { name: "Tailwind CSS", class: "bg-danger" },
+      { name: "Winget / NPM", class: "bg-secondary" }
     ]
   },
   {
@@ -87,7 +92,7 @@ export const projects = [
     customDate: "2026-04-05",
     tags: [
       { name: "Python", class: "bg-warning text-dark" },
-      { name: "Electron", class: "bg-info text-dark" },
+      { name: "Electron (v41)", class: "bg-info text-dark" },
       { name: "React (v19)", class: "bg-primary" },
       { name: "Vite", class: "bg-info text-dark" },
       { name: "Tailwind CSS", class: "bg-danger" },
@@ -105,7 +110,7 @@ export const projects = [
     tags: [
       { name: "TypeScript", class: "bg-secondary" },
       { name: "React (v19)", class: "bg-primary" },
-      { name: "Electron", class: "bg-info text-dark" },
+      { name: "Electron (v41)", class: "bg-info text-dark" },
       { name: "Material UI (MUI)", class: "bg-danger" },
       { name: "Vite", class: "bg-info text-dark" },
       { name: "Node.js", class: "bg-success" }
@@ -121,7 +126,7 @@ export const projects = [
     tags: [
       { name: "React (v18)", class: "bg-primary" },
       { name: "Vite", class: "bg-info text-dark" },
-      { name: "Bootstrap", class: "bg-danger" },
+      { name: "Bootstrap 5", class: "bg-danger" },
       { name: "JS/HTML/CSS", class: "bg-warning text-dark" },
       { name: "PWA", class: "bg-success" }
     ]
@@ -135,6 +140,7 @@ export const projects = [
     customDate: "2025-10-01",
     tags: [
       { name: "Batch (CMD)", class: "bg-secondary" },
+      { name: "Netsh WLAN", class: "bg-dark text-white" },
       { name: "CyberSecurity", class: "bg-dark text-white" }
     ]
   },
@@ -147,7 +153,7 @@ export const projects = [
     customDate: "2025-08-01",
     tags: [
       { name: "Batch (CMD)", class: "bg-secondary" },
-      { name: "Winget", class: "bg-primary" }
+      { name: "Winget CLI", class: "bg-primary" }
     ]
   }
 ];
