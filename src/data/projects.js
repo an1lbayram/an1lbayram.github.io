@@ -42,6 +42,7 @@ export const projects = [
     title: "GAIA",
     descKey: "proj-gaia",
     url: "https://github.com/an1lbayram/GAIA",
+    demoUrl: "https://gaia-plum-one.vercel.app/",
     category: "web desktop",
     customDate: "2026-06-01",
     tags: [
@@ -71,6 +72,7 @@ export const projects = [
     title: "DevPulse",
     descKey: "proj-devpulse",
     url: "https://github.com/an1lbayram/DevPulse",
+    demoUrl: "https://dev-pulse-tau-liart.vercel.app/",
     category: "desktop",
     customDate: "2026-04-10",
     tags: [
