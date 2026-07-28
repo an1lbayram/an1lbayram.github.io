@@ -604,7 +604,7 @@ html[data-bs-theme="dark"] .custom-toast {
   opacity: 0;
 }
 
-/* Glass Pill Badge */
+/* Glass Pill Badge - Base (Light Mode) */
 .code-cursor-badge {
   position: absolute;
   top: 0;
@@ -614,52 +614,66 @@ html[data-bs-theme="dark"] .custom-toast {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 10px;
-  background: rgba(15, 23, 42, 0.88);
+  padding: 5px 12px;
+  background: rgba(15, 23, 42, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border: 1.8px solid rgba(0, 242, 254, 0.6);
   border-radius: 999px;
   color: #00f2fe;
   font-family: 'JetBrains Mono', 'Fira Code', 'Segoe UI Mono', monospace;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   pointer-events: none;
   will-change: transform;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 242, 254, 0.25);
-  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 15px rgba(0, 242, 254, 0.4);
+  transition: background 0.25s ease, border-color 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
 }
 
+/* Ultra-High Visibility Dark Mode Styling */
 html[data-bs-theme="dark"] .code-cursor-badge {
-  background: rgba(15, 23, 42, 0.92);
-  border-color: rgba(56, 189, 248, 0.4);
-  color: #38bdf8;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.3);
-}
-
-/* Hover state: morph into glowing interactive pill */
-.code-cursor-badge.is-hovered {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.95), rgba(124, 58, 237, 0.95));
-  border-color: rgba(0, 242, 254, 0.8);
-  padding: 6px 14px;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.8), 0 0 30px rgba(0, 242, 254, 0.6);
+  background: rgba(10, 15, 30, 0.96);
+  border: 2px solid #38bdf8;
   color: #ffffff;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6), 0 0 35px rgba(0, 242, 254, 0.4), inset 0 0 10px rgba(56, 189, 248, 0.2);
 }
 
-/* Text state */
+/* Hover State: Glowing Interactive Neon Pill */
+.code-cursor-badge.is-hovered {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.98), rgba(147, 51, 234, 0.98));
+  border-color: #00f2fe;
+  padding: 7px 16px;
+  box-shadow: 0 0 25px rgba(79, 70, 229, 0.9), 0 0 40px rgba(0, 242, 254, 0.8), 0 0 60px rgba(147, 51, 234, 0.5);
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+/* Text Input State */
 .code-cursor-badge.is-text {
-  background: rgba(15, 23, 42, 0.95);
-  border-color: var(--bs-primary);
+  background: rgba(15, 23, 42, 0.98);
+  border-color: #38bdf8;
   color: #00f2fe;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
 }
 
-/* Click state */
+/* Disabled Element State */
+.code-cursor-badge.is-disabled {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: #ef4444;
+  color: #f87171;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+/* Tactile Click Feedback State */
 .code-cursor-badge.is-clicked {
-  transform: scale(0.88);
+  transform: scale(0.82) !important;
+  border-color: #00f2fe !important;
+  box-shadow: 0 0 30px #00f2fe, 0 0 50px rgba(0, 242, 254, 0.8) !important;
 }
 
 .code-symbol {
   display: inline-block;
-  transition: transform 0.2s ease;
+  transition: transform 0.15s ease;
 }

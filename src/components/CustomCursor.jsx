@@ -4,6 +4,7 @@ const CustomCursor = () => {
   const [cursorState, setCursorState] = useState({
     hovered: false,
     text: false,
+    disabled: false,
     clicked: false,
     hidden: true,
     isTouch: false,
@@ -37,6 +38,10 @@ const CustomCursor = () => {
       const target = e.target;
       if (!target || !(target instanceof HTMLElement)) return;
 
+      const isDisabledEl = target.closest(
+        ':disabled, .disabled, [aria-disabled="true"], [disabled]'
+      );
+
       const isInteractive = target.closest(
         'a, button, input[type="submit"], input[type="button"], .btn, [role="button"], .toggle-theme, .scroll-to-top, select, label, .certificate-link, .timeline-content, .card, .hamburger, .nav-links a, .badge-link'
       );
@@ -47,8 +52,9 @@ const CustomCursor = () => {
 
       setCursorState(prev => ({
         ...prev,
-        hovered: Boolean(isInteractive),
-        text: Boolean(isTextInput),
+        disabled: Boolean(isDisabledEl),
+        hovered: Boolean(isInteractive) && !isDisabledEl,
+        text: Boolean(isTextInput) && !isDisabledEl,
       }));
     };
 
@@ -61,7 +67,7 @@ const CustomCursor = () => {
 
     // Smooth Lerp Animation Loop
     const animate = () => {
-      const lerpFactor = 0.28; // Fast, responsive lerp smoothing
+      const lerpFactor = 0.28;
       badgePos.current.x += (mousePos.current.x - badgePos.current.x) * lerpFactor;
       badgePos.current.y += (mousePos.current.y - badgePos.current.y) * lerpFactor;
 
@@ -87,14 +93,22 @@ const CustomCursor = () => {
 
   if (cursorState.isTouch) return null;
 
+  // Determine Symbol
+  let symbol = '</>';
+  if (cursorState.disabled) {
+    symbol = '<🚫>';
+  } else if (cursorState.text) {
+    symbol = '<|>';
+  }
+
   return (
     <div className={`code-cursor-wrapper ${cursorState.hidden ? 'cursor-hidden' : ''}`}>
-      {/* Pure </> Glass Pill Badge Cursor */}
+      {/* State-Adaptive </> Glass Pill Badge Cursor */}
       <div
         ref={badgeRef}
-        className={`code-cursor-badge ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.text ? 'is-text' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
+        className={`code-cursor-badge ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.text ? 'is-text' : ''} ${cursorState.disabled ? 'is-disabled' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
       >
-        <span className="code-symbol">{cursorState.text ? '<|>' : '</>'}</span>
+        <span className="code-symbol">{symbol}</span>
       </div>
     </div>
   );
