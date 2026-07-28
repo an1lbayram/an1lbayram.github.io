@@ -5,6 +5,7 @@ import { useLanguage } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import CustomCursor from './components/CustomCursor';
 
 // Lazy loaded components
 const About = React.lazy(() => import('./components/About'));
@@ -101,6 +102,7 @@ function App() {
       )}
       <Analytics />
       <SpeedInsights />
+      <CustomCursor />
     </ErrorBoundary>
   );
 }
