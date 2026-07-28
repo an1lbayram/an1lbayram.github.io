@@ -11,6 +11,10 @@
   *, *::before, *::after, html, body, a, button, input, textarea, select, [role="button"], label, .card, .btn {
     cursor: none !important;
   }
+  /* Restore native cursor for cross-origin iframes (e.g. hCaptcha) */
+  iframe, .h-captcha-wrapper, [src*="hcaptcha"], [title*="hCaptcha"] {
+    cursor: pointer !important;
+  }
 }
 
 html {

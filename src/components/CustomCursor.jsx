@@ -24,9 +24,19 @@ const CustomCursor = () => {
       return;
     }
 
+    const checkIframeHover = (target) => {
+      if (!target || !(target instanceof HTMLElement)) return false;
+      return Boolean(target.closest('iframe, .h-captcha-wrapper, [src*="hcaptcha"], [title*="hCaptcha"]'));
+    };
+
     const handleMouseMove = (e) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
-      setCursorState(prev => prev.hidden ? { ...prev, hidden: false } : prev);
+      const isOverIframe = checkIframeHover(e.target);
+      if (isOverIframe) {
+        setCursorState(prev => ({ ...prev, hidden: true }));
+      } else {
+        setCursorState(prev => prev.hidden ? { ...prev, hidden: false } : prev);
+      }
     };
 
     const handleMouseDown = () => setCursorState(prev => ({ ...prev, clicked: true }));
@@ -37,6 +47,11 @@ const CustomCursor = () => {
     const handleElementHover = (e) => {
       const target = e.target;
       if (!target || !(target instanceof HTMLElement)) return;
+
+      if (checkIframeHover(target)) {
+        setCursorState(prev => ({ ...prev, hidden: true }));
+        return;
+      }
 
       const isDisabledEl = target.closest(
         ':disabled, .disabled, [aria-disabled="true"], [disabled]'
@@ -52,6 +67,7 @@ const CustomCursor = () => {
 
       setCursorState(prev => ({
         ...prev,
+        hidden: false,
         disabled: Boolean(isDisabledEl),
         hovered: Boolean(isInteractive) && !isDisabledEl,
         text: Boolean(isTextInput) && !isDisabledEl,

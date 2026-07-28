@@ -139,7 +139,7 @@ const Contact = () => {
                     </div>
 
                     {/* hCaptcha Widget - Web3Forms spam koruması */}
-                    <div className="col-12 mt-3 d-flex justify-content-center">
+                    <div className="col-12 mt-3 d-flex justify-content-center h-captcha-wrapper">
                       <HCaptcha
                         sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
                         onVerify={(token) => setCaptchaToken(token)}
