@@ -9,7 +9,6 @@ const CustomCursor = () => {
     isTouch: false,
   });
 
-  const dotRef = useRef(null);
   const badgeRef = useRef(null);
 
   // Position refs for 60-120fps lerp animation
@@ -62,13 +61,9 @@ const CustomCursor = () => {
 
     // Smooth Lerp Animation Loop
     const animate = () => {
-      const lerpFactor = 0.22;
+      const lerpFactor = 0.28; // Fast, responsive lerp smoothing
       badgePos.current.x += (mousePos.current.x - badgePos.current.x) * lerpFactor;
       badgePos.current.y += (mousePos.current.y - badgePos.current.y) * lerpFactor;
-
-      if (dotRef.current) {
-        dotRef.current.style.transform = `translate3d(${mousePos.current.x}px, ${mousePos.current.y}px, 0)`;
-      }
 
       if (badgeRef.current) {
         badgeRef.current.style.transform = `translate3d(${badgePos.current.x}px, ${badgePos.current.y}px, 0)`;
@@ -92,24 +87,14 @@ const CustomCursor = () => {
 
   if (cursorState.isTouch) return null;
 
-  const badgeIcon = cursorState.text ? '✏️' : cursorState.hovered ? '⚡' : '👨‍💻';
-  const badgeLabel = cursorState.text ? 'EDIT' : cursorState.hovered ? 'CLICK' : 'DEV';
-
   return (
-    <div className={`dev-cursor-container ${cursorState.hidden ? 'cursor-hidden' : ''}`}>
-      {/* 0ms Precision Target Dot */}
-      <div
-        ref={dotRef}
-        className={`dev-cursor-dot ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
-      />
-
-      {/* Developer Badge */}
+    <div className={`code-cursor-wrapper ${cursorState.hidden ? 'cursor-hidden' : ''}`}>
+      {/* Pure </> Glass Pill Badge Cursor */}
       <div
         ref={badgeRef}
-        className={`dev-cursor-badge ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.text ? 'is-text' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
+        className={`code-cursor-badge ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.text ? 'is-text' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
       >
-        <span className="dev-badge-icon">{badgeIcon}</span>
-        <span className="dev-badge-text">{badgeLabel}</span>
+        <span className="code-symbol">{cursorState.text ? '<|>' : '</>'}</span>
       </div>
     </div>
   );

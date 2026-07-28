@@ -608,10 +608,10 @@ html[data-bs-theme="dark"] .custom-toast {
 }
 
 /* ==========================================================================
-   Developer Badge Custom Cursor (👨‍💻 DEV)
+   Pure </> Code Tag Glass Pill Badge Cursor
    ========================================================================== */
 
-.dev-cursor-container {
+.code-cursor-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -623,99 +623,64 @@ html[data-bs-theme="dark"] .custom-toast {
   transition: opacity 0.3s ease;
 }
 
-.dev-cursor-container.cursor-hidden {
+.code-cursor-wrapper.cursor-hidden {
   opacity: 0;
 }
 
-/* 0ms Precision Target Dot */
-.dev-cursor-dot {
+/* Glass Pill Badge */
+.code-cursor-badge {
   position: absolute;
-  top: -3px;
-  left: -3px;
-  width: 6px;
-  height: 6px;
-  background-color: var(--bs-primary);
-  border-radius: 50%;
-  pointer-events: none;
-  will-change: transform;
-  box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
-  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-}
-
-html[data-bs-theme="dark"] .dev-cursor-dot {
-  background-color: #38bdf8;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
-}
-
-.dev-cursor-dot.is-hovered {
-  width: 10px;
-  height: 10px;
-  top: -5px;
-  left: -5px;
-  background-color: #00f2fe;
-}
-
-.dev-cursor-dot.is-clicked {
-  transform: scale(0.6);
-}
-
-/* Developer Pill Badge */
-.dev-cursor-badge {
-  position: absolute;
-  top: 10px;
-  left: 12px;
+  top: -10px;
+  left: -12px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 3px 10px;
+  justify-content: center;
+  padding: 4px 10px;
   background: rgba(15, 23, 42, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
-  color: #f8fafc;
+  color: #00f2fe;
   font-family: 'JetBrains Mono', 'Fira Code', 'Segoe UI Mono', monospace;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 800;
   letter-spacing: 0.5px;
   pointer-events: none;
   will-change: transform;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 242, 254, 0.25);
+  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-html[data-bs-theme="dark"] .dev-cursor-badge {
+html[data-bs-theme="dark"] .code-cursor-badge {
   background: rgba(15, 23, 42, 0.92);
   border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 /* Hover state: morph into glowing interactive pill */
-.dev-cursor-badge.is-hovered {
+.code-cursor-badge.is-hovered {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.95), rgba(124, 58, 237, 0.95));
-  border-color: rgba(0, 242, 254, 0.7);
-  padding: 4px 14px;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.7), 0 0 30px rgba(0, 242, 254, 0.5);
+  border-color: rgba(0, 242, 254, 0.8);
+  padding: 6px 14px;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.8), 0 0 30px rgba(0, 242, 254, 0.6);
   color: #ffffff;
 }
 
 /* Text state */
-.dev-cursor-badge.is-text {
+.code-cursor-badge.is-text {
   background: rgba(15, 23, 42, 0.95);
   border-color: var(--bs-primary);
+  color: #00f2fe;
 }
 
 /* Click state */
-.dev-cursor-badge.is-clicked {
-  transform: scale(0.9);
+.code-cursor-badge.is-clicked {
+  transform: scale(0.88);
 }
 
-.dev-badge-icon {
-  font-size: 0.85rem;
-  line-height: 1;
-}
-
-.dev-badge-text {
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
+.code-symbol {
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
