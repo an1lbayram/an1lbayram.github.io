@@ -183,6 +183,7 @@ html[data-bs-theme="light"] .hamburger div { background-color: #111; }
 .btn-primary:hover, .btn-primary:focus { background-color: var(--accent-hover); border-color: var(--accent-hover); }
 .text-primary { color: var(--bs-primary) !important; }
 .bg-primary { background-color: var(--bs-primary) !important; }
+.bg-purple { background-color: #8b5cf6 !important; color: #ffffff !important; }
 
 /* Cards */
 .card-reveal {
