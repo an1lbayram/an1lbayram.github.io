@@ -10,15 +10,15 @@ const CustomCursor = () => {
   });
 
   const dotRef = useRef(null);
-  const trailingRef = useRef(null);
+  const badgeRef = useRef(null);
 
-  // Position refs for lerp smoothing
+  // Position refs for 60-120fps lerp animation
   const mousePos = useRef({ x: -100, y: -100 });
-  const trailPos = useRef({ x: -100, y: -100 });
+  const badgePos = useRef({ x: -100, y: -100 });
   const animFrameId = useRef(null);
 
   useEffect(() => {
-    // Touch screen guard
+    // Mobile / Touch device check
     if (window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window) {
       setCursorState(prev => ({ ...prev, isTouch: true }));
       return;
@@ -60,18 +60,18 @@ const CustomCursor = () => {
     document.addEventListener('mouseenter', handleMouseEnter);
     window.addEventListener('mouseover', handleElementHover, { passive: true });
 
-    // Smooth Lerp Animation Loop (60-120 FPS)
+    // Smooth Lerp Animation Loop
     const animate = () => {
-      const lerpFactor = 0.2; // Smoothness factor
-      trailPos.current.x += (mousePos.current.x - trailPos.current.x) * lerpFactor;
-      trailPos.current.y += (mousePos.current.y - trailPos.current.y) * lerpFactor;
+      const lerpFactor = 0.22;
+      badgePos.current.x += (mousePos.current.x - badgePos.current.x) * lerpFactor;
+      badgePos.current.y += (mousePos.current.y - badgePos.current.y) * lerpFactor;
 
       if (dotRef.current) {
         dotRef.current.style.transform = `translate3d(${mousePos.current.x}px, ${mousePos.current.y}px, 0)`;
       }
 
-      if (trailingRef.current) {
-        trailingRef.current.style.transform = `translate3d(${trailPos.current.x}px, ${trailPos.current.y}px, 0)`;
+      if (badgeRef.current) {
+        badgeRef.current.style.transform = `translate3d(${badgePos.current.x}px, ${badgePos.current.y}px, 0)`;
       }
 
       animFrameId.current = requestAnimationFrame(animate);
@@ -92,22 +92,24 @@ const CustomCursor = () => {
 
   if (cursorState.isTouch) return null;
 
+  const badgeIcon = cursorState.text ? '✏️' : cursorState.hovered ? '⚡' : '👨‍💻';
+  const badgeLabel = cursorState.text ? 'EDIT' : cursorState.hovered ? 'CLICK' : 'DEV';
+
   return (
-    <div className={`custom-cursor-wrapper ${cursorState.hidden ? 'cursor-hidden' : ''}`}>
-      {/* 0ms Precision Dot Hotspot */}
+    <div className={`dev-cursor-container ${cursorState.hidden ? 'cursor-hidden' : ''}`}>
+      {/* 0ms Precision Target Dot */}
       <div
         ref={dotRef}
-        className={`custom-cursor-dot ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
+        className={`dev-cursor-dot ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
       />
 
-      {/* Spring Physics Trailing </> Code Badge */}
+      {/* Developer Badge */}
       <div
-        ref={trailingRef}
-        className={`custom-cursor-trailing ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.text ? 'is-text' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
+        ref={badgeRef}
+        className={`dev-cursor-badge ${cursorState.hovered ? 'is-hovered' : ''} ${cursorState.text ? 'is-text' : ''} ${cursorState.clicked ? 'is-clicked' : ''}`}
       >
-        <span className="cursor-code-symbol">
-          {cursorState.text ? '</|>' : '</>'}
-        </span>
+        <span className="dev-badge-icon">{badgeIcon}</span>
+        <span className="dev-badge-text">{badgeLabel}</span>
       </div>
     </div>
   );

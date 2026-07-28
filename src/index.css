@@ -608,10 +608,10 @@ html[data-bs-theme="dark"] .custom-toast {
 }
 
 /* ==========================================================================
-   World-Class Interactive Spring-Animated Custom Cursor
+   Developer Badge Custom Cursor (👨‍💻 DEV)
    ========================================================================== */
 
-.custom-cursor-wrapper {
+.dev-cursor-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -623,12 +623,12 @@ html[data-bs-theme="dark"] .custom-toast {
   transition: opacity 0.3s ease;
 }
 
-.custom-cursor-wrapper.cursor-hidden {
+.dev-cursor-container.cursor-hidden {
   opacity: 0;
 }
 
-/* 0ms Precision Hotspot Dot */
-.custom-cursor-dot {
+/* 0ms Precision Target Dot */
+.dev-cursor-dot {
   position: absolute;
   top: -3px;
   left: -3px;
@@ -638,16 +638,16 @@ html[data-bs-theme="dark"] .custom-toast {
   border-radius: 50%;
   pointer-events: none;
   will-change: transform;
-  box-shadow: 0 0 10px rgba(79, 70, 229, 0.6);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
   transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
 }
 
-html[data-bs-theme="dark"] .custom-cursor-dot {
+html[data-bs-theme="dark"] .dev-cursor-dot {
   background-color: #38bdf8;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
 }
 
-.custom-cursor-dot.is-hovered {
+.dev-cursor-dot.is-hovered {
   width: 10px;
   height: 10px;
   top: -5px;
@@ -655,59 +655,67 @@ html[data-bs-theme="dark"] .custom-cursor-dot {
   background-color: #00f2fe;
 }
 
-.custom-cursor-dot.is-clicked {
+.dev-cursor-dot.is-clicked {
   transform: scale(0.6);
 }
 
-/* Spring-Physics Trailing </> Code Badge */
-.custom-cursor-trailing {
+/* Developer Pill Badge */
+.dev-cursor-badge {
   position: absolute;
   top: 10px;
-  left: 14px;
-  padding: 3px 8px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
   color: #f8fafc;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace, sans-serif;
-  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Segoe UI Mono', monospace;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   pointer-events: none;
   will-change: transform;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
 }
 
-html[data-bs-theme="dark"] .custom-cursor-trailing {
-  background: rgba(15, 23, 42, 0.9);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.2);
+html[data-bs-theme="dark"] .dev-cursor-badge {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.25);
 }
 
 /* Hover state: morph into glowing interactive pill */
-.custom-cursor-trailing.is-hovered {
-  background: rgba(79, 70, 229, 0.9);
-  border-color: rgba(0, 242, 254, 0.6);
-  padding: 4px 12px;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.6), 0 0 30px rgba(0, 242, 254, 0.4);
+.dev-cursor-badge.is-hovered {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.95), rgba(124, 58, 237, 0.95));
+  border-color: rgba(0, 242, 254, 0.7);
+  padding: 4px 14px;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.7), 0 0 30px rgba(0, 242, 254, 0.5);
   color: #ffffff;
 }
 
 /* Text state */
-.custom-cursor-trailing.is-text {
+.dev-cursor-badge.is-text {
   background: rgba(15, 23, 42, 0.95);
   border-color: var(--bs-primary);
 }
 
 /* Click state */
-.custom-cursor-trailing.is-clicked {
+.dev-cursor-badge.is-clicked {
   transform: scale(0.9);
 }
 
-.cursor-code-symbol {
-  display: inline-block;
-  transition: transform 0.2s ease;
+.dev-badge-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.dev-badge-text {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
