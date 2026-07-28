@@ -17,6 +17,9 @@ const CustomCursor = () => {
   const badgePos = useRef({ x: -100, y: -100 });
   const animFrameId = useRef(null);
 
+  const stateRef = useRef(cursorState);
+  stateRef.current = cursorState;
+
   useEffect(() => {
     // Mobile / Touch device check
     if (window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window) {
@@ -88,7 +91,8 @@ const CustomCursor = () => {
       badgePos.current.y += (mousePos.current.y - badgePos.current.y) * lerpFactor;
 
       if (badgeRef.current) {
-        badgeRef.current.style.transform = `translate3d(${badgePos.current.x}px, ${badgePos.current.y}px, 0)`;
+        const scale = stateRef.current.clicked ? 0.84 : stateRef.current.hovered ? 1.12 : 1.0;
+        badgeRef.current.style.transform = `translate3d(${badgePos.current.x}px, ${badgePos.current.y}px, 0) scale(${scale})`;
       }
 
       animFrameId.current = requestAnimationFrame(animate);

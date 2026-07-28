@@ -676,7 +676,6 @@ html[data-bs-theme="dark"] .code-cursor-badge.is-disabled {
 /* Tactile Click State (Unified across Light & Dark Mode) */
 .code-cursor-badge.is-clicked,
 html[data-bs-theme="dark"] .code-cursor-badge.is-clicked {
-  transform: scale(0.82) !important;
   border-color: #00f2fe !important;
   box-shadow: 0 0 30px #4f46e5, 0 0 50px rgba(0, 242, 254, 0.9) !important;
 }
