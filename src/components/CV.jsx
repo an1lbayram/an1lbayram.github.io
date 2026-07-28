@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/projects';
 import { certificates } from '../data/certificates';

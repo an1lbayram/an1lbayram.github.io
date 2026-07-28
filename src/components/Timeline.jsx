@@ -1,13 +1,10 @@
-import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useLanguage } from '../context/LanguageContext';
-import { useGitHubStats } from '../hooks/useGitHubStats';
 import { projects } from '../data/projects';
 
 const Timeline = () => {
   const { t } = useLanguage();
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
-  const { stats } = useGitHubStats();
 
   // Use customDate for timeline sorting
   const timelineItems = projects

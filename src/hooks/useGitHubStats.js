@@ -63,7 +63,9 @@ export const useGitHubStats = (username = 'an1lbayram') => {
            try {
               const { data } = JSON.parse(cachedData);
               setStats(data);
-           } catch(e) {}
+           } catch (e) {
+              console.warn("Failed to parse cached GitHub stats:", e);
+           }
         }
       }
     };

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Toast = ({ message, type = 'success', onClose }) => {
   const onCloseRef = useRef(onClose);

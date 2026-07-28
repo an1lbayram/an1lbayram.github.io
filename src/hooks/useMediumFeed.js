@@ -82,10 +82,12 @@ export const useMediumFeed = () => {
         setLoading(false);
         // Fallback to cache if available
         if (cachedData) {
-           try {
-              const { data } = JSON.parse(cachedData);
-              setArticles(data);
-           } catch(e) {}
+          try {
+            const { data } = JSON.parse(cachedData);
+            setArticles(data);
+          } catch (e) {
+            console.warn("Failed to parse cached Medium feed:", e);
+          }
         }
       }
     };

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Skeleton = ({ type, className = '' }) => {
   const classes = `skeleton ${type} ${className}`;

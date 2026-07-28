@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const TypeWriter = ({ text, delay = 100, className = '' }) => {
   const [currentText, setCurrentText] = useState('');
