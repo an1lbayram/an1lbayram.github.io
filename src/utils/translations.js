@@ -37,8 +37,8 @@ export const translations = {
     'btn-read': 'Yazıyı Oku',
     'btn-preview': 'Canlı Önizleme',
     
-    'proj-altay': 'Çevrenizdeki ve dünya genelindeki tarihi eserleri, antik kentleri, müzeleri, kale & surları ve anıtları interaktif harita üzerinde keşfetmenizi sağlayan modern Web & PWA uygulaması. Leaflet.js, Overpass API ve Nominatim geocoding ile POI tarama; OSM, Wikidata, Wikipedia, Wikimedia Commons, Open-Meteo, Open-Elevation ve UNESCO verilerini birleştiren Multi-Source Data Fusion Engine; GPS konum tespiti, kategori filtreleme, marker cluster, 4 harita katmanı, Türkçe sesli rehber (Web Speech API), favoriler, canlı hava durumu, rakım bilgisi, Google Maps yol tarifi ve karanlık/aydınlık mod desteği.',
-    'proj-zenith': 'Kanban görev yönetimi, 7 günlük alışkanlık takibi (streak & XP), Web Audio API 20 prosedürel ortam sesli Pomodoro odak zamanlayıcısı, XP ödül marketi, günlük mood/zihin notu takibi ve PWA destekli oyunlaştırılmış verimlilik ve yaşam yönetim platformu.',
+    'proj-altay': 'Tarihi eserleri, antik kentleri ve anıtları interaktif harita üzerinde keşfetmenizi sağlayan Web & PWA uygulaması. OSM, Wikidata ve UNESCO gibi kaynakları birleştiren Data Fusion Engine, Türkçe sesli rehber ve canlı hava durumu içerir.',
+    'proj-zenith': 'Kanban görev yönetimi, alışkanlık takibi (streak & XP) ve prosedürel ortam sesli Pomodoro zamanlayıcısı sunan oyunlaştırılmış verimlilik platformu. XP ödül marketi ve günlük mood takibi ile PWA destekli.',
     'proj-winkam': 'Python CLI çekirdeği, Electron ve React (v19) arayüzü ile sistem temizliği, onarım ve yedekleme sunan hepsi bir arada Windows optimizasyon aracı.',
     'proj-kapatika': 'TypeScript, React (v19), Electron (v41) ve Material UI (MUI) ile geliştirilmiş süreli bilgisayar kapatma ve zamanlayıcı masaüstü uygulaması.',
     'proj-devpulse': 'Electron (v41), React (v19) ve Node.js ile geliştirilen; Winget, Chocolatey ve NPM geliştirici araçlarını otomatik algılayan ve tek tıkla güncelleyen masaüstü uygulaması.',
@@ -219,8 +219,8 @@ export const translations = {
     'btn-read': 'Read Article',
     'btn-preview': 'Live Preview',
     
-    'proj-altay': 'Modern Web & PWA app for discovering historical sites, ancient cities, museums, castles, and monuments on an interactive map. Features Leaflet.js, Overpass API, Nominatim geocoding, Multi-Source Data Fusion Engine (OSM, Wikidata, Wikipedia, Wikimedia Commons, Open-Meteo, Open-Elevation, UNESCO), GPS location, category filtering, marker clustering, 4 map layers, Turkish TTS audio guide (Web Speech API), bookmarks, live weather, elevation data, Google Maps directions, and dark/light mode.',
-    'proj-zenith': 'Gamified productivity & life management platform featuring Kanban task management, 7-day habit tracker (streak & XP), Pomodoro focus timer with Web Audio API 20 procedural ambient sounds, XP reward shop, daily mood/journal logger, and PWA offline support.',
+    'proj-altay': 'Web & PWA app for discovering historical sites, ancient cities, and monuments on an interactive map. Combines sources like OSM, Wikidata, and UNESCO via a Data Fusion Engine, with a Turkish TTS audio guide and live weather.',
+    'proj-zenith': 'Gamified productivity platform with Kanban task management, habit tracking (streak & XP), and a Pomodoro timer with procedural ambient sounds. Includes an XP reward shop and daily mood logger, with PWA offline support.',
     'proj-winkam': 'An all-in-one Windows optimization tool featuring a Python CLI engine, Electron & React (v19) UI for safe cleanup, system repair, and backups.',
     'proj-kapatika': 'A timer-based computer shutdown desktop application built with TypeScript, React (v19), Electron (v41), and Material UI (MUI).',
     'proj-devpulse': 'A desktop app built with Electron (v41), React (v19), and Node.js that automatically detects Winget, Chocolatey, and NPM dev tools and safely updates them.',
