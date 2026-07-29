@@ -27,7 +27,9 @@ const Hero = () => {
             loading="eager"
           />
         </div>
-        <h1 className="display-5 fw-bold mb-2" dangerouslySetInnerHTML={{ __html: t('hero-hello') }}></h1>
+        <h1 className="display-5 fw-bold mb-2">
+          <span className="text-primary">{t('hero-hello')}</span>
+        </h1>
         <h2 className="h4 text-secondary mb-4">
           <TypeWriter text={t('hero-role')} delay={100} />
         </h2>

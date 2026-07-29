@@ -10,7 +10,7 @@ export const translations = {
     'nav-social': 'Sosyal',
     'nav-contact': 'İletişim',
     
-    'hero-hello': '<span class="text-primary">ANIL BAYRAM</span>',
+    'hero-hello': 'ANIL BAYRAM',
     'hero-role': 'JR. Front-End Developer',
     'hero-btn': 'Projelerimi Gör',
     'hero-cv-btn': 'CV İndir',
@@ -192,7 +192,7 @@ export const translations = {
     'nav-social': 'Social',
     'nav-contact': 'Contact',
     
-    'hero-hello': '<span class="text-primary">ANIL BAYRAM</span>',
+    'hero-hello': 'ANIL BAYRAM',
     'hero-role': 'JR. Front-End Developer',
     'hero-btn': 'View My Projects',
     'hero-cv-btn': 'Download CV',
