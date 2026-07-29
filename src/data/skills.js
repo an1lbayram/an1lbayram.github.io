@@ -3,7 +3,7 @@ export const skills = [
   { id: 2, name: 'JavaScript (ES6+) / TypeScript / React (v18, v19)', progress: 92, colorClass: 'bg-info' },
   { id: 3, name: 'Node.js / Express / Socket.io / WebSockets / REST API', progress: 88, colorClass: 'bg-danger' },
   { id: 4, name: 'Electron (v41) Masaüstü Geliştirme (Electron Forge / Builder)', progress: 86, colorClass: 'bg-primary' },
-  { id: 5, name: 'Vite / PWA / Web Performans / Framer Motion / Chart.js', progress: 90, colorClass: 'bg-secondary' },
+  { id: 5, name: 'Vite / PWA / Leaflet.js / Web Audio & Speech API / Framer Motion', progress: 90, colorClass: 'bg-secondary' },
   { id: 6, name: 'Python (Setuptools/OCR) / C# / PowerShell / Batch (CMD)', progress: 82, colorClass: 'bg-success' },
   { id: 7, name: 'Winget CLI / Netsh WLAN / Sistem Otomasyonu & Güvenliği', progress: 85, colorClass: 'bg-purple' },
   { id: 8, name: 'Arduino / Gömülü Sistemler (Embedded)', progress: 70, colorClass: 'bg-warning' }

@@ -98,7 +98,7 @@ const CV = ({ onClose }) => {
               <span className="cv-item-title">{language === 'tr' ? 'Kütüphaneler & Framework\'ler:' : 'Libraries & Frameworks:'}</span> React (v18, v19), Vite, Electron (v41), Node.js, Express, Socket.io, Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js, React Router DOM
             </li>
             <li>
-              <span className="cv-item-title">{language === 'tr' ? 'Araçlar & Teknolojiler:' : 'Tools & Technologies:'}</span> WebSockets, PWA, Winget CLI, Netsh WLAN Security, Python OCR / PyMuPDF, System Cleanup & Automation, Electron Builder, Tsup, Oxlint, Vitest, Vercel Analytics, Git, GitHub
+              <span className="cv-item-title">{language === 'tr' ? 'Araçlar & Teknolojiler:' : 'Tools & Technologies:'}</span> Leaflet.js & Overpass API (İnteraktif Harita), WebSockets, PWA, Web Audio API (20 Ortam Sesi Engine), Web Speech API (Sesli Rehber), Winget CLI, Netsh WLAN Security, Python OCR / PyMuPDF, System Cleanup & Automation, Electron Builder, Tsup, Oxlint, Vitest, Vercel Analytics, Git, GitHub
             </li>
             <li>
               <span className="cv-item-title">{language === 'tr' ? 'Öne Çıkan Yetkinlikler:' : 'Skill Highlights:'}</span> {skills.map(s => `${s.name} (%${s.progress})`).join(', ')}

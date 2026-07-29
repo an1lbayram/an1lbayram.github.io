@@ -18,7 +18,7 @@ export const translations = {
     'timeline-title': 'Geliştirme Süreci',
     
     'about-title': 'Hakkımda',
-    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End ve Masaüstü Geliştirici kimliğine dönüştürdüm. HTML5, CSS3, JavaScript, TypeScript ve React (v18/v19) gibi modern web teknolojileriyle kullanıcı odaklı dinamik arayüzler tasarlarken; projelerimde Node.js, Express, Socket.io, Vite, Electron (v41), Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js ve PWA gibi güncel teknolojileri etkin şekilde kullanıyorum. Masaüstü ve web uygulamalarının yanı sıra Python (OCR/otomasyon), C#, PowerShell ve Batch (CMD) betik dilleriyle sistem temizleme, paket yönetimi (Winget/Chocolatey/NPM), ağ güvenliği (Netsh WLAN) ve otomasyon araçları geliştiriyorum. Açık kaynak ekosistemine katkıda bulunmaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum.',
+    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End ve Masaüstü Geliştirici kimliğine dönüştürdüm. HTML5, CSS3, JavaScript, TypeScript ve React (v18/v19) gibi modern web teknolojileriyle kullanıcı odaklı dinamik arayüzler tasarlarken; projelerimde Node.js, Express, Socket.io, Vite, Electron (v41), Leaflet.js, Web Audio/Speech API, Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js ve PWA gibi güncel teknolojileri etkin şekilde kullanıyorum. Masaüstü ve web uygulamalarının yanı sıra Python (OCR/otomasyon), C#, PowerShell ve Batch (CMD) betik dilleriyle sistem temizleme, paket yönetimi (Winget/Chocolatey/NPM), ağ güvenliği (Netsh WLAN) ve otomasyon araçları geliştiriyorum. Açık kaynak ekosistemine katkıda bulunmaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum.',
     'about-personal': 'Kişisel Bilgiler',
     'about-edu': 'Eğitim',
     'about-license': 'Ehliyet',
@@ -37,6 +37,8 @@ export const translations = {
     'btn-read': 'Yazıyı Oku',
     'btn-preview': 'Canlı Önizleme',
     
+    'proj-altay': 'Çevrenizdeki ve dünya genelindeki tarihi eserleri, antik kentleri, müzeleri, kale & surları ve anıtları interaktif harita üzerinde keşfetmenizi sağlayan modern Web & PWA uygulaması. Leaflet.js, Overpass API ve Nominatim geocoding ile POI tarama; OSM, Wikidata, Wikipedia, Wikimedia Commons, Open-Meteo, Open-Elevation ve UNESCO verilerini birleştiren Multi-Source Data Fusion Engine; GPS konum tespiti, kategori filtreleme, marker cluster, 4 harita katmanı, Türkçe sesli rehber (Web Speech API), favoriler, canlı hava durumu, rakım bilgisi, Google Maps yol tarifi ve karanlık/aydınlık mod desteği.',
+    'proj-zenith': 'Kanban görev yönetimi, 7 günlük alışkanlık takibi (streak & XP), Web Audio API 20 prosedürel ortam sesli Pomodoro odak zamanlayıcısı, XP ödül marketi, günlük mood/zihin notu takibi ve PWA destekli oyunlaştırılmış verimlilik ve yaşam yönetim platformu.',
     'proj-winkam': 'Python CLI çekirdeği, Electron ve React (v19) arayüzü ile sistem temizliği, onarım ve yedekleme sunan hepsi bir arada Windows optimizasyon aracı.',
     'proj-kapatika': 'TypeScript, React (v19), Electron (v41) ve Material UI (MUI) ile geliştirilmiş süreli bilgisayar kapatma ve zamanlayıcı masaüstü uygulaması.',
     'proj-devpulse': 'Electron (v41), React (v19) ve Node.js ile geliştirilen; Winget, Chocolatey ve NPM geliştirici araçlarını otomatik algılayan ve tek tıkla güncelleyen masaüstü uygulaması.',
@@ -198,7 +200,7 @@ export const translations = {
     'timeline-title': 'Development Timeline',
     
     'about-title': 'About Me',
-    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End and Desktop Developer. While designing user-centric dynamic interfaces with modern web technologies such as HTML5, CSS3, JavaScript, TypeScript, and React (v18/v19); I actively utilize up-to-date technologies including Node.js, Express, Socket.io, Vite, Electron (v41), Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js, and PWA. Alongside web and desktop applications, I build system cleanup, package management (Winget/Chocolatey/NPM), network security (Netsh WLAN), and automation tools using Python (OCR/automation), C#, PowerShell, and Batch (CMD) scripting languages. I enjoy contributing to the open-source ecosystem and sharing my technical experiences on Medium.',
+    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End and Desktop Developer. While designing user-centric dynamic interfaces with modern web technologies such as HTML5, CSS3, JavaScript, TypeScript, and React (v18/v19); I actively utilize up-to-date technologies including Node.js, Express, Socket.io, Vite, Electron (v41), Leaflet.js, Web Audio/Speech API, Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js, and PWA. Alongside web and desktop applications, I build system cleanup, package management (Winget/Chocolatey/NPM), network security (Netsh WLAN), and automation tools using Python (OCR/automation), C#, PowerShell, and Batch (CMD) scripting languages. I enjoy contributing to the open-source ecosystem and sharing my technical experiences on Medium.',
     'about-personal': 'Personal Information',
     'about-edu': 'Education',
     'about-license': 'Driving License',
@@ -217,6 +219,8 @@ export const translations = {
     'btn-read': 'Read Article',
     'btn-preview': 'Live Preview',
     
+    'proj-altay': 'Modern Web & PWA app for discovering historical sites, ancient cities, museums, castles, and monuments on an interactive map. Features Leaflet.js, Overpass API, Nominatim geocoding, Multi-Source Data Fusion Engine (OSM, Wikidata, Wikipedia, Wikimedia Commons, Open-Meteo, Open-Elevation, UNESCO), GPS location, category filtering, marker clustering, 4 map layers, Turkish TTS audio guide (Web Speech API), bookmarks, live weather, elevation data, Google Maps directions, and dark/light mode.',
+    'proj-zenith': 'Gamified productivity & life management platform featuring Kanban task management, 7-day habit tracker (streak & XP), Pomodoro focus timer with Web Audio API 20 procedural ambient sounds, XP reward shop, daily mood/journal logger, and PWA offline support.',
     'proj-winkam': 'An all-in-one Windows optimization tool featuring a Python CLI engine, Electron & React (v19) UI for safe cleanup, system repair, and backups.',
     'proj-kapatika': 'A timer-based computer shutdown desktop application built with TypeScript, React (v19), Electron (v41), and Material UI (MUI).',
     'proj-devpulse': 'A desktop app built with Electron (v41), React (v19), and Node.js that automatically detects Winget, Chocolatey, and NPM dev tools and safely updates them.',

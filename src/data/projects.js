@@ -1,5 +1,41 @@
 export const projects = [
   {
+    id: 12,
+    title: "Altay",
+    descKey: "proj-altay",
+    url: "https://github.com/an1lbayram/Altay",
+    demoUrl: "https://altay-liard.vercel.app/",
+    category: "web",
+    customDate: "2026-07-28",
+    tags: [
+      { name: "Leaflet.js", class: "bg-success" },
+      { name: "Overpass API", class: "bg-info text-dark" },
+      { name: "Nominatim", class: "bg-secondary" },
+      { name: "Wikidata", class: "bg-primary" },
+      { name: "Data Fusion", class: "bg-dark text-white" },
+      { name: "Web Speech API", class: "bg-primary" },
+      { name: "Tailwind CSS", class: "bg-danger" },
+      { name: "PWA", class: "bg-warning text-dark" }
+    ]
+  },
+  {
+    id: 11,
+    title: "Zenith",
+    descKey: "proj-zenith",
+    url: "https://github.com/an1lbayram/Zenith",
+    demoUrl: "https://zenith-pi-nine.vercel.app/",
+    category: "web desktop",
+    customDate: "2026-07-25",
+    tags: [
+      { name: "JavaScript (ES6+)", class: "bg-primary" },
+      { name: "Tailwind CSS", class: "bg-danger" },
+      { name: "Web Audio API", class: "bg-info text-dark" },
+      { name: "PWA", class: "bg-warning text-dark" },
+      { name: "Reactive Store", class: "bg-success" },
+      { name: "Vercel Analytics", class: "bg-secondary" }
+    ]
+  },
+  {
     id: 9,
     title: "FiWi V2",
     descKey: "proj-fiwi2",
