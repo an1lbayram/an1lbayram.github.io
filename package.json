@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:update-snapshots": "playwright test --update-snapshots",
+    "test:lighthouse": "lhci autorun"
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^2.0.2",
@@ -20,6 +23,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.62.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
@@ -33,6 +39,8 @@
     "jsdom": "^30.0.1",
     "vite": "^8.1.5",
     "vite-plugin-pwa": "^1.3.0",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "vitest-axe": "^0.1.0",
+    "wait-on": "^9.1.0"
   }
 }

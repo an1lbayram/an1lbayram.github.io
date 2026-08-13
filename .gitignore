@@ -37,6 +37,10 @@ build/
 # Testing
 coverage/
 .nyc_output/
+.lighthouseci/
+playwright-report/
+test-results/
+dev-dist/
 
 # Misc
 *.bak

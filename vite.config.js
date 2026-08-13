@@ -8,6 +8,10 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./src/test/setup.js'],
     css: true,
+    // e2e/*.spec.js are Playwright tests (run via `npm run test:e2e`), not
+    // Vitest — without this exclude, Vitest's default *.spec.js glob picks
+    // them up too and fails on Playwright's incompatible test.beforeEach().
+    exclude: ['**/node_modules/**', '**/dist/**', 'e2e/**'],
   },
   plugins: [
     react(),

@@ -54,7 +54,10 @@ const ProjectCard = ({ project, stats }) => {
               >
                 <span>{t('btn-github')}</span>
                 {stats && stats.forks > 0 && (
-                  <span className="small opacity-75">🍴 {stats.forks}</span>
+                  // Plain white (not opacity-75) — the reduced opacity dropped
+                  // this badge's contrast on the btn-primary background to
+                  // 4.26:1, just under the 4.5:1 WCAG AA minimum.
+                  <span className="small">🍴 {stats.forks}</span>
                 )}
               </a>
             )}

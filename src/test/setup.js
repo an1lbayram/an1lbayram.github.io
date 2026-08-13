@@ -1,6 +1,11 @@
 import '@testing-library/jest-dom/vitest';
-import { afterEach, vi } from 'vitest';
+import { afterEach, expect, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
+// vitest-axe@0.1.0 ships an empty extend-expect.js (a known packaging bug),
+// so the toHaveNoViolations matcher is registered manually from its
+// underlying (working) matchers module instead.
+import { toHaveNoViolations } from 'vitest-axe/matchers';
+expect.extend({ toHaveNoViolations });
 
 afterEach(() => {
   cleanup();

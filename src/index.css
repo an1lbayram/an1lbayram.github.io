@@ -22,6 +22,42 @@ html {
   scroll-padding-top: 70px;
 }
 
+/* Bootstrap's default .text-secondary fails WCAG AA (4.5:1) body-text
+   contrast in both themes — #7c848c on white is 3.79:1, and the unmodified
+   #6c757d on this dark theme's #212529 body background is ~3.3:1 (caught by
+   an automated axe-core accessibility scan). */
+html[data-bs-theme="light"] .text-secondary {
+  color: #495057 !important;
+}
+html[data-bs-theme="dark"] .text-secondary {
+  color: #adb5bd !important;
+}
+
+/* The brand accent purple (#4f46e5) also fails contrast as TEXT against this
+   dark theme's backgrounds — 2.11:1-3.42:1 vs the 3:1-4.5:1 WCAG AA minimums
+   for the navbar brand link, section headings, certificate links, and
+   outline buttons (caught by an automated axe-core accessibility scan).
+   Button *backgrounds* are unaffected (white text on #4f46e5 already
+   passes) — only text/border usages are lightened here, keeping the same
+   hue. Note: --bs-btn-hover-bg/--bs-btn-active-bg must stay at the darker
+   #4f46e5, not this lighter tint — a filter button's *filled* (.active)
+   state pairs it with white text, and the lighter tint drops that white-on-
+   fill contrast to 2.66:1 (this was tried once and reverted). */
+html[data-bs-theme="dark"] .text-primary,
+html[data-bs-theme="dark"] .brand,
+html[data-bs-theme="dark"] .certificate-link {
+  color: #9a93f5 !important;
+}
+html[data-bs-theme="dark"] .brand:hover {
+  color: #b5afff !important;
+}
+html[data-bs-theme="dark"] .btn-outline-primary {
+  --bs-btn-color: #9a93f5;
+  --bs-btn-border-color: #9a93f5;
+  --bs-btn-hover-border-color: #9a93f5;
+  --bs-btn-active-border-color: #9a93f5;
+}
+
 #root {
   min-height: 100vh;
 }
