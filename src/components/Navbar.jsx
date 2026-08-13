@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import InstallButton from './InstallButton';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,13 +53,16 @@ const Navbar = () => {
             <li><a href="#skills" onClick={closeMenu}>{t('nav-skills')}</a></li>
             <li><a href="#contact" onClick={closeMenu}>{t('nav-contact')}</a></li>
             <li>
-              <button 
-                onClick={toggleLanguage} 
-                className="btn btn-sm btn-outline-primary ms-lg-3 mt-2 mt-lg-0" 
+              <button
+                onClick={toggleLanguage}
+                className="btn btn-sm btn-outline-primary ms-lg-3 mt-2 mt-lg-0"
                 style={{ fontWeight: 600, padding: '4px 12px', borderRadius: '6px' }}
               >
                 {language === 'tr' ? 'EN | TR' : 'TR | EN'}
               </button>
+            </li>
+            <li>
+              <InstallButton className="ms-lg-2 mt-2 mt-lg-0" />
             </li>
           </ul>
         </div>

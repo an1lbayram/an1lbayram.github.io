@@ -153,6 +153,12 @@ export const translations = {
     'theme-dark': 'Koyu Temaya Geç',
     'copy-fail': 'Bağlantı kopyalanamadı',
     'scroll-top': 'Sayfanın Başına Git',
+
+    'install-app': 'Uygulamayı Yükle',
+    'install-app-aria': 'Bu web sitesini uygulama olarak cihazına yükle',
+    'install-app-ios-title': 'Ana Ekrana Ekle',
+    'install-app-ios-desc': 'Safari\'de paylaş simgesine ⎋ dokun, ardından "Ana Ekrana Ekle" seçeneğini seç.',
+    'install-app-ios-close': 'Anladım',
     
     'social-github-aria': 'GitHub profilimi ziyaret et',
     'social-medium-aria': 'Medium yazılarımı oku',
@@ -335,6 +341,12 @@ export const translations = {
     'theme-dark': 'Switch to Dark Mode',
     'copy-fail': 'Could not copy link',
     'scroll-top': 'Scroll to Top',
+
+    'install-app': 'Install App',
+    'install-app-aria': 'Install this website as an app on your device',
+    'install-app-ios-title': 'Add to Home Screen',
+    'install-app-ios-desc': 'Tap the Share icon ⎋ in Safari, then choose "Add to Home Screen".',
+    'install-app-ios-close': 'Got it',
     
     'social-github-aria': 'Visit my GitHub profile',
     'social-medium-aria': 'Read my Medium articles',

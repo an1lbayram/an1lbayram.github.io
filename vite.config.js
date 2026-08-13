@@ -3,10 +3,20 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test/setup.js'],
+    css: true,
+  },
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true,
+        type: 'module',
+      },
       includeAssets: ['icons/A.ico', 'images/an1lbayram_light.png', 'images/an1lbayram_night.png', 'robots.txt', 'sitemap.xml'],
       manifest: {
         name: 'Anıl Bayram - Software Developer',

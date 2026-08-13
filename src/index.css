@@ -608,6 +608,38 @@ html[data-bs-theme="dark"] .custom-toast {
   opacity: 0;
 }
 
+/* ==========================================================================
+   PWA Install Button & iOS Instructions Modal
+   ========================================================================== */
+
+.install-app-btn {
+  font-weight: 600;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.install-ios-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+.install-ios-modal {
+  background: var(--bs-body-bg, #fff);
+  color: var(--bs-body-color, #212529);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
 /* Glass Pill Badge - Base (Light Mode) */
 .code-cursor-badge {
   position: absolute;

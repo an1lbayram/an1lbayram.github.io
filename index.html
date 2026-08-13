@@ -45,6 +45,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
+  <!-- CSP fallback for GitHub Pages (static hosting can't set HTTP headers; Vercel uses vercel.json instead) -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://va.vercel-scripts.com https://web3forms.com https://js.hcaptcha.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self' https://api.web3forms.com https://vitals.vercel-insights.com https://vitals.vercel-analytics.com https://api.hcaptcha.com https://api.github.com https://api.rss2json.com; frame-src https://newassets.hcaptcha.com;" />
+
   <meta name="theme-color" content="#00adb5" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
