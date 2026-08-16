@@ -231,5 +231,21 @@ export const certificates = [
     institution: "T.C. Millî Eğitim Bakanlığı",
     date: "Kasım 2018 - Kasım 2023",
     credentialId: "27049320180058314916"
+  },
+  {
+    id: 28,
+    title: "Amateur Seaman's Certificate",
+    titleKey: "cert-dyn-26",
+    institution: "T.C. Ulaştırma ve Altyapı Bakanlığı - Denizcilik Genel Müdürlüğü",
+    date: "Ağustos 2026",
+    credentialId: ""
+  },
+  {
+    id: 29,
+    title: "Certificate of Competence for Short Range Radio Operators",
+    titleKey: "cert-dyn-27",
+    institution: "T.C. Ulaştırma ve Altyapı Bakanlığı - Denizcilik Genel Müdürlüğü",
+    date: "Ağustos 2026",
+    credentialId: ""
   }
 ];
