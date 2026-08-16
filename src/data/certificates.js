@@ -1,6 +1,22 @@
 export const certificates = [
   {
     id: 1,
+    title: "Amateur Seaman's Certificate",
+    titleKey: "cert-dyn-26",
+    institution: "T.C. Ulaştırma ve Altyapı Bakanlığı",
+    date: "Ağustos 2026",
+    credentialId: ""
+  },
+  {
+    id: 2,
+    title: "Certificate of Competence for Short Range Radio Operators",
+    titleKey: "cert-dyn-27",
+    institution: "T.C. Ulaştırma ve Altyapı Bakanlığı",
+    date: "Ağustos 2026",
+    credentialId: ""
+  },
+  {
+    id: 3,
     title: "Web Tabanlı İçerik Yönetim Sistemleri",
     titleKey: "cert-dyn-17",
     institution: "T.C. Millî Eğitim Bakanlığı",
@@ -8,7 +24,7 @@ export const certificates = [
     credentialId: "11868320260096835309"
   },
   {
-    id: 2,
+    id: 4,
     title: "Yapay Zeka Mini Bootcamp",
     titleKey: "cert-dyn-0",
     institution: "Miuul",
@@ -17,7 +33,7 @@ export const certificates = [
     url: "https://learning.miuul.com/certificates/lnqw0txrji"
   },
   {
-    id: 3,
+    id: 5,
     title: "Temel Excel Eğitimi",
     titleKey: "cert-dyn-1",
     institution: "Pupilica",
@@ -25,7 +41,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 4,
+    id: 6,
     title: "Temel Seviye SQL Eğitimi",
     titleKey: "cert-dyn-2",
     institution: "CSDEV - Ankara Üniversitesi Bilgisayar Bilimleri Geliştirme Topluluğu",
@@ -34,7 +50,7 @@ export const certificates = [
     url: "https://verified.sertifier.com/en/verify/96874326598077/"
   },
   {
-    id: 5,
+    id: 7,
     title: "Yapay Zeka Yaz Kampı 2025",
     titleKey: "cert-dyn-3",
     institution: "Miuul",
@@ -43,7 +59,7 @@ export const certificates = [
     url: "https://learning.miuul.com/certificates/mjvv2gmdr7"
   },
   {
-    id: 6,
+    id: 8,
     title: "Kodsuz Bir IT Kariyeri: QA Test Uzmanı Olmak",
     titleKey: "cert-dyn-18",
     institution: "GoIT Türkiye",
@@ -51,7 +67,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 7,
+    id: 9,
     title: "C# ile Algoritma ve Programlama 101",
     titleKey: "cert-dyn-19",
     institution: "Turkcell Geleceği Yazanlar",
@@ -60,7 +76,7 @@ export const certificates = [
     url: "https://gelecegiyazanlar.turkcell.com.tr/sertifika/3b940ddee8b14eafb2d701f60a725a7a"
   },
   {
-    id: 8,
+    id: 10,
     title: "Cursor ile Yapay Zeka Destekli Yazılım Geliştirme Atölyesi",
     titleKey: "cert-dyn-20",
     institution: "Pupilica",
@@ -68,7 +84,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 9,
+    id: 11,
     title: "Yapay Zekanın İş Dünyasına Etkisi",
     titleKey: "cert-dyn-4",
     institution: "Toplum Gönüllüleri Vakfı (TOG)",
@@ -76,7 +92,7 @@ export const certificates = [
     credentialId: "36219526099805"
   },
   {
-    id: 10,
+    id: 12,
     title: "React 101",
     titleKey: "cert-dyn-5",
     institution: "Turkcell Geleceği Yazanlar",
@@ -85,7 +101,7 @@ export const certificates = [
     url: "https://gelecegiyazanlar.turkcell.com.tr/sertifika/f681c780d040424992cb88e638564edd"
   },
   {
-    id: 11,
+    id: 13,
     title: "Bootstrap Eğitimi",
     titleKey: "cert-dyn-6",
     institution: "İstanbul İşletme Enstitüsü",
@@ -94,7 +110,7 @@ export const certificates = [
     url: "https://www.iienstitu.com/sertifika-sorgulama/sertifika/135649211522"
   },
   {
-    id: 12,
+    id: 14,
     title: "Siber Güvenliğe Giriş",
     titleKey: "cert-dyn-7",
     institution: "Turkcell Geleceği Yazanlar",
@@ -103,7 +119,7 @@ export const certificates = [
     url: "https://gelecegiyazanlar.turkcell.com.tr/sertifika/b7f651f6201b4bb1988cc25fdd74b968"
   },
   {
-    id: 13,
+    id: 15,
     title: "Veritabanı Saldırıları ve Veritabanı Güvenliği",
     titleKey: "cert-dyn-21",
     institution: "BTK Akademi",
@@ -112,7 +128,7 @@ export const certificates = [
     url: "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=7rptmPzAq"
   },
   {
-    id: 14,
+    id: 16,
     title: "İngilizce B2 Eğitimi",
     titleKey: "cert-dyn-8",
     institution: "Sorbil",
@@ -120,7 +136,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 15,
+    id: 17,
     title: "DDOS / DDOS Saldırıları ve Koruma",
     titleKey: "cert-dyn-9",
     institution: "BTK Akademi",
@@ -129,7 +145,7 @@ export const certificates = [
     url: "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Yx1hPYqV8z"
   },
   {
-    id: 16,
+    id: 18,
     title: "Data Science and AI Engineering Mini Bootcamp",
     titleKey: "cert-dyn-22",
     institution: "Miuul",
@@ -138,7 +154,7 @@ export const certificates = [
     url: "https://certificate.miuul.com/anil_bayram"
   },
   {
-    id: 17,
+    id: 19,
     title: "Robotik Kodlama Eğitimi",
     titleKey: "cert-dyn-10",
     institution: "Sorbil",
@@ -146,7 +162,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 18,
+    id: 20,
     title: "Web Programlama 301: JavaScript",
     titleKey: "cert-dyn-11",
     institution: "Turkcell Geleceği Yazanlar",
@@ -155,7 +171,7 @@ export const certificates = [
     url: "https://gelecegiyazanlar.turkcell.com.tr/sertifika/da10e5dc48644ac68e679d557ac75ac0"
   },
   {
-    id: 19,
+    id: 21,
     title: "Web Tasarım Geliştirme Kursu HTML5 - CSS3 - JavaScript - Bootstrap",
     titleKey: "cert-dyn-23",
     institution: "Udemy",
@@ -164,7 +180,7 @@ export const certificates = [
     url: "https://www.udemy.com/certificate/UC-a4c43573-8be0-4a05-b5c2-3b0aed18508f/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
   },
   {
-    id: 20,
+    id: 22,
     title: "Sıfırdan Web Sitesi Oluşturma 2. Eğitim",
     titleKey: "cert-dyn-24",
     institution: "Sorbil",
@@ -172,7 +188,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 21,
+    id: 23,
     title: "Web Programlama 101: HTML",
     titleKey: "cert-dyn-12",
     institution: "Turkcell Geleceği Yazanlar",
@@ -181,7 +197,7 @@ export const certificates = [
     url: "https://gelecegiyazanlar.turkcell.com.tr/sertifika/17b70800681141f3b1b2037708d2bf63"
   },
   {
-    id: 22,
+    id: 24,
     title: "Web Programlama 201: HTML5 & CSS",
     titleKey: "cert-dyn-13",
     institution: "Turkcell Geleceği Yazanlar",
@@ -190,7 +206,7 @@ export const certificates = [
     url: "https://gelecegiyazanlar.turkcell.com.tr/sertifika/59d76a51254b4e0e942d341b417f597f"
   },
   {
-    id: 23,
+    id: 25,
     title: "Sıfırdan Web Sitesi Oluşturma 1. Eğitim",
     titleKey: "cert-dyn-25",
     institution: "Sorbil",
@@ -198,7 +214,7 @@ export const certificates = [
     credentialId: ""
   },
   {
-    id: 24,
+    id: 26,
     title: "Finansal Okuryazarlık",
     titleKey: "cert-dyn-14",
     institution: "Sermaye Piyasası Lisanslama Sicil ve Eğitim Kuruluşu A.Ş.",
@@ -207,7 +223,7 @@ export const certificates = [
     url: "https://finansalokuryazarlik.spl.com.tr/c/d4e5f563-0fe5-4a11-965b-88bf7e284e5c"
   },
   {
-    id: 25,
+    id: 27,
     title: "İlkyardım",
     titleKey: "cert-dyn-15",
     institution: "T.C. Sağlık Bakanlığı",
@@ -216,7 +232,7 @@ export const certificates = [
     url: "https://ckys.saglik.gov.tr/reports/rwservlet?&cmdkey=YRDMR01&PRM_K_ID=QUCWKWGWHL"
   },
   {
-    id: 26,
+    id: 28,
     title: "E-Ticarete Giriş",
     titleKey: "cert-dyn-16",
     institution: "BTK Akademi",
@@ -225,27 +241,11 @@ export const certificates = [
     url: "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=AJaSdMXY0g"
   },
   {
-    id: 27,
+    id: 29,
     title: "İlkyardım",
     titleKey: "cert-dyn-15",
     institution: "T.C. Millî Eğitim Bakanlığı",
     date: "Kasım 2018 - Kasım 2023",
     credentialId: "27049320180058314916"
-  },
-  {
-    id: 28,
-    title: "Amateur Seaman's Certificate",
-    titleKey: "cert-dyn-26",
-    institution: "T.C. Ulaştırma ve Altyapı Bakanlığı - Denizcilik Genel Müdürlüğü",
-    date: "Ağustos 2026",
-    credentialId: ""
-  },
-  {
-    id: 29,
-    title: "Certificate of Competence for Short Range Radio Operators",
-    titleKey: "cert-dyn-27",
-    institution: "T.C. Ulaştırma ve Altyapı Bakanlığı - Denizcilik Genel Müdürlüğü",
-    date: "Ağustos 2026",
-    credentialId: ""
   }
 ];
