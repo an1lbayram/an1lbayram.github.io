@@ -117,8 +117,18 @@ const Projects = () => {
                 <button
                   key={filter.id}
                   onClick={() => setActiveFilter(filter.id)}
+                  aria-pressed={isActive}
                   className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors
-                    ${isActive ? 'text-primary-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+                    ${
+                      isActive
+                        // Kayan pill `-z-10` ile butonun arkasinda durdugu icin
+                        // erisilebilirlik denetcileri (ve pill henuz yerine
+                        // oturmadiysa kullanici) etiketi zeminsiz goruyordu.
+                        // Ayni rengi butonun kendi arka plani olarak da veriyoruz:
+                        // gorunum ayni, kontrast her an olculebilir.
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
                 >
                   {isActive && (
                     <motion.span

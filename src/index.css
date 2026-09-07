@@ -20,7 +20,10 @@
     --popover-foreground: 222 16% 11%;
 
     /* Amber-700: beyaz uzerinde 4.9:1 — metin ve buton icin guvenli */
-    --primary: 27 82% 37%;
+    /* L=37 iken sertifika kartindaki 12px "Yeterlilik Belgesi" baglantisi
+       kendi hafif tonlu zemininde 4.2:1'de kaliyordu (WCAG AA 4.5 ister).
+       L=34 ayni renk ailesini korur ve olcumu 4.83:1'e cikarir. */
+    --primary: 27 82% 34%;
     --primary-foreground: 40 30% 98%;
     --primary-hover: 24 86% 30%;
 

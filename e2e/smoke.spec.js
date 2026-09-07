@@ -44,7 +44,13 @@ test.describe('Functional QA / E2E: core page flow', () => {
     await expect(page.getByRole('heading', { name: 'Hakkımda' })).toBeVisible();
 
     await openMobileMenuIfNeeded(page);
-    await page.getByRole('button', { name: 'EN | TR' }).click();
+    // Dil dugmesi artik yalnizca gecilecek dili yaziyor ('EN'), ve mobil
+    // cekmece acikken masaustu kopyasi da DOM'da kaliyor - gorunur olani sec.
+    await page
+      .getByRole('banner')
+      .getByRole('button', { name: 'EN', exact: true })
+      .filter({ visible: true })
+      .click();
     await expect(page.getByRole('heading', { name: 'About Me' })).toBeVisible();
 
     await page.reload();
