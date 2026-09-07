@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { mockExternalApis } from './helpers.js';
+import { mockExternalApis, settleScrollReveals } from './helpers.js';
 
 test.beforeEach(async ({ page }) => {
   await mockExternalApis(page);
@@ -18,6 +18,7 @@ test.describe('accessibility (axe-core, live browser scan)', () => {
   test('homepage (dark theme) has no serious/critical accessibility violations', async ({ page }) => {
     await page.goto('/');
     await page.locator('#contact').scrollIntoViewIfNeeded(); // let lazy sections mount
+    await settleScrollReveals(page);
 
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa'])
@@ -31,6 +32,7 @@ test.describe('accessibility (axe-core, live browser scan)', () => {
     await page.goto('/');
     await page.getByRole('button', { name: /Açık Temaya Geç/i }).click();
     await page.locator('#contact').scrollIntoViewIfNeeded();
+    await settleScrollReveals(page);
 
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa'])

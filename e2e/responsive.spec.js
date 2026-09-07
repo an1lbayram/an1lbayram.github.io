@@ -45,13 +45,15 @@ test.describe('mobile navigation interaction', () => {
     await mockExternalApis(page);
     await page.goto('/');
 
-    const navLinks = page.locator('.nav-links');
-    await expect(navLinks).not.toHaveClass(/active/);
+    // Cekmece artik bir `active` sinifiyla degil, AnimatePresence ile
+    // mount/unmount ediliyor.
+    const drawer = page.getByTestId('mobile-menu');
+    await expect(drawer).toHaveCount(0);
 
     await page.getByLabel('Menüyü Aç/Kapat').click();
-    await expect(navLinks).toHaveClass(/active/);
+    await expect(drawer).toBeVisible();
 
-    await page.getByRole('link', { name: 'Hakkımda', exact: true }).click();
-    await expect(navLinks).not.toHaveClass(/active/);
+    await drawer.getByRole('link', { name: 'Hakkımda', exact: true }).click();
+    await expect(drawer).toHaveCount(0);
   });
 });

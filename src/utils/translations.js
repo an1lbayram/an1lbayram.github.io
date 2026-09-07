@@ -175,6 +175,8 @@ export const translations = {
     'cv-dob': 'Doğum Tarihi',
     'cv-license': 'Ehliyet',
     'certs-more': 'Tümünü göster',
+    'footer-nav': 'Menü',
+    'nav-main': 'Ana menü',
     'certs-less': 'Daha az göster',
     'hero-tagline': 'React, Next.js ve Node.js ile kullanıcı odaklı arayüzler geliştiriyorum.',
   },
@@ -354,6 +356,8 @@ export const translations = {
     'cv-dob': 'Date of Birth',
     'cv-license': 'Driving License',
     'certs-more': 'Show all',
+    'footer-nav': 'Menu',
+    'nav-main': 'Main menu',
     'certs-less': 'Show less',
     'hero-tagline': 'I build user-focused interfaces with React, Next.js and Node.js.',
   }

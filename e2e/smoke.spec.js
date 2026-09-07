@@ -28,7 +28,12 @@ test.describe('Functional QA / E2E: core page flow', () => {
 
     for (const { link, id } of sections) {
       await openMobileMenuIfNeeded(page);
-      await page.getByRole('navigation').getByRole('link', { name: link, exact: true }).click();
+      // Sayfada iki navigasyon landmark'i var (ust menu ve footer menusu);
+      // ikisi de ayni bolumlere link veriyor, o yuzden ust menuyu adiyla hedefle.
+      await page
+        .getByRole('navigation', { name: 'Ana menü' })
+        .getByRole('link', { name: link, exact: true })
+        .click();
       await expect(page.locator(`#${id}`)).toBeInViewport();
     }
   });

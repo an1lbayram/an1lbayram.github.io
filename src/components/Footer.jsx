@@ -116,8 +116,8 @@ const Footer = () => {
             </motion.div>
 
             {/* Menü */}
-            <motion.nav variants={fadeUp} aria-label={t('nav-home')}>
-              <ColumnTitle>{t('nav-home')}</ColumnTitle>
+            <motion.nav variants={fadeUp} aria-label={t('footer-nav')}>
+              <ColumnTitle>{t('footer-nav')}</ColumnTitle>
               <ul className="space-y-1">
                 {NAV_LINKS.map((item) => (
                   <li key={item.href}>

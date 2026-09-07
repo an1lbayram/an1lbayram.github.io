@@ -84,7 +84,7 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: EASE }}
       className="fixed inset-x-0 top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-md"
     >
-      <nav className="container flex items-center justify-between gap-4 py-4">
+      <nav aria-label={t('nav-main')} className="container flex items-center justify-between gap-4 py-4">
         <a href="#hero" className="group relative font-mono text-base font-medium tracking-tight text-primary">
           &lt;Anıl Bayram/&gt;
           <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 group-hover:scale-x-100" />
@@ -166,6 +166,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: EASE }}
+            data-testid="mobile-menu"
             className="overflow-hidden border-t border-border bg-background/95 md:hidden"
           >
             <motion.ul

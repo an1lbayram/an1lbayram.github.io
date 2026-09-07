@@ -58,3 +58,33 @@ export async function openMobileMenuIfNeeded(page) {
     await hamburger.click();
   }
 }
+
+/**
+ * Framer Motion's `whileInView` reveals start at `opacity: 0` and only settle
+ * once the element has actually scrolled into view. axe walks the whole
+ * document, so anything still parked at opacity 0 gets sampled as a faded
+ * blend of its real color against the page background — which reports a
+ * colour-contrast violation for text that no user ever sees in that state.
+ *
+ * Walking the page top-to-bottom fires every reveal; the assertion then waits
+ * until no revealed section is mid-transition, so axe scans the settled page.
+ */
+export async function settleScrollReveals(page) {
+  await page.evaluate(async () => {
+    const step = Math.round(window.innerHeight * 0.75);
+    for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    window.scrollTo(0, 0);
+  });
+
+  await page.waitForFunction(
+    () =>
+      [...document.querySelectorAll('section [style*="opacity"]')].every(
+        (el) => parseFloat(getComputedStyle(el).opacity) === 1
+      ),
+    null,
+    { timeout: 10_000 }
+  );
+}
