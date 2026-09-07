@@ -28,6 +28,8 @@ const Toast = ({ message, type = 'success', onClose }) => {
       <span
         className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-white
                     ${isSuccess ? 'bg-[hsl(var(--success))]' : 'bg-destructive'}`}
+        data-testid="toast-icon"
+        data-variant={isSuccess ? 'success' : 'error'}
       >
         {isSuccess ? <Check className="h-3.5 w-3.5" /> : <X className="h-3.5 w-3.5" />}
       </span>

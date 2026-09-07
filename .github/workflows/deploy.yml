@@ -32,6 +32,8 @@ jobs:
 
       - name: Build project
         run: npm run build -- --base=./
+        env:
+          VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
 
       - name: Add .nojekyll file
         run: touch ./dist/.nojekyll

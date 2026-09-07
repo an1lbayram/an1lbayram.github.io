@@ -334,3 +334,131 @@
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: none; }
 }
+
+/* ---------------------------------------------------------------------------
+   Custom "</>" cursor + PWA install button
+   Ported from the pre-Tailwind design: same behaviour, repainted with the
+   current design tokens (amber/copper primary + glow) instead of the old
+   indigo/cyan, and keyed off `html.dark` instead of `data-bs-theme`.
+   --------------------------------------------------------------------------- */
+
+/* Hide the OS cursor only for real pointing devices, and never for
+   cross-origin iframes (hCaptcha) where we cannot draw our own. */
+@media (pointer: fine) {
+  *, *::before, *::after,
+  html, body, a, button, input, textarea, select, [role="button"], label {
+    cursor: none !important;
+  }
+  iframe, .h-captcha-wrapper, [src*="hcaptcha"], [title*="hCaptcha"] {
+    cursor: pointer !important;
+  }
+}
+
+.code-cursor-wrapper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+.code-cursor-wrapper.cursor-hidden { opacity: 0; }
+
+.code-cursor-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -10px;
+  margin-left: -15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: hsl(var(--background) / 0.92);
+  border: 1.4px solid hsl(var(--primary));
+  color: hsl(var(--primary));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: theme('fontFamily.mono');
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  pointer-events: none;
+  will-change: transform;
+  box-shadow: 0 4px 20px hsl(var(--foreground) / 0.18);
+  transition: background 0.25s ease, border-color 0.25s ease, padding 0.25s ease,
+    box-shadow 0.25s ease, color 0.25s ease;
+}
+
+html.dark .code-cursor-badge {
+  background: hsl(var(--background) / 0.96);
+  color: hsl(var(--glow));
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.45);
+}
+
+.code-cursor-badge.is-hovered {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--glow));
+  color: hsl(var(--primary-foreground));
+  padding: 5px 12px;
+  box-shadow: 0 0 25px hsl(var(--primary) / 0.65);
+}
+
+.code-cursor-badge.is-text {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+  box-shadow: 0 0 22px hsl(var(--primary) / 0.5);
+}
+
+.code-cursor-badge.is-disabled {
+  border-color: hsl(var(--destructive));
+  color: hsl(var(--destructive));
+  box-shadow: 0 0 18px hsl(var(--destructive) / 0.45);
+}
+
+.code-cursor-badge.is-clicked {
+  border-color: hsl(var(--glow));
+  box-shadow: 0 0 30px hsl(var(--primary) / 0.8);
+}
+
+.code-symbol {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+/* The badge is decorative; people who ask for less motion get the real
+   cursor back rather than a lagging painted one. */
+@media (prefers-reduced-motion: reduce) {
+  .code-cursor-wrapper { display: none; }
+  @media (pointer: fine) {
+    *, *::before, *::after,
+    html, body, a, button, input, textarea, select, [role="button"], label {
+      cursor: auto !important;
+    }
+    a, button, [role="button"], label { cursor: pointer !important; }
+  }
+}
+
+.install-ios-overlay {
+  position: fixed;
+  inset: 0;
+  background: hsl(var(--foreground) / 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+.install-ios-modal {
+  width: 100%;
+  max-width: 320px;
+  padding: 24px;
+  border-radius: 0.75rem;
+  text-align: center;
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-card);
+}

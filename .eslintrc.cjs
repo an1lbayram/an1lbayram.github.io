@@ -7,13 +7,14 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
-  ignorePatterns: ['dist', 'dev-dist', '_yedek', 'node_modules', '*.bak'],
+  ignorePatterns: ['dist', 'dev-dist', '_yedek', 'node_modules', '*.bak', '.eslintrc.cjs', 'sw.js', 'workbox-*.js', 'playwright-report', 'test-results'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module', ecmaFeatures: { jsx: true } },
   settings: { react: { version: 'detect' } },
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
   },
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
+import InstallButton from './InstallButton'
 import { EASE } from '../lib/motion'
 
 const NAV_ITEMS = [
@@ -122,6 +123,9 @@ const Navbar = () => {
               {language === 'tr' ? 'EN' : 'TR'}
             </motion.button>
           </li>
+          <li>
+            <InstallButton />
+          </li>
         </ul>
 
         <button
@@ -189,6 +193,9 @@ const Navbar = () => {
                 <button onClick={toggleLanguage} className="btn-outline btn-sm w-full font-mono font-semibold">
                   {language === 'tr' ? 'EN' : 'TR'}
                 </button>
+              </li>
+              <li>
+                <InstallButton className="w-full justify-center" />
               </li>
             </motion.ul>
           </motion.div>

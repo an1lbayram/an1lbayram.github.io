@@ -21,6 +21,7 @@ const ProjectCard = ({ project, stats, featured }) => {
     <motion.article
       {...reveal()}
       layout
+      data-testid="project-card"
       className={`group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card p-6
                   transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg
                   ${featured ? 'md:col-span-2' : ''}`}

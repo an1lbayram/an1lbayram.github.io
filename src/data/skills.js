@@ -1,10 +1,12 @@
 export const skills = [
-  { id: 1, name: 'HTML / CSS / Bootstrap', progress: 95, colorClass: 'bg-primary' },
-  { id: 2, name: 'JavaScript / TypeScript / React', progress: 90, colorClass: 'bg-info' },
-  { id: 3, name: 'Python / C# / PowerShell', progress: 75, colorClass: 'bg-success' },
-  { id: 4, name: 'Arduino / Embedded', progress: 70, colorClass: 'bg-warning' },
-  { id: 5, name: 'Node.js / Express / Electron', progress: 80, colorClass: 'bg-danger' },
-  { id: 6, name: 'Vite / PWA / Batch (CMD)', progress: 85, colorClass: 'bg-secondary' }
+  { id: 1, name: 'HTML5 / CSS3 / Bootstrap 5 / Tailwind CSS / Material UI (MUI)', progress: 95, colorClass: 'bg-primary' },
+  { id: 2, name: 'JavaScript (ES6+) / TypeScript / React (v18, v19)', progress: 92, colorClass: 'bg-info' },
+  { id: 3, name: 'Node.js / Express / Socket.io / WebSockets / REST API', progress: 88, colorClass: 'bg-danger' },
+  { id: 4, name: 'Electron (v41) Masaüstü Geliştirme (Electron Forge / Builder)', progress: 86, colorClass: 'bg-primary' },
+  { id: 5, name: 'Vite / PWA / Leaflet.js / Web Audio & Speech API / Framer Motion', progress: 90, colorClass: 'bg-secondary' },
+  { id: 6, name: 'Python (Setuptools/OCR) / C# / PowerShell / Batch (CMD)', progress: 82, colorClass: 'bg-success' },
+  { id: 7, name: 'Winget CLI / Netsh WLAN / Sistem Otomasyonu & Güvenliği', progress: 85, colorClass: 'bg-purple' },
+  { id: 8, name: 'Arduino / Gömülü Sistemler (Embedded)', progress: 70, colorClass: 'bg-warning' }
 ];
 
 export const languages = [

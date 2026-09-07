@@ -9,10 +9,24 @@ export default defineConfig({
       '@': path.resolve(process.cwd(), './src'),
     },
   },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test/setup.js'],
+    css: true,
+    // e2e/*.spec.js are Playwright tests (run via `npm run test:e2e`), not
+    // Vitest — without this exclude, Vitest's default *.spec.js glob picks
+    // them up too and fails on Playwright's incompatible test.beforeEach().
+    exclude: ['**/node_modules/**', '**/dist/**', 'e2e/**'],
+  },
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true,
+        type: 'module',
+      },
       includeAssets: ['icons/A.ico', 'images/an1lbayram_light_440.webp', 'images/an1lbayram_night_440.webp', 'robots.txt', 'sitemap.xml'],
       manifest: {
         name: 'Anıl Bayram - Software Developer',

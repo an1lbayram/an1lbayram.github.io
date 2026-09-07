@@ -3,6 +3,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://an1lbayram.github.io/sitemap.xml
+Sitemap: https://an1lbayram-github-io.vercel.app/sitemap.xml
 
 Crawl-delay: 1

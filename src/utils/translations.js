@@ -9,17 +9,13 @@ export const translations = {
     'nav-langs': 'Diller',
     'nav-social': 'Sosyal',
     'nav-contact': 'İletişim',
-    
     'hero-hello': '<span class="text-primary">ANIL BAYRAM</span>',
     'hero-role': 'JR. Front-End Developer',
-    'hero-tagline': 'React, Next.js ve Node.js ile kullanıcı odaklı arayüzler geliştiriyorum.',
     'hero-btn': 'Projelerimi Gör',
     'hero-cv-btn': 'CV İndir',
-    
     'timeline-title': 'Geliştirme Süreci',
-    
     'about-title': 'Hakkımda',
-    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End Geliştirici kimliğine dönüştürdüm. HTML, CSS, JavaScript, TypeScript ve React gibi modern web teknolojileriyle kullanıcı odaklı arayüzler tasarlarken; projelerime Node.js, Express, Vite, Electron, WebSockets, Bootstrap ve PWA gibi güncel teknolojileri de entegre ediyorum. Açık kaynak dünyasına katkı sağlamaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum. Sadece web arayüzleri geliştirmekle kalmıyor; Python, C#, PowerShell, Batch (CMD) ve Arduino gibi farklı disiplinlere dokunarak çok yönlü bir mühendislik bakış açısı kazanmayı hedefliyorum.',
+    'about-desc': 'Yazılım dünyasına duyduğum merakı, sürekli öğrenen ve üreten bir Front-End ve Masaüstü Geliştirici kimliğine dönüştürdüm. HTML5, CSS3, JavaScript, TypeScript ve React (v18/v19) gibi modern web teknolojileriyle kullanıcı odaklı dinamik arayüzler tasarlarken; projelerimde Node.js, Express, Socket.io, Vite, Electron (v41), Leaflet.js, Web Audio/Speech API, Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js ve PWA gibi güncel teknolojileri etkin şekilde kullanıyorum. Masaüstü ve web uygulamalarının yanı sıra Python (OCR/otomasyon), C#, PowerShell ve Batch (CMD) betik dilleriyle sistem temizleme, paket yönetimi (Winget/Chocolatey/NPM), ağ güvenliği (Netsh WLAN) ve otomasyon araçları geliştiriyorum. Açık kaynak ekosistemine katkıda bulunmaktan ve Medium üzerinde teknik deneyimlerimi paylaşmaktan keyif alıyorum.',
     'about-personal': 'Kişisel Bilgiler',
     'about-edu': 'Eğitim',
     'about-license': 'Ehliyet',
@@ -27,7 +23,6 @@ export const translations = {
     'edu-1': 'İstanbul Üniversitesi | Bilgisayar Programcılığı - Mezuniyet: Devam Ediyor',
     'edu-2': 'Muğla Sıtkı Koçman Üni. | Acil Durum ve Afet Yönetimi - Mezuniyet: 24.06.2020',
     'edu-3': 'Melsa Sağlık Meslek Lisesi | Acil Tıp Teknisyenliği - Mezuniyet: 09.06.2017',
-    
     'projects-title': 'Projelerim',
     'filter-all': 'Tümü',
     'filter-web': 'Web',
@@ -36,19 +31,22 @@ export const translations = {
     'btn-github': 'GitHub\'da Gör',
     'btn-private': 'Özel Proje (Private)',
     'btn-read': 'Yazıyı Oku',
+    'btn-preview': 'Canlı Önizleme',
     
+    'proj-altay': 'Tarihi eserleri, antik kentleri ve anıtları interaktif harita üzerinde keşfetmenizi sağlayan Web & PWA uygulaması. OSM, Wikidata ve UNESCO gibi kaynakları birleştiren Data Fusion Engine, Türkçe sesli rehber ve canlı hava durumu içerir.',
+    'proj-zenith': 'Kanban görev yönetimi, alışkanlık takibi (streak & XP) ve prosedürel ortam sesli Pomodoro zamanlayıcısı sunan oyunlaştırılmış verimlilik platformu. XP ödül marketi ve günlük mood takibi ile PWA destekli.',
     'proj-winkam': 'Güvenli temizlik, sistem onarımı ve tek tıkla yedekleme için hepsi bir arada Windows optimizasyon aracı.',
     'proj-kapatika': 'Bir zaman ayarlayın. Arkanıza yaslanın. Bilgisayarı kapatma işini Kapatika\'ya bırakın.',
     'proj-devpulse': 'Geliştirici araçlarınızı otomatik olarak algılayan, kontrol eden ve tek tıkla güvenle güncelleyen modern bir Windows masaüstü uygulaması.',
     'proj-portfolio': 'Anıl Bayram - Kişisel Portföy Web Sitesi',
     'proj-fiwi': 'Kayıtlı Wi-Fi şifrelerini görüntüleme aracı',
+    'proj-fiwi2': 'Kayıtlı Wi-Fi şifrelerini görüntüleme, canlı ağ takibi, QR kod paylaşımı ve spektrum analizi sunan Node.js/Express, Socket.io, React (v19) ve PWA tabanlı web platformu.',
     'proj-dathex': 'Windows sistemleri için Winget tabanlı toplu yazılım güncelleme aracı',
     'proj-dathex2': 'Winget tabanlı toplu Windows yazılım güncelleme aracının yeni nesil versiyonu.',
+    'proj-gaia': 'Python (OCR/PyMuPDF) ile soru analiz eden, React (v19), Chart.js, React Router ve PWA destekli interaktif soru çözme ve sınav hazırlık platformu.',
     'proj-ls': 'Kapsamlı güvenlik portalı projesi. (Özel/Gizli Depo)',
-    
     'medium-title': 'Medium Yazılarım',
     'medium-btn': 'Tüm Yazılarımı Gör',
-    
     'certs-title': 'Sertifikalar',
     'med-dyn-0': `Anıl Bayram Profil Fotoğrafı (Koyu Tema)`,
     'med-dyn-1': `Anıl Bayram Profil Fotoğrafı (Açık Tema)`,
@@ -101,27 +99,23 @@ export const translations = {
     'cert-dyn-14': 'Finansal Okuryazarlık',
     'cert-dyn-15': 'İlkyardım',
     'cert-dyn-16': 'E-Ticarete Giriş',
-    'certs-more': 'Tümünü göster',
-    'certs-less': 'Daha az göster',
+    'cert-dyn-26': "Amateur Seaman's Certificate",
+    'cert-dyn-27': 'Certificate of Competence for Short Range Radio Operators',
     'cert-inst': 'Kurum: ',
     'cert-date': 'Tarih: ',
     'cert-id': 'Yeterlilik Kimliği: ',
     'cert-link': 'Yeterlilik Belgesi',
-    
     'skills-title': 'Yetkinliklerim / Teknik Becerilerim',
-    
     'langs-title': 'Diller',
     'lang-tr': 'Türkçe',
     'lang-tr-lvl': 'Anadil',
     'lang-en': 'İngilizce',
     'lang-en-lvl': 'B2',
-    
     'social-title': 'Sosyal Bağlantılarım',
     'social-all': 'Tüm Bağlantılar',
     'social-share': 'Sayfayı Paylaş',
     'social-copy': 'Bağlantıyı Kopyala',
     'social-dm': 'DM Gönder',
-    
     'contact-title': 'İletişim',
     'contact-desc': 'Benimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.',
     'contact-name': 'İsim',
@@ -146,11 +140,15 @@ export const translations = {
     'contact-success-label': 'Başarılı!',
     'contact-error-label': 'Hata!',
     'contact-rate-limit': 'Çok fazla istek gönderdiniz. Lütfen daha sonra tekrar deneyin.',
-    
     'theme-light': 'Açık Temaya Geç',
     'theme-dark': 'Koyu Temaya Geç',
     'copy-fail': 'Bağlantı kopyalanamadı',
     'scroll-top': 'Sayfanın Başına Git',
+    'install-app': 'Uygulamayı Yükle',
+    'install-app-aria': 'Bu web sitesini uygulama olarak cihazına yükle',
+    'install-app-ios-title': 'Ana Ekrana Ekle',
+    'install-app-ios-desc': 'Safari\'de paylaş simgesine ⎋ dokun, ardından "Ana Ekrana Ekle" seçeneğini seç.',
+    'install-app-ios-close': 'Anladım',
     
     'social-github-aria': 'GitHub profilimi ziyaret et',
     'social-medium-aria': 'Medium yazılarımı oku',
@@ -162,9 +160,7 @@ export const translations = {
     'social-facebook-aria': 'Facebook\'ta paylaş',
     'social-linkedin-share-aria': 'LinkedIn\'de paylaş',
     'social-copy-aria': 'Bağlantıyı kopyala',
-    
     'footer-copy': ' Anıl Bayram - Tüm hakları saklıdır.',
-    
     'cv-title': 'Anıl Bayram - Özgeçmiş / CV',
     'cv-download-btn': '📄 PDF Olarak İndir / Yazdır',
     'cv-close-btn': '✕ Kapat',
@@ -177,7 +173,10 @@ export const translations = {
     'cv-footer-text': 'Bu özgeçmiş https://an1lbayram-github-io.vercel.app websitesinden indirilmiştir.',
     'cv-known-langs': 'Bilinen Diller',
     'cv-dob': 'Doğum Tarihi',
-    'cv-license': 'Ehliyet'
+    'cv-license': 'Ehliyet',
+    'certs-more': 'Tümünü göster',
+    'certs-less': 'Daha az göster',
+    'hero-tagline': 'React, Next.js ve Node.js ile kullanıcı odaklı arayüzler geliştiriyorum.',
   },
   en: {
     'nav-home': 'Home',
@@ -189,17 +188,13 @@ export const translations = {
     'nav-langs': 'Languages',
     'nav-social': 'Social',
     'nav-contact': 'Contact',
-    
     'hero-hello': '<span class="text-primary">ANIL BAYRAM</span>',
     'hero-role': 'JR. Front-End Developer',
-    'hero-tagline': 'I build user-focused interfaces with React, Next.js and Node.js.',
     'hero-btn': 'View My Projects',
     'hero-cv-btn': 'Download CV',
-    
     'timeline-title': 'Development Timeline',
-    
     'about-title': 'About Me',
-    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End Developer. While designing user-centric interfaces with modern web technologies such as HTML, CSS, JavaScript, TypeScript, and React; I also integrate up-to-date technologies like Node.js, Express, Vite, Electron, WebSockets, Bootstrap, and PWA into my projects. I enjoy contributing to the open-source world and sharing my technical experiences on Medium. Not only developing web interfaces, but I also aim to gain a versatile engineering perspective by touching upon different disciplines like Python, C#, PowerShell, Batch (CMD), and Arduino.',
+    'about-desc': 'I have transformed my curiosity for the software world into the identity of a constantly learning and producing Front-End and Desktop Developer. While designing user-centric dynamic interfaces with modern web technologies such as HTML5, CSS3, JavaScript, TypeScript, and React (v18/v19); I actively utilize up-to-date technologies including Node.js, Express, Socket.io, Vite, Electron (v41), Leaflet.js, Web Audio/Speech API, Tailwind CSS, Bootstrap 5, Material UI (MUI), Framer Motion, Chart.js, and PWA. Alongside web and desktop applications, I build system cleanup, package management (Winget/Chocolatey/NPM), network security (Netsh WLAN), and automation tools using Python (OCR/automation), C#, PowerShell, and Batch (CMD) scripting languages. I enjoy contributing to the open-source ecosystem and sharing my technical experiences on Medium.',
     'about-personal': 'Personal Information',
     'about-edu': 'Education',
     'about-license': 'Driving License',
@@ -207,7 +202,6 @@ export const translations = {
     'edu-1': 'Istanbul University | Computer Programming - Graduation: Ongoing',
     'edu-2': 'Mugla Sitki Kocman Univ. | Emergency & Disaster Mng. - Graduation: 24.06.2020',
     'edu-3': 'Melsa Vocational Health High School | Emergency Med. Tech - Graduation: 09.06.2017',
-    
     'projects-title': 'My Projects',
     'filter-all': 'All',
     'filter-web': 'Web',
@@ -216,22 +210,23 @@ export const translations = {
     'btn-github': 'View on GitHub',
     'btn-private': 'Private Repository',
     'btn-read': 'Read Article',
+    'btn-preview': 'Live Preview',
     
+    'proj-altay': 'Web & PWA app for discovering historical sites, ancient cities, and monuments on an interactive map. Combines sources like OSM, Wikidata, and UNESCO via a Data Fusion Engine, with a Turkish TTS audio guide and live weather.',
+    'proj-zenith': 'Gamified productivity platform with Kanban task management, habit tracking (streak & XP), and a Pomodoro timer with procedural ambient sounds. Includes an XP reward shop and daily mood logger, with PWA offline support.',
     'proj-winkam': 'An all-in-one Windows optimization tool for safe cleanup, system repair, and one-click backup creation.',
     'proj-kapatika': 'Set a time. Walk away. Let Kapatika handle the shutdown.',
     'proj-devpulse': 'A modern Windows desktop app that automatically detects, checks, and safely updates your dev tools with a single click.',
     'proj-portfolio': 'Anıl Bayram - Portfolio Website',
     'proj-fiwi': 'Tool for viewing saved Wi-Fi passwords',
+    'proj-fiwi2': 'Next-gen web platform built with Node.js/Express, Socket.io, React (v19), and PWA for viewing saved Wi-Fi passwords, live network monitoring, and QR code sharing.',
     'proj-dathex': 'Winget-based mass software updater for Windows systems',
     'proj-dathex2': 'Next-generation Winget-based mass Windows software updater.',
+    'proj-gaia': 'AI & Python OCR-supported interactive quiz solving and statistics tracking platform built with React (v19), Chart.js, React Router, and PWA.',
     'proj-ls': 'Comprehensive security portal project. (Private Repository)',
-    
     'medium-title': 'My Medium Articles',
     'medium-btn': 'View All Articles',
-    
     'certs-title': 'Certificates',
-    'certs-more': 'Show all',
-    'certs-less': 'Show less',
     'med-dyn-0': `Anıl Bayram Profile Photo (Dark Theme)`,
     'med-dyn-1': `Anıl Bayram Profile Photo (Light Theme)`,
     'med-dyn-2': `My Certificates`,
@@ -283,25 +278,23 @@ export const translations = {
     'cert-dyn-14': 'Financial Literacy',
     'cert-dyn-15': 'First Aid',
     'cert-dyn-16': 'Introduction to E-Commerce',
+    'cert-dyn-26': "Amateur Seaman's Certificate",
+    'cert-dyn-27': 'Certificate of Competence for Short Range Radio Operators',
     'cert-inst': 'Institution: ',
     'cert-date': 'Date: ',
     'cert-id': 'Credential ID: ',
     'cert-link': 'Show Credential',
-    
     'skills-title': 'My Competencies / Technical Skills',
-    
     'langs-title': 'Languages',
     'lang-tr': 'Turkish',
     'lang-tr-lvl': 'Native',
     'lang-en': 'English',
     'lang-en-lvl': 'B2',
-    
     'social-title': 'My Social Links',
     'social-all': 'All Links',
     'social-share': 'Share Page',
     'social-copy': 'Copy Link',
     'social-dm': 'Send DM',
-    
     'contact-title': 'Contact',
     'contact-desc': 'You can fill out the form below to get in touch with me.',
     'contact-name': 'Name',
@@ -326,11 +319,15 @@ export const translations = {
     'contact-success-label': 'Success!',
     'contact-error-label': 'Error!',
     'contact-rate-limit': 'You have sent too many requests. Please try again later.',
-    
     'theme-light': 'Switch to Light Mode',
     'theme-dark': 'Switch to Dark Mode',
     'copy-fail': 'Could not copy link',
     'scroll-top': 'Scroll to Top',
+    'install-app': 'Install App',
+    'install-app-aria': 'Install this website as an app on your device',
+    'install-app-ios-title': 'Add to Home Screen',
+    'install-app-ios-desc': 'Tap the Share icon ⎋ in Safari, then choose "Add to Home Screen".',
+    'install-app-ios-close': 'Got it',
     
     'social-github-aria': 'Visit my GitHub profile',
     'social-medium-aria': 'Read my Medium articles',
@@ -342,9 +339,7 @@ export const translations = {
     'social-facebook-aria': 'Share on Facebook',
     'social-linkedin-share-aria': 'Share on LinkedIn',
     'social-copy-aria': 'Copy link',
-    
     'footer-copy': ' Anıl Bayram - All rights reserved.',
-    
     'cv-title': 'Anıl Bayram - Resume / CV',
     'cv-download-btn': '📄 Download PDF / Print',
     'cv-close-btn': '✕ Close',
@@ -357,6 +352,9 @@ export const translations = {
     'cv-footer-text': 'This resume was downloaded from https://an1lbayram-github-io.vercel.app',
     'cv-known-langs': 'Languages',
     'cv-dob': 'Date of Birth',
-    'cv-license': 'Driving License'
+    'cv-license': 'Driving License',
+    'certs-more': 'Show all',
+    'certs-less': 'Show less',
+    'hero-tagline': 'I build user-focused interfaces with React, Next.js and Node.js.',
   }
 };
