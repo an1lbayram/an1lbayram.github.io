@@ -63,9 +63,15 @@ const Skills = () => {
           <motion.h2 variants={fadeUp} className="section-title mb-8 text-center">
             {t('langs-title')}
           </motion.h2>
-          <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Grid yerine wrap eden flex: son satir tam dolmadiginda (su an 2 dil,
+              3 sutunluk grid) kartlar sola yaslanmiyor, ortada kaliyor. */}
+          <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-6">
             {languages.map((lang) => (
-              <motion.div key={lang.id} variants={fadeUp} className="card-surface p-6 text-center">
+              <motion.div
+                key={lang.id}
+                variants={fadeUp}
+                className="card-surface w-full max-w-xs flex-auto basis-56 p-6 text-center"
+              >
                 <h3 className="text-lg font-semibold">{lang.nameKey ? t(lang.nameKey) : lang.name}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {lang.levelKey ? t(lang.levelKey) : lang.level}
