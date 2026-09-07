@@ -1,68 +1,82 @@
-import { useEffect, useState } from 'react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { skills, languages } from '../data/skills';
-import { useLanguage } from '../context/LanguageContext';
+import { motion } from 'framer-motion'
+import { skills, languages } from '../data/skills'
+import { useLanguage } from '../context/LanguageContext'
+import { EASE, fadeUp, stagger, viewportOnce } from '../lib/motion'
+
+const SkillBar = ({ skill }) => (
+  <motion.div variants={fadeUp}>
+    <div className="mb-2 flex items-center justify-between">
+      <span className="text-sm font-semibold text-foreground">{skill.name}</span>
+      <span className="font-mono text-xs tabular-nums text-muted-foreground">{skill.progress}%</span>
+    </div>
+    <div
+      className="h-2.5 w-full overflow-hidden rounded-full bg-muted"
+      role="progressbar"
+      aria-label={skill.name}
+      aria-valuenow={skill.progress}
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      <motion.div
+        className="h-full rounded-full bg-primary"
+        initial={{ width: 0 }}
+        whileInView={{ width: `${skill.progress}%` }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 1.1, ease: EASE }}
+      />
+    </div>
+  </motion.div>
+)
 
 const Skills = () => {
-  const { t } = useLanguage();
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.2 });
-  const [animated, setAnimated] = useState(false);
-
-  useEffect(() => {
-    if (isVisible && !animated) {
-      setAnimated(true);
-    }
-  }, [isVisible, animated]);
+  const { t } = useLanguage()
 
   return (
     <>
-      <section id="skills" className="py-5" ref={ref}>
-        <div className={`container ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <h2 className="h3 text-primary mb-4">{t('skills-title')}</h2>
-          <div className="row g-4">
+      <section id="skills">
+        <motion.div
+          className="section-shell"
+          variants={stagger(0.06)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
+          <motion.h2 variants={fadeUp} className="section-title mb-8">
+            {t('skills-title')}
+          </motion.h2>
+          <div className="grid gap-6 md:grid-cols-2 md:gap-x-10">
             {skills.map((skill) => (
-              <div className="col-md-6" key={skill.id}>
-                <div className="mb-2 fw-semibold">{skill.name}</div>
-                <div
-                  className="progress"
-                  role="progressbar"
-                  aria-label={skill.name}
-                  aria-valuenow={skill.progress}
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div
-                    className={`progress-bar ${skill.colorClass} skill-fill`}
-                    style={{ width: animated ? `${skill.progress}%` : '0%' }}
-                  >
-                    {skill.progress}%
-                  </div>
-                </div>
-              </div>
+              <SkillBar key={skill.id} skill={skill} />
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      <section id="languages" className="py-5">
-        <div className="container">
-          <h2 className="h3 text-primary mb-4 text-center">{t('langs-title')}</h2>
-          <div className="row justify-content-center">
+      <section id="languages">
+        <motion.div
+          className="section-shell pt-0"
+          variants={stagger(0.08)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
+          <motion.h2 variants={fadeUp} className="section-title mb-8 text-center">
+            {t('langs-title')}
+          </motion.h2>
+          <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {languages.map((lang) => (
-              <div className="col-md-6 col-lg-4" key={lang.id}>
-                <div className="card shadow-sm">
-                  <div className="card-body text-center">
-                    <h3 className="h5 card-title mb-2">{lang.nameKey ? t(lang.nameKey) : lang.name}</h3>
-                    <p className="text-secondary mb-0">{lang.levelKey ? t(lang.levelKey) : lang.level}</p>
-                  </div>
-                </div>
-              </div>
+              <motion.div key={lang.id} variants={fadeUp} className="card-surface p-6 text-center">
+                <h3 className="text-lg font-semibold">{lang.nameKey ? t(lang.nameKey) : lang.name}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {lang.levelKey ? t(lang.levelKey) : lang.level}
+                </p>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

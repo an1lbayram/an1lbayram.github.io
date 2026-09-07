@@ -1,34 +1,29 @@
-import React from 'react';
-
-const Skeleton = ({ type, className = '' }) => {
-  const classes = `skeleton ${type} ${className}`;
-  return <div className={classes}></div>;
-};
+const Skeleton = ({ type, className = '' }) => <div className={`skeleton ${type} ${className}`} />
 
 export const SkeletonCard = () => (
-  <div className="card h-100 shadow-sm border-0 bg-transparent">
-    <div className="card-body d-flex flex-column gap-3">
+  <div className="rounded-xl border border-border p-6">
+    <div className="flex flex-col gap-3">
       <Skeleton type="skeleton-title" />
       <Skeleton type="skeleton-text" />
       <Skeleton type="skeleton-text" />
-      <div className="d-flex gap-2">
+      <div className="flex gap-2">
         <Skeleton type="skeleton-badge" />
         <Skeleton type="skeleton-badge" />
       </div>
-      <Skeleton type="skeleton-button" className="mt-auto" />
+      <Skeleton type="skeleton-button" className="mt-2" />
     </div>
   </div>
-);
+)
 
 export const SkeletonArticle = () => (
-  <div className="card h-100 shadow-sm border-0 bg-transparent">
-    <div className="card-body d-flex flex-column gap-3">
+  <div className="rounded-xl border border-border p-6">
+    <div className="flex flex-col gap-3">
       <Skeleton type="skeleton-title" />
       <Skeleton type="skeleton-text" />
       <Skeleton type="skeleton-text" />
-      <Skeleton type="skeleton-button" className="mt-auto" />
+      <Skeleton type="skeleton-button" className="mt-2" />
     </div>
   </div>
-);
+)
 
-export default Skeleton;
+export default Skeleton

@@ -12,6 +12,7 @@ export const translations = {
     
     'hero-hello': '<span class="text-primary">ANIL BAYRAM</span>',
     'hero-role': 'JR. Front-End Developer',
+    'hero-tagline': 'React, Next.js ve Node.js ile kullanıcı odaklı arayüzler geliştiriyorum.',
     'hero-btn': 'Projelerimi Gör',
     'hero-cv-btn': 'CV İndir',
     
@@ -100,6 +101,8 @@ export const translations = {
     'cert-dyn-14': 'Finansal Okuryazarlık',
     'cert-dyn-15': 'İlkyardım',
     'cert-dyn-16': 'E-Ticarete Giriş',
+    'certs-more': 'Tümünü göster',
+    'certs-less': 'Daha az göster',
     'cert-inst': 'Kurum: ',
     'cert-date': 'Tarih: ',
     'cert-id': 'Yeterlilik Kimliği: ',
@@ -189,6 +192,7 @@ export const translations = {
     
     'hero-hello': '<span class="text-primary">ANIL BAYRAM</span>',
     'hero-role': 'JR. Front-End Developer',
+    'hero-tagline': 'I build user-focused interfaces with React, Next.js and Node.js.',
     'hero-btn': 'View My Projects',
     'hero-cv-btn': 'Download CV',
     
@@ -226,6 +230,8 @@ export const translations = {
     'medium-btn': 'View All Articles',
     
     'certs-title': 'Certificates',
+    'certs-more': 'Show all',
+    'certs-less': 'Show less',
     'med-dyn-0': `Anıl Bayram Profile Photo (Dark Theme)`,
     'med-dyn-1': `Anıl Bayram Profile Photo (Light Theme)`,
     'med-dyn-2': `My Certificates`,

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/projects';
 import { certificates } from '../data/certificates';
@@ -26,22 +26,22 @@ const CV = ({ onClose }) => {
   const sortedProjects = [...projects].sort((a, b) => new Date(b.customDate) - new Date(a.customDate));
 
   return (
-    <div className="cv-wrapper animate-fade-in">
+    <div className="cv-wrapper cv-fade-in">
       {/* Sticky Top Control Bar */}
       <div className="cv-top-bar no-print">
-        <div className="cv-top-bar-title fw-bold">
+        <div className="cv-top-bar-title font-bold">
           {t('cv-title')}
         </div>
-        <div className="d-flex gap-2">
+        <div className="flex gap-2">
           <button 
-            className="btn btn-primary btn-sm px-3 shadow-sm d-inline-flex align-items-center gap-2" 
+            className="btn-primary btn-sm shadow-sm" 
             onClick={handlePrint}
             aria-label={t('cv-download-btn')}
           >
             <span>{t('cv-download-btn')}</span>
           </button>
           <button 
-            className="btn btn-danger btn-sm px-3 shadow-sm d-inline-flex align-items-center gap-2" 
+            className="btn btn-sm bg-destructive text-destructive-foreground shadow-sm hover:opacity-90" 
             onClick={onClose}
             aria-label={t('cv-close-btn')}
           >
@@ -53,7 +53,7 @@ const CV = ({ onClose }) => {
       <div id="cv-container">
         {/* CV Header */}
         <div className="cv-header-content">
-          <img src="/images/an1lbayram_light.png" alt="Anıl Bayram" className="cv-photo no-print" />
+          <img src="/images/an1lbayram_light_440.webp" alt="Anıl Bayram" className="cv-photo no-print" />
           <div className="cv-header-text">
             <h1 className="cv-name">ANIL BAYRAM</h1>
             <h2 className="cv-role">JR. Front-End Developer</h2>
@@ -115,7 +115,7 @@ const CV = ({ onClose }) => {
             
             return (
               <div key={project.id} className="cv-item mb-3">
-                <div className="d-flex justify-content-between align-items-baseline">
+                <div className="flex items-baseline justify-between">
                   <div className="cv-item-title">{project.title}</div>
                   <div className="cv-item-subtitle">{monthYear}</div>
                 </div>

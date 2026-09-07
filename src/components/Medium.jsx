@@ -1,87 +1,81 @@
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { useLanguage } from '../context/LanguageContext';
-import { useMediumFeed } from '../hooks/useMediumFeed';
-import { SkeletonArticle } from './Skeleton';
-// Fallback local data if feed fails
-import { mediumArticles } from '../data/medium';
+import { motion } from 'framer-motion'
+import { useLanguage } from '../context/LanguageContext'
+import { useMediumFeed } from '../hooks/useMediumFeed'
+import { SkeletonArticle } from './Skeleton'
+import { mediumArticles } from '../data/medium'
+import { fadeUp, reveal, stagger, viewportOnce } from '../lib/motion'
 
 const ArticleCard = ({ article }) => {
-  const { t } = useLanguage();
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const { t } = useLanguage()
 
   return (
-    <div className="col-md-6 col-lg-4" ref={ref}>
-      <div className={`card h-100 shadow-sm card-reveal ${isVisible ? 'revealed' : ''}`}>
-        {article.thumbnail && (
-          <img 
-            src={article.thumbnail} 
-            className="card-img-top" 
-            alt={article.title}
-            style={{ height: '160px', objectFit: 'cover' }}
-            loading="lazy"
-          />
+    <motion.article {...reveal()} className="card-surface flex flex-col overflow-hidden">
+      {article.thumbnail && (
+        <img
+          src={article.thumbnail}
+          alt={article.title}
+          className="h-40 w-full object-cover"
+          loading="lazy"
+        />
+      )}
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="line-clamp-2 text-lg font-semibold leading-snug">
+          {article.titleKey ? t(article.titleKey) : article.title}
+        </h3>
+        {article.pubDate && (
+          <p className="mt-1 text-xs text-muted-foreground">{article.pubDate}</p>
         )}
-        <div className="card-body d-flex flex-column">
-          <h3 className="h5 card-title line-clamp-2">{article.titleKey ? t(article.titleKey) : article.title}</h3>
-          
-          {article.pubDate && (
-             <p className="text-muted small mb-2">{article.pubDate}</p>
-          )}
-
-          <p className="card-text text-secondary line-clamp-3">
-            {article.descKey ? t(article.descKey) : article.description}
-          </p>
-          
-          <a
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline-primary mt-auto"
-          >
-            {t('btn-read')}
-          </a>
-        </div>
+        <p className="mt-3 line-clamp-3 text-sm text-muted-foreground">
+          {article.descKey ? t(article.descKey) : article.description}
+        </p>
+        <a
+          href={article.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-outline mt-6 self-start"
+        >
+          {t('btn-read')}
+        </a>
       </div>
-    </div>
-  );
-};
+    </motion.article>
+  )
+}
 
 const Medium = () => {
-  const { t, language } = useLanguage();
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
-  const { articles: feedArticles, loading } = useMediumFeed();
+  const { t, language } = useLanguage()
+  const { articles: feedArticles, loading } = useMediumFeed()
 
-  // If we have API data, filter by language if possible, else just show all.
-  // If API fails or is empty, fallback to local data.
-  let displayArticles = [];
-  
+  let displayArticles = []
   if (!loading && feedArticles && feedArticles.length > 0) {
-    displayArticles = feedArticles.slice(0, 6); // Show latest 6
+    displayArticles = feedArticles.slice(0, 6)
   } else if (!loading) {
-    // Local fallback
-    displayArticles = mediumArticles.filter(article => article.lang === (language === 'tr' ? 'TR' : 'EN'));
+    displayArticles = mediumArticles.filter(
+      (article) => article.lang === (language === 'tr' ? 'TR' : 'EN')
+    )
   }
 
   return (
-    <section id="medium" className="py-5 bg-body-tertiary" ref={ref}>
-      <div className={`container ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-        <h2 className="h3 text-primary mb-4">{t('medium-title')}</h2>
-        <div className="row g-4">
-          {loading ? (
-             Array.from({ length: 3 }).map((_, idx) => (
-              <div className="col-md-6 col-lg-4" key={`skel-med-${idx}`}>
-                <SkeletonArticle />
-              </div>
-            ))
-          ) : (
-            displayArticles.map((article, index) => (
-              <ArticleCard key={article.id || index} article={article} />
-            ))
-          )}
+    <section id="medium" className="bg-muted/40">
+      <motion.div
+        className="section-shell"
+        variants={stagger(0.06)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+      >
+        <motion.h2 variants={fadeUp} className="section-title mb-8">
+          {t('medium-title')}
+        </motion.h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {loading
+            ? Array.from({ length: 3 }).map((_, idx) => <SkeletonArticle key={`skel-med-${idx}`} />)
+            : displayArticles.map((article, index) => (
+                <ArticleCard key={article.id || index} article={article} />
+              ))}
         </div>
-      </div>
+      </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default Medium;
+export default Medium

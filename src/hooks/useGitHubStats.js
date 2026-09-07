@@ -63,7 +63,12 @@ export const useGitHubStats = (username = 'an1lbayram') => {
            try {
               const { data } = JSON.parse(cachedData);
               setStats(data);
-           } catch(e) {}
+           } catch (parseError) {
+              // Bozuk onbellek kaydi: sessizce yutmak yerine temizle,
+              // aksi halde her yuklemede ayni hata tekrar eder.
+              console.warn('Bozuk onbellek temizlendi:', parseError)
+              localStorage.removeItem(CACHE_KEY)
+           }
         }
       }
     };

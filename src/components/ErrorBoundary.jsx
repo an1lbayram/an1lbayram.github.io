@@ -20,11 +20,11 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
-        <div className="container py-5 text-center">
-          <h2 className="text-danger mb-4">Bir şeyler yanlış gitti / Something went wrong</h2>
-          <p className="text-secondary mb-4">Sayfayı yenilemeyi deneyin / Try refreshing the page.</p>
+        <div className="container py-20 text-center">
+          <h2 className="mb-4 text-2xl font-bold text-destructive">Bir şeyler yanlış gitti / Something went wrong</h2>
+          <p className="mb-6 text-muted-foreground">Sayfayı yenilemeyi deneyin / Try refreshing the page.</p>
           <button 
-            className="btn btn-primary"
+            className="btn-primary"
             onClick={() => window.location.reload()}
           >
             Yenile / Refresh
