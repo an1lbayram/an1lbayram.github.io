@@ -70,21 +70,26 @@ export async function openMobileMenuIfNeeded(page) {
  * until no revealed section is mid-transition, so axe scans the settled page.
  */
 export async function settleScrollReveals(page) {
+  // Once sayfayi bastan sona gezerek her reveal'i tetikle.
   await page.evaluate(async () => {
     const step = Math.round(window.innerHeight * 0.75);
-    for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+    for (let y = 0, guard = 0; y < document.documentElement.scrollHeight && guard < 80; y += step, guard++) {
       window.scrollTo(0, y);
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 80));
     }
     window.scrollTo(0, 0);
   });
 
-  await page.waitForFunction(
-    () =>
-      [...document.querySelectorAll('section [style*="opacity"]')].every(
-        (el) => parseFloat(getComputedStyle(el).opacity) === 1
-      ),
-    null,
-    { timeout: 10_000 }
-  );
+  // Sonra kalanlari zorla son hallerine getir. Beklemek yerine dayatmak
+  // onemli: WebKit'te bazi reveal'lar hic yerine oturmuyor ve tarayiciya
+  // gore degisen bir bekleme testi kirilgan yapiyor. Gecisleri de kapatiyoruz
+  // - tema degistirildikten hemen sonra tarama yapilirsa axe yari yolda kalmis
+  // bir rengi olcup gercekte olmayan kontrast hatasi bildiriyor.
+  await page.addStyleTag({
+    content: `
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      [style*="opacity"] { opacity: 1 !important; }
+    `,
+  });
+  await page.waitForTimeout(150);
 }

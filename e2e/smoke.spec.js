@@ -28,11 +28,14 @@ test.describe('Functional QA / E2E: core page flow', () => {
 
     for (const { link, id } of sections) {
       await openMobileMenuIfNeeded(page);
-      // Sayfada iki navigasyon landmark'i var (ust menu ve footer menusu);
-      // ikisi de ayni bolumlere link veriyor, o yuzden ust menuyu adiyla hedefle.
+      // Footer da ayni bolumlere link veriyor, o yuzden basligi hedefle.
+      // Mobilde acilan cekmece <nav> disinda kaldigi icin landmark yerine
+      // banner'i kullanip gorunur olan kopyayi seciyoruz.
       await page
-        .getByRole('navigation', { name: 'Ana menü' })
+        .getByRole('banner')
         .getByRole('link', { name: link, exact: true })
+        .filter({ visible: true })
+        .first()
         .click();
       await expect(page.locator(`#${id}`)).toBeInViewport();
     }
