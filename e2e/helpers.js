@@ -60,6 +60,42 @@ export async function openMobileMenuIfNeeded(page) {
 }
 
 /**
+ * Bir bolum baglantisina tiklandiktan sonra sayfa yumusak kaydirma ile hedefe
+ * gidiyor. Mobil WebKit'te bu kaydirma surerken `position: fixed` olan header
+ * her karede yeniden konumlaniyor; kaydirma bitmeden header icindeki bir
+ * dugmeye tiklamaya calisan test, Playwright'in "stable" bekleyisinde 30sn
+ * zaman asimina ugruyor. Bu yardimci once menu kapanma animasyonunu, sonra
+ * kaydirmanin durmasini bekliyor.
+ *
+ * Bilerek `waitForFunction` kullanmiyoruz: kosul saglanmazsa test kirilgan
+ * bicimde patliyor. Buradaki dongu her halukarda sonlaniyor, en kotu ihtimalle
+ * ustteki guard ile ~4sn sonra.
+ */
+export async function waitForScrollToSettle(page, { startDelay = 400 } = {}) {
+  await page.waitForTimeout(startDelay);
+  await page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        let last = window.scrollY;
+        let stillFrames = 0;
+        let guard = 0;
+        const tick = () => {
+          guard += 1;
+          if (window.scrollY === last) {
+            stillFrames += 1;
+          } else {
+            stillFrames = 0;
+            last = window.scrollY;
+          }
+          if (stillFrames >= 5 || guard > 240) resolve();
+          else requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      })
+  );
+}
+
+/**
  * Framer Motion's `whileInView` reveals start at `opacity: 0` and only settle
  * once the element has actually scrolled into view. axe walks the whole
  * document, so anything still parked at opacity 0 gets sampled as a faded

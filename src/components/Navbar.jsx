@@ -14,6 +14,10 @@ const NAV_ITEMS = [
   { href: '#contact', id: 'contact', key: 'nav-contact' },
 ]
 
+// Mobil cekmecenin acilip kapanma suresi (ms). Kapanma bittikten sonra
+// kaydirmayi baslatabilmek icin JS tarafinda da biliniyor olmasi gerekiyor.
+const MOBILE_MENU_CLOSE_MS = 300
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState('hero')
@@ -23,6 +27,26 @@ const Navbar = () => {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 })
 
   const closeMenu = () => setIsOpen(false)
+
+  // Cekmece kapanirken yuksekligi 300ms boyunca animasyonla sifira iniyor.
+  // Tarayicinin kendi anchor kaydirmasi ayni anda calisirsa hedef bolumun
+  // konumu kaydirma boyunca altindan kayiyor ve kaydirma yarida kalabiliyor
+  // (mobil WebKit'te gozlendi). Bu yuzden mobil baglantilarda varsayilan
+  // davranisi durdurup, menu kapandiktan sonra kaydirmayi kendimiz
+  // baslatiyoruz.
+  const handleMobileNavClick = (event, href) => {
+    closeMenu()
+    const target = document.querySelector(href)
+    // Hedef bolum henuz mount olmadiysa tarayicinin kendi anchor davranisini
+    // bozmuyoruz - menuyu kapatmak zaten her durumda yapilmali.
+    if (!target) return
+    event.preventDefault()
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.setTimeout(() => {
+      target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' })
+      window.history.replaceState(null, '', href)
+    }, MOBILE_MENU_CLOSE_MS)
+  }
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -165,7 +189,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: EASE }}
+            transition={{ duration: MOBILE_MENU_CLOSE_MS / 1000, ease: EASE }}
             data-testid="mobile-menu"
             className="overflow-hidden border-t border-border bg-background/95 md:hidden"
           >
@@ -182,7 +206,7 @@ const Navbar = () => {
                 >
                   <a
                     href={item.href}
-                    onClick={closeMenu}
+                    onClick={(event) => handleMobileNavClick(event, item.href)}
                     className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors
                       ${active === item.id ? 'bg-primary/10 text-primary' : 'text-foreground/85 hover:bg-muted'}`}
                   >

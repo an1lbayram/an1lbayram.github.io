@@ -1,5 +1,10 @@
 import { test, expect } from '@playwright/test';
-import { mockExternalApis, waitForSectionsToMount, openMobileMenuIfNeeded } from './helpers.js';
+import {
+  mockExternalApis,
+  waitForSectionsToMount,
+  openMobileMenuIfNeeded,
+  waitForScrollToSettle,
+} from './helpers.js';
 
 test.beforeEach(async ({ page }) => {
   await mockExternalApis(page);
@@ -37,6 +42,9 @@ test.describe('Functional QA / E2E: core page flow', () => {
         .filter({ visible: true })
         .first()
         .click();
+      // Menu kapanma animasyonu ve kaydirma bitmeden ne dogrulama yapilabilir
+      // ne de dongunun bir sonraki adiminda hamburger'a tiklanabilir.
+      await waitForScrollToSettle(page);
       await expect(page.locator(`#${id}`)).toBeInViewport();
     }
   });
