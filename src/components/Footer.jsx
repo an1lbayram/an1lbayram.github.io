@@ -188,13 +188,12 @@ const Footer = () => {
 
           <motion.div
             variants={fadeUp}
-            className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-border pt-6
-                       text-xs text-muted-foreground sm:flex-row"
+            className="mt-14 flex flex-col items-center justify-center gap-3 border-t border-border pt-6
+                       text-xs text-muted-foreground"
           >
             <p>
               © {new Date().getFullYear()} {t('footer-copy')}
             </p>
-            <p className="font-mono">React · Vite · Tailwind CSS · Framer Motion</p>
           </motion.div>
         </motion.div>
       </footer>
