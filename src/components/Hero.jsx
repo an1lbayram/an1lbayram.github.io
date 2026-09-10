@@ -8,7 +8,11 @@ const Hero = () => {
 
   return (
     <Hero21
-      eyebrow={t('hero-role')}
+      // Rol artik basligin altindaki satirda yaziliyor; ustte ikinci kez
+      // tekrarlanmasin diye eyebrow kapatildi. Hero21'in varsayilan bir
+      // eyebrow metni oldugu icin prop'u tamamen kaldirmak yerine acikca
+      // null geciyoruz.
+      eyebrow={null}
       title="ANIL BAYRAM"
       subtitle={<TypeWriter text={t('hero-tagline')} delay={45} />}
       ctaLabel={t('hero-btn')}

@@ -178,7 +178,7 @@ export const translations = {
     'footer-nav': 'Menü',
     'nav-main': 'Ana menü',
     'certs-less': 'Daha az göster',
-    'hero-tagline': 'React, Next.js ve Node.js ile kullanıcı odaklı arayüzler geliştiriyorum.',
+    'hero-tagline': 'JR. FRONT-END DEVELOPER',
   },
   en: {
     'nav-home': 'Home',
@@ -359,6 +359,6 @@ export const translations = {
     'footer-nav': 'Menu',
     'nav-main': 'Main menu',
     'certs-less': 'Show less',
-    'hero-tagline': 'I build user-focused interfaces with React, Next.js and Node.js.',
+    'hero-tagline': 'JR. FRONT-END DEVELOPER',
   }
 };
